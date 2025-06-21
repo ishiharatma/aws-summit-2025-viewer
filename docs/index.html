@@ -405,6 +405,11 @@
             margin-bottom: 5px;
         }
 
+        #modal-speaker {
+            line-height: 1.5;
+            color: #333;
+        }
+
         .google-calendar-btn {
             background: #4285f4;
             color: white;
@@ -887,7 +892,17 @@
             document.getElementById('modal-time').textContent = session.time;
             document.getElementById('modal-title').textContent = session.title;
             document.getElementById('modal-description').textContent = session.description || 'セッション概要は準備中です。';
-            document.getElementById('modal-speaker').textContent = session.speaker || '未定';
+            
+            // 発表者情報を複数行対応で設定
+            const speakerElement = document.getElementById('modal-speaker');
+            const speakerText = session.speaker || '未定';
+            
+            // 改行文字を<br>タグに変換して表示
+            if (speakerText.includes('\n')) {
+                speakerElement.innerHTML = speakerText.replace(/\n/g, '<br>');
+            } else {
+                speakerElement.textContent = speakerText;
+            }
             
             // Googleカレンダー追加ボタンのイベント設定
             const addToCalendarBtn = document.getElementById('add-to-calendar');
@@ -909,7 +924,7 @@
             // 現在表示中のステージを取得（モーダルのタイトルから推測）
             const currentStage = getCurrentStageFromModal();
             const description = encodeURIComponent(
-                `【${currentStage}】${session.description}\n\n発表者: ${session.speaker}\n\nAWS Summit Japan 2025`
+                `【${currentStage}】\n${session.description}\n\n発表者:\n${session.speaker}\n\nAWS Summit Japan 2025`
             );
             const location = encodeURIComponent('幕張メッセ');
             
