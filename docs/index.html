@@ -74,11 +74,10 @@
             background: white;
             padding: 20px;
             display: flex;
-            justify-content: space-between; /* 中央と右端に配置 */
-            align-items: center;
-            gap: 20px;
+            flex-direction: column; /* 縦並びに変更 */
+            align-items: center; /* 中央寄せ */
+            gap: 15px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            flex-wrap: wrap;
             position: sticky;
             top: 0;
             z-index: 200;
@@ -88,16 +87,14 @@
         .day-selector {
             display: flex;
             gap: 10px;
-            flex: 1;
             justify-content: center; /* 中央配置を維持 */
         }
 
         /* 現在時刻表示 */
         .current-time-display {
             display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            gap: 2px;
+            align-items: center; /* 横並びで中央揃え */
+            gap: 10px;
             font-size: 0.9em;
             color: #333;
         }
@@ -418,20 +415,8 @@
         /* レスポンシブ対応 */
         @media (max-width: 768px) {
             .controls {
-                flex-direction: column;
-                gap: 15px;
                 padding: 15px;
-            }
-            
-            .day-selector {
-                justify-content: center;
-                flex: none;
-            }
-            
-            .current-time-display {
-                align-items: center;
-                flex-direction: row;
-                gap: 10px;
+                gap: 12px;
             }
             
             .current-time {
@@ -890,7 +875,8 @@
                 minute: '2-digit' 
             });
             
-            document.getElementById('current-time').textContent = timeString;
+            // 時計の絵文字付きで表示
+            document.getElementById('current-time').textContent = `🕐 ${timeString}`;
             
             // サミット開催状況の判定
             const currentDate = now.toDateString();
@@ -904,13 +890,13 @@
             if (currentDate === summitDay1 || currentDate === summitDay2) {
                 // 開催日の場合、時間で判定
                 if (currentHour < 11) {
-                    status = '開催前';
+                    status = '📅 開催前';
                     statusClass = 'before';
                 } else if (currentHour >= 11 && currentHour < 19) {
-                    status = '開催中';
+                    status = '🔴 開催中';
                     statusClass = 'active';
                 } else {
-                    status = '本日終了';
+                    status = '✅ 本日終了';
                     statusClass = 'ended';
                 }
             } else {
@@ -919,13 +905,13 @@
                 const summitEnd = new Date('2025-06-26');
                 
                 if (now < summitStart) {
-                    status = '開催前';
+                    status = '📅 開催前';
                     statusClass = 'before';
                 } else if (now > summitEnd) {
-                    status = '開催終了';
+                    status = '✅ 開催終了';
                     statusClass = 'ended';
                 } else {
-                    status = '開催期間';
+                    status = '📅 開催期間';
                     statusClass = 'active';
                 }
             }
