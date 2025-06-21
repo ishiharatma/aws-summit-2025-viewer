@@ -513,32 +513,14 @@ function scrollToTop() {
     });
 }
 
-// スクロール時のトップに戻るボタンとフッターヘッダー表示制御
+// スクロール時のトップに戻るボタン表示制御
 window.addEventListener('scroll', () => {
     const backToTopBtn = document.getElementById('backToTop');
-    const footerHeader = document.getElementById('footer-header');
-    const calendarContainer = document.querySelector('.calendar-container');
     
     // トップに戻るボタンの表示制御
     if (window.pageYOffset > 300) {
         backToTopBtn.classList.add('show');
     } else {
         backToTopBtn.classList.remove('show');
-    }
-    
-    // フッターヘッダーの表示制御
-    if (calendarContainer) {
-        const containerRect = calendarContainer.getBoundingClientRect();
-        const calendarHeader = document.querySelector('.calendar-header');
-        const headerRect = calendarHeader ? calendarHeader.getBoundingClientRect() : null;
-        
-        // カレンダーヘッダーが画面上部から見えなくなったらフッターヘッダーを表示
-        if (headerRect && headerRect.bottom < 0) {
-            footerHeader.style.display = 'grid';
-            document.body.classList.add('footer-header-visible');
-        } else {
-            footerHeader.style.display = 'none';
-            document.body.classList.remove('footer-header-visible');
-        }
     }
 });
