@@ -1,0 +1,40 @@
+{
+    "name": "Amazon Q CLI environment",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "features": {
+        // Git installation
+        // https://github.com/devcontainers/features/tree/main/src/git
+        "ghcr.io/devcontainers/features/git:1": {},
+        
+        // AWS CLI installation - allows you to run `aws` commands in terminal
+        // https://aws.amazon.com/cli/
+        "ghcr.io/devcontainers/features/aws-cli:1": {}
+    },
+    "mounts": [
+        "source=./.aws/,target=/home/vscode/.aws/,type=bind,consistency=cached",
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "github.vscode-pull-request-github",
+                "eamodio.gitlens",
+                "donjayamanne.githistory",
+                "ms-azuretools.vscode-docker",
+                "ms-vscode-remote.remote-containers"
+            ],
+            "settings": {
+                // Default terminal in Linux
+                "terminal.integrated.defaultProfile.linux": "/bin/bash"
+            }
+        }
+    },
+    // Command to run after container creation
+    "postCreateCommand": "bash .devcontainer/postCreateCommand.sh",
+    // Workspace folder path
+    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+    // デフォルトユーザーをvscodeに設定
+    "remoteUser": "vscode"
+}
