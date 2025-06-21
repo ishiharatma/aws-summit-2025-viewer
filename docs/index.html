@@ -37,6 +37,30 @@
             opacity: 0.9;
         }
 
+        .header-link {
+            margin-top: 15px;
+        }
+
+        .header-link a {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            font-weight: bold;
+            font-size: 1em;
+            transition: all 0.3s ease;
+        }
+
+        .header-link a:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
         .controls {
             background: white;
             padding: 20px;
@@ -354,6 +378,11 @@
             .header h1 {
                 font-size: 2em;
             }
+            
+            .header-link a {
+                font-size: 0.9em;
+                padding: 8px 16px;
+            }
         }
 
         .loading {
@@ -464,6 +493,11 @@
     <div class="header">
         <h1>AWS Summit 2025</h1>
         <p>ミニステージ スケジュールビューアー</p>
+        <div class="header-link">
+            <a href="https://pages.awscloud.com/summit-japan-2025-aws-expo-booth.html" target="_blank" rel="noopener noreferrer">
+                AWS Expo 詳細はこちら
+            </a>
+        </div>
     </div>
 
     <div class="controls">
