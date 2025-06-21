@@ -47,6 +47,7 @@
             top: 0;
             z-index: 200;
         }
+        }
 
         .day-selector {
             display: flex;
@@ -97,7 +98,7 @@
             color: white;
             font-weight: bold;
             position: sticky;
-            top: 90px; /* controlsの高さ分下げる */
+            top: 80px; /* controlsの実際の高さに合わせて調整 */
             z-index: 150;
         }
 
@@ -369,6 +370,37 @@
             color: #d32f2f;
             font-size: 1.1em;
         }
+
+        /* トップに戻るボタン */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: #ff9900;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            box-shadow: 0 4px 15px rgba(255, 153, 0, 0.3);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 1000;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: #e68900;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 153, 0, 0.4);
+        }
     </style>
 </head>
 <body>
@@ -416,6 +448,9 @@
             </div>
         </div>
     </div>
+
+    <!-- トップに戻るボタン -->
+    <button class="back-to-top" id="backToTop" onclick="scrollToTop()">↑</button>
 
     <script>
         let sessionsData = {};
@@ -563,6 +598,9 @@
             
             if (!session) return;
 
+            // 現在のステージを記録
+            currentModalStage = stage;
+
             document.getElementById('modal-time').textContent = session.time;
             document.getElementById('modal-title').textContent = session.title;
             document.getElementById('modal-description').textContent = session.description || 'セッション概要は準備中です。';
@@ -584,14 +622,24 @@
             const endDateTime = `${date}T${endTime.replace(':', '')}00`;
             
             const title = encodeURIComponent(session.title);
+            
+            // 現在表示中のステージを取得（モーダルのタイトルから推測）
+            const currentStage = getCurrentStageFromModal();
             const description = encodeURIComponent(
-                `${session.description}\n\n発表者: ${session.speaker}\n\nAWS Summit Japan 2025`
+                `【${currentStage}】${session.description}\n\n発表者: ${session.speaker}\n\nAWS Summit Japan 2025`
             );
             const location = encodeURIComponent('幕張メッセ');
             
             const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${startDateTime}/${endDateTime}&details=${description}&location=${location}`;
             
             window.open(googleCalendarUrl, '_blank');
+        }
+
+        // 現在のステージ名を取得（セッション詳細表示時に使用）
+        let currentModalStage = '';
+        
+        function getCurrentStageFromModal() {
+            return currentModalStage;
         }
 
         // 日付切り替え
@@ -618,6 +666,24 @@
 
         // 初期化
         loadSessions();
+
+        // トップに戻るボタンの機能
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // スクロール時のトップに戻るボタン表示制御
+        window.addEventListener('scroll', () => {
+            const backToTopBtn = document.getElementById('backToTop');
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
     </script>
 </body>
 </html>
