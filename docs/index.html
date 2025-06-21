@@ -481,6 +481,11 @@
                     const duration = calculateDurationInMinutes(session.time);
                     const height = Math.max((duration / 30) * 80, 60); // 30分 = 80px、最小60px
                     
+                    // デバッグログ
+                    if (stage === 'AWS Village Stage' && currentDay === 'Day 1') {
+                        console.log(`${session.time}: start=${sessionStartMinutes}, base=${baseTime}, diff=${minutesFromBase}, top=${top}px, height=${height}px`);
+                    }
+                    
                     html += `
                         <div class="session" style="height: ${height}px; top: ${top}px; position: absolute; left: 8px; right: 8px; z-index: 10;" 
                              onclick="showSessionDetail('${stage}', '${session.time}', '${currentDay}')">

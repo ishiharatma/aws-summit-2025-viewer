@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>セッション時間デバッグ</title>
+</head>
+<body>
+    <h1>セッション時間の確認</h1>
+    <div id="debug-info"></div>
+
+    <script>
+        // 時間文字列を分に変換
+        function parseTime(timeStr) {
+            const [hour, minute] = timeStr.split(':').map(Number);
+            return hour * 60 + minute;
+        }
+
+        // セッションデータを読み込んでデバッグ情報を表示
+        async function debugSessions() {
+            try {
+                const response = await fetch('docs/sessions.json');
+                const sessionsData = await response.json();
+                
+                let html = '';
+                
+                ['AWS Village Stage', 'Developers on Live', 'Community Stage'].forEach(stage => {
+                    html += `<h2>${stage}</h2>`;
+                    
+                    ['Day 1', 'Day 2'].forEach(day => {
+                        html += `<h3>${day}</h3>`;
+                        const sessions = sessionsData[stage]?.[day] || [];
+                        
+                        sessions.forEach(session => {
+                            const [startTime, endTime] = session.time.split(' - ');
+                            const baseTime = parseTime('11:00');
+                            const sessionStartMinutes = parseTime(startTime);
+                            const minutesFromBase = sessionStartMinutes - baseTime;
+                            const top = (minutesFromBase / 30) * 80;
+                            
+                            html += `
+                                <div style="margin: 10px 0; padding: 10px; border: 1px solid #ccc;">
+                                    <strong>${session.time}</strong> - ${session.title}<br>
+                                    開始時間: ${startTime} (${sessionStartMinutes}分)<br>
+                                    基準からの分数: ${minutesFromBase}分<br>
+                                    計算されたtop位置: ${top}px
+                                </div>
+                            `;
+                        });
+                    });
+                });
+                
+                document.getElementById('debug-info').innerHTML = html;
+            } catch (error) {
+                document.getElementById('debug-info').innerHTML = 'エラー: ' + error.message;
+            }
+        }
+
+        debugSessions();
+    </script>
+</body>
+</html>
