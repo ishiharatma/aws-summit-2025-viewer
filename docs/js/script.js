@@ -4,6 +4,9 @@ let currentDay = 'Day 1';
 // デバッグモード設定
 const DEBUG_MODE = false; // true: デバッグログ表示, false: ログ非表示
 
+// テストモード設定（アクティブセッション表示テスト用）
+const TEST_ACTIVE_SESSION = true; // true: テスト用アクティブセッション表示, false: 実際の日時判定
+
 // デバッグログ関数
 function debugLog(category, message, ...args) {
     if (DEBUG_MODE) {
@@ -280,6 +283,14 @@ window.addEventListener('click', (event) => {
 
 // セッションがアクティブ（現在進行中）かどうかを判定
 function isSessionActive(sessionTime, day) {
+    // テストモードの場合、特定のセッションをアクティブとして表示
+    if (TEST_ACTIVE_SESSION) {
+        // 13:00-13:20のセッションをアクティブとしてテスト表示
+        if (sessionTime && sessionTime.includes('13:00 - 13:20')) {
+            return true;
+        }
+    }
+    
     const now = new Date();
     const currentDate = now.toDateString();
     
