@@ -432,7 +432,7 @@
 
         /* フッターヘッダー表示時のトップに戻るボタン位置調整 */
         body.footer-header-visible .back-to-top {
-            bottom: 90px; /* フッターヘッダーの高さ + マージン */
+            bottom: 100px; /* フッターヘッダーの高さ + マージン */
         }
 
         /* フッター固定ヘッダー */
@@ -457,7 +457,7 @@
 
         .footer-header .time-header,
         .footer-header .stage-header {
-            padding: 10px 15px; /* 通常より少し小さく */
+            padding: 15px;
             text-align: center;
             border-right: 1px solid #4a5568;
             background: #232f3e;
@@ -466,7 +466,7 @@
 
         /* フッターヘッダー表示時のボディ下部余白 */
         body.footer-header-visible {
-            padding-bottom: 60px;
+            padding-bottom: 70px; /* フッターヘッダーの高さに合わせて調整 */
         }
 
         /* レスポンシブ対応 - モバイルでの調整 */
@@ -489,12 +489,12 @@
             }
             
             body.footer-header-visible .back-to-top {
-                bottom: 80px; /* モバイルでは少し小さめの調整 */
+                bottom: 90px; /* モバイルでのフッターヘッダー高さに合わせて調整 */
             }
             
             .footer-header .time-header,
             .footer-header .stage-header {
-                padding: 8px 5px;
+                padding: 12px 5px; /* カレンダーヘッダーに近い高さ */
                 font-size: 0.75em;
                 text-align: center;
                 word-break: break-word;
@@ -510,7 +510,7 @@
             
             .footer-header .time-header,
             .footer-header .stage-header {
-                padding: 6px 3px;
+                padding: 10px 3px; /* 小さなスマホでもある程度の高さを確保 */
                 font-size: 0.7em;
             }
             
