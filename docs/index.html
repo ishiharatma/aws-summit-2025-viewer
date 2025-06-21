@@ -43,6 +43,9 @@
             gap: 20px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 200;
         }
 
         .day-selector {
@@ -94,8 +97,8 @@
             color: white;
             font-weight: bold;
             position: sticky;
-            top: 0;
-            z-index: 100;
+            top: 90px; /* controlsの高さ分下げる */
+            z-index: 150;
         }
 
         .time-header, .stage-header {
@@ -159,13 +162,13 @@
             background: linear-gradient(135deg, #ff9900, #ffb84d);
             color: white;
             border-radius: 8px;
-            padding: 8px;
+            padding: 6px;
             cursor: pointer;
             box-shadow: 0 2px 8px rgba(255, 153, 0, 0.3);
             transition: all 0.3s ease;
             overflow: hidden;
             z-index: 10;
-            margin: 2px;
+            margin: 3px 0; /* 上下に3pxの隙間 */
         }
 
         .session:hover {
@@ -437,17 +440,17 @@
             const calendarBody = document.getElementById('calendar-body');
             const stages = ['AWS Village Stage', 'Developers on Live', 'Community Stage'];
             
-            // 時間スロットを生成（11:00-19:00）
-            const timeSlots = [];
+            // 表示用時間スロット（30分刻み）
+            const displayTimeSlots = [];
             for (let hour = 11; hour <= 18; hour++) {
-                timeSlots.push(`${hour}:00`);
+                displayTimeSlots.push(`${hour}:00`);
                 if (hour < 18) {
-                    timeSlots.push(`${hour}:30`);
+                    displayTimeSlots.push(`${hour}:30`);
                 }
             }
 
             let html = '<div class="time-column">';
-            timeSlots.forEach(time => {
+            displayTimeSlots.forEach(time => {
                 html += `<div class="time-slot">${time}</div>`;
             });
             html += '</div>';
@@ -456,8 +459,8 @@
             stages.forEach(stage => {
                 html += '<div class="stage-column" style="position: relative;">';
                 
-                // 基本的な時間スロットを作成
-                timeSlots.forEach((time, index) => {
+                // 基本的な時間スロット（表示用、30分刻み）
+                displayTimeSlots.forEach((time, index) => {
                     html += `<div class="session-slot" data-time="${time}" data-stage="${stage}"></div>`;
                 });
                 
@@ -466,22 +469,26 @@
                 
                 sessions.forEach(session => {
                     const [startTime, endTime] = session.time.split(' - ');
-                    const startIndex = timeSlots.findIndex(slot => slot === startTime);
                     
-                    if (startIndex !== -1) {
-                        const duration = calculateDuration(session.time); // 30分単位での継続時間
-                        const height = Math.max(duration * 80, 80); // 30分 = 80px
-                        const top = startIndex * 80;
-                        
-                        html += `
-                            <div class="session" style="height: ${height}px; top: ${top}px; position: absolute; left: 5px; right: 5px; z-index: 10;" 
-                                 onclick="showSessionDetail('${stage}', '${session.time}', '${currentDay}')">
-                                <div class="session-time">${session.time}</div>
-                                <div class="session-title">${session.title}</div>
-                                <div class="session-speaker">${getSpeakerName(session.speaker)}</div>
-                            </div>
-                        `;
-                    }
+                    // 開始時間を基準時間（11:00）からの分数で計算
+                    const baseTime = parseTime('11:00');
+                    const sessionStartMinutes = parseTime(startTime);
+                    const minutesFromBase = sessionStartMinutes - baseTime;
+                    
+                    // 30分刻みの表示スロットでの位置を計算
+                    const top = (minutesFromBase / 30) * 80;
+                    
+                    const duration = calculateDurationInMinutes(session.time);
+                    const height = Math.max((duration / 30) * 80, 60); // 30分 = 80px、最小60px
+                    
+                    html += `
+                        <div class="session" style="height: ${height}px; top: ${top}px; position: absolute; left: 8px; right: 8px; z-index: 10;" 
+                             onclick="showSessionDetail('${stage}', '${session.time}', '${currentDay}')">
+                            <div class="session-time">${session.time}</div>
+                            <div class="session-title">${session.title}</div>
+                            <div class="session-speaker">${getSpeakerName(session.speaker)}</div>
+                        </div>
+                    `;
                 });
                 
                 html += '</div>';
@@ -490,13 +497,12 @@
             calendarBody.innerHTML = html;
         }
 
-        // セッションの継続時間を計算（30分単位）
-        function calculateDuration(timeRange) {
+        // セッションの継続時間を分で計算
+        function calculateDurationInMinutes(timeRange) {
             const [start, end] = timeRange.split(' - ');
             const startTime = parseTime(start);
             const endTime = parseTime(end);
-            const durationMinutes = endTime - startTime;
-            return durationMinutes / 30; // 30分を1単位とする
+            return endTime - startTime;
         }
 
         // 時間文字列を分に変換
