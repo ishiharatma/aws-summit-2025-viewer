@@ -811,7 +811,7 @@
                     
                     // デバッグログ
                     if (stage === 'AWS Village Stage' && currentDay === 'Day 1') {
-                        console.log(`${session.time}: start=${sessionStartMinutes}, top=${top}px, height=${height}px, offset=${topOffset}px`);
+                        debugLog('セッション配置', `${session.time}: start=${sessionStartMinutes}, top=${top}px, height=${height}px, offset=${topOffset}px`);
                     }
                     
                     // セッションがアクティブかどうかを判定
