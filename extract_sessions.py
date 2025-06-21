@@ -58,37 +58,78 @@ def extract_sessions_from_html(html_content):
                             # HTMLの内容を取得
                             cell_html = str(content_cell)
                             
-                            # タイトル部分を除去してテキストを取得
-                            temp_soup = BeautifulSoup(cell_html, 'html.parser')
-                            title_span_in_temp = temp_soup.find('span', style=lambda x: x and 'font-weight: bold' in x)
-                            if title_span_in_temp:
-                                title_span_in_temp.decompose()
+                            # <br /><br />で分割してセッション概要と発表者を分離
+                            parts = re.split(r'<br\s*/?\s*>\s*<br\s*/?\s*>', cell_html, flags=re.IGNORECASE)
                             
-                            # 残りのテキストを取得
-                            remaining_text = temp_soup.get_text().strip()
-                            
-                            # 改行で分割して空行を除去
-                            lines = [line.strip() for line in remaining_text.split('\n') if line.strip()]
-                            
-                            # 概要と発表者を分離
                             description = ""
                             speaker = ""
                             
-                            if len(lines) >= 2:
-                                # 最後の行が発表者、それ以外が概要
-                                speaker = lines[-1]
-                                description = ' '.join(lines[:-1]).strip()
-                            elif len(lines) == 1:
-                                # 1行しかない場合、AWSで始まるなら発表者、そうでなければ概要
-                                if lines[0].startswith(('AWS', 'Amazon', '株式会社', '合同会社', 'JSR', '三井住友', '独立行政法人')):
-                                    speaker = lines[0]
+                            if len(parts) >= 3:
+                                # parts[0]: タイトル部分
+                                # parts[1]: 概要部分
+                                # parts[2]: 発表者部分
+                                
+                                # 概要部分からHTMLタグを除去
+                                desc_soup = BeautifulSoup(parts[1], 'html.parser')
+                                description = desc_soup.get_text().strip()
+                                
+                                # 発表者部分を処理（複数発表者対応）
+                                speaker_soup = BeautifulSoup(parts[2], 'html.parser')
+                                speaker_html = str(speaker_soup)
+                                
+                                # 発表者部分を<br />で分割
+                                speaker_parts = re.split(r'<br\s*/?\s*>', speaker_html, flags=re.IGNORECASE)
+                                speakers = []
+                                
+                                for speaker_part in speaker_parts:
+                                    speaker_text = BeautifulSoup(speaker_part, 'html.parser').get_text().strip()
+                                    if speaker_text and not speaker_text.startswith('<'):
+                                        # AWS、Amazon、会社名で始まる行を発表者として認識
+                                        if (speaker_text.startswith(('AWS', 'Amazon', '株式会社', '合同会社', 'JSR', '三井住友', '独立行政法人')) or
+                                            '　' in speaker_text or '氏' in speaker_text or '様' in speaker_text):
+                                            speakers.append(speaker_text)
+                                
+                                # 複数発表者を改行で結合
+                                speaker = '\n'.join(speakers) if speakers else "未定"
+                                
+                            elif len(parts) == 2:
+                                # parts[0]: タイトル部分
+                                # parts[1]: 概要または発表者
+                                
+                                content_soup = BeautifulSoup(parts[1], 'html.parser')
+                                content_text = content_soup.get_text().strip()
+                                
+                                # 内容が発表者情報かどうかを判定
+                                if content_text.startswith(('AWS', 'Amazon', '株式会社', '合同会社', 'JSR', '三井住友', '独立行政法人')):
+                                    speaker = content_text
                                     description = "セッション概要は準備中です。"
                                 else:
-                                    description = lines[0]
+                                    description = content_text
                                     speaker = "未定"
                             else:
-                                description = "セッション概要は準備中です。"
-                                speaker = "未定"
+                                # フォールバック処理
+                                temp_soup = BeautifulSoup(cell_html, 'html.parser')
+                                title_span_in_temp = temp_soup.find('span', style=lambda x: x and 'font-weight: bold' in x)
+                                if title_span_in_temp:
+                                    title_span_in_temp.decompose()
+                                
+                                remaining_text = temp_soup.get_text().strip()
+                                lines = [line.strip() for line in remaining_text.split('\n') if line.strip()]
+                                
+                                if len(lines) >= 2:
+                                    # 最後の行が発表者、それ以外が概要
+                                    speaker = lines[-1]
+                                    description = ' '.join(lines[:-1]).strip()
+                                elif len(lines) == 1:
+                                    if lines[0].startswith(('AWS', 'Amazon', '株式会社', '合同会社', 'JSR', '三井住友', '独立行政法人')):
+                                        speaker = lines[0]
+                                        description = "セッション概要は準備中です。"
+                                    else:
+                                        description = lines[0]
+                                        speaker = "未定"
+                                else:
+                                    description = "セッション概要は準備中です。"
+                                    speaker = "未定"
                             
                             session = {
                                 'time': time_cell,

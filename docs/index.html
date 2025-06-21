@@ -291,8 +291,10 @@
         .session-speaker {
             font-size: 0.7em; /* 0.75emから0.7emに縮小 */
             opacity: 0.9;
+            white-space: pre-line; /* 改行を保持 */
+            line-height: 1.2;
             display: -webkit-box;
-            -webkit-line-clamp: 1;
+            -webkit-line-clamp: 2; /* 最大2行表示 */
             -webkit-box-orient: vertical;
             overflow: hidden;
         }
@@ -823,18 +825,53 @@
         function getSpeakerName(speaker) {
             if (!speaker || speaker === '未定') return '未定';
             
-            // AWSの部署名を除去して人名のみ抽出
-            const lines = speaker.split('\n');
+            // 複数発表者を改行で分割
+            const lines = speaker.split('\n').filter(line => line.trim());
             const names = [];
             
             lines.forEach(line => {
-                const match = line.match(/([^\s]+\s+[^\s]+)$/);
+                line = line.trim();
+                if (!line) return;
+                
+                // AWSの部署名を除去して人名のみ抽出
+                // パターン1: "AWS 部署名 氏名" の形式
+                let match = line.match(/AWS[^　]*　(.+)/);
                 if (match) {
-                    names.push(match[1]);
+                    names.push(match[1].trim());
+                    return;
+                }
+                
+                // パターン2: "Amazon 部署名 氏名" の形式
+                match = line.match(/Amazon[^　]*　(.+)/);
+                if (match) {
+                    names.push(match[1].trim());
+                    return;
+                }
+                
+                // パターン3: "会社名 氏名" の形式
+                match = line.match(/^[^　]+　(.+)/);
+                if (match) {
+                    names.push(match[1].trim());
+                    return;
+                }
+                
+                // パターン4: 最後の2つの単語を名前として抽出
+                const words = line.split(/\s+/);
+                if (words.length >= 2) {
+                    names.push(words.slice(-2).join(' '));
+                } else {
+                    names.push(line);
                 }
             });
             
-            return names.length > 0 ? names.join(', ') : speaker.split('\n')[0];
+            // 複数名の場合は改行で区切って表示、単一の場合はそのまま
+            if (names.length > 1) {
+                return names.join('\n');
+            } else if (names.length === 1) {
+                return names[0];
+            } else {
+                return speaker.split('\n')[0];
+            }
         }
 
         // セッション詳細を表示
