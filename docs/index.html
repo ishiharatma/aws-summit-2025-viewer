@@ -74,7 +74,8 @@
             background: white;
             padding: 20px;
             display: flex;
-            justify-content: center;
+            justify-content: space-between; /* 中央と右端に配置 */
+            align-items: center;
             gap: 20px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             flex-wrap: wrap;
@@ -87,6 +88,53 @@
         .day-selector {
             display: flex;
             gap: 10px;
+            flex: 1;
+            justify-content: center; /* 中央配置を維持 */
+        }
+
+        /* 現在時刻表示 */
+        .current-time-display {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 2px;
+            font-size: 0.9em;
+            color: #333;
+        }
+
+        .current-time {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #232f3e;
+        }
+
+        .summit-status {
+            font-size: 0.85em;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-weight: bold;
+        }
+
+        .summit-status.before {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .summit-status.active {
+            background: #e8f5e8;
+            color: #2e7d32;
+            animation: pulse-status 2s infinite;
+        }
+
+        .summit-status.ended {
+            background: #fafafa;
+            color: #757575;
+        }
+
+        @keyframes pulse-status {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
         }
 
         .day-btn {
@@ -369,6 +417,31 @@
 
         /* レスポンシブ対応 */
         @media (max-width: 768px) {
+            .controls {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px;
+            }
+            
+            .day-selector {
+                justify-content: center;
+                flex: none;
+            }
+            
+            .current-time-display {
+                align-items: center;
+                flex-direction: row;
+                gap: 10px;
+            }
+            
+            .current-time {
+                font-size: 1em;
+            }
+            
+            .summit-status {
+                font-size: 0.8em;
+            }
+            
             .calendar-header, .calendar-body {
                 grid-template-columns: 80px repeat(3, 1fr);
             }
@@ -546,6 +619,10 @@
         <div class="day-selector">
             <button class="day-btn" data-day="Day 1">Day 1 (6/25)</button>
             <button class="day-btn" data-day="Day 2">Day 2 (6/26)</button>
+        </div>
+        <div class="current-time-display">
+            <div class="current-time" id="current-time">--:--</div>
+            <div class="summit-status" id="summit-status">読み込み中</div>
         </div>
     </div>
 
@@ -805,6 +882,59 @@
             }
         });
 
+        // 現在時刻と開催状況を更新
+        function updateCurrentTime() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('ja-JP', { 
+                hour: '2-digit', 
+                minute: '2-digit' 
+            });
+            
+            document.getElementById('current-time').textContent = timeString;
+            
+            // サミット開催状況の判定
+            const currentDate = now.toDateString();
+            const summitDay1 = new Date('2025-06-25').toDateString();
+            const summitDay2 = new Date('2025-06-26').toDateString();
+            const currentHour = now.getHours();
+            
+            let status = '';
+            let statusClass = '';
+            
+            if (currentDate === summitDay1 || currentDate === summitDay2) {
+                // 開催日の場合、時間で判定
+                if (currentHour < 11) {
+                    status = '開催前';
+                    statusClass = 'before';
+                } else if (currentHour >= 11 && currentHour < 19) {
+                    status = '開催中';
+                    statusClass = 'active';
+                } else {
+                    status = '本日終了';
+                    statusClass = 'ended';
+                }
+            } else {
+                // 開催日以外の場合
+                const summitStart = new Date('2025-06-25');
+                const summitEnd = new Date('2025-06-26');
+                
+                if (now < summitStart) {
+                    status = '開催前';
+                    statusClass = 'before';
+                } else if (now > summitEnd) {
+                    status = '開催終了';
+                    statusClass = 'ended';
+                } else {
+                    status = '開催期間';
+                    statusClass = 'active';
+                }
+            }
+            
+            const statusElement = document.getElementById('summit-status');
+            statusElement.textContent = status;
+            statusElement.className = `summit-status ${statusClass}`;
+        }
+
         // 現在の日付に基づいてDay1/Day2を自動選択
         function autoSelectDay() {
             const now = new Date();
@@ -833,7 +963,11 @@
 
         // 初期化
         autoSelectDay(); // 自動選択を最初に実行
+        updateCurrentTime(); // 初回時刻更新
         loadSessions();
+
+        // 1秒ごとに時刻を更新
+        setInterval(updateCurrentTime, 1000);
 
         // トップに戻るボタンの機能
         function scrollToTop() {
