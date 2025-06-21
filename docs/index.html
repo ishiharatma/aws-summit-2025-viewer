@@ -89,7 +89,7 @@
             background: white;
             border-radius: 10px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            overflow: visible; /* hiddenからvisibleに変更 */
+            overflow: hidden;
             position: relative;
         }
 
@@ -99,13 +99,6 @@
             background: #232f3e;
             color: white;
             font-weight: bold;
-            position: sticky;
-            top: 80px; /* controlsの高さに合わせて調整 */
-            z-index: 150;
-            max-width: 1400px;
-            margin: 0 auto;
-            border-radius: 10px 10px 0 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
         .time-header, .stage-header {
@@ -407,6 +400,38 @@
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(35, 47, 62, 0.4);
         }
+
+        /* フッター固定ヘッダー */
+        .footer-header {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: grid;
+            grid-template-columns: 100px repeat(3, 1fr);
+            background: #232f3e;
+            color: white;
+            font-weight: bold;
+            z-index: 180;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+            max-width: 1400px;
+            margin: 0 auto;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .footer-header .time-header,
+        .footer-header .stage-header {
+            padding: 10px 15px; /* 通常より少し小さく */
+            text-align: center;
+            border-right: 1px solid #4a5568;
+            background: #232f3e;
+            font-size: 0.9em; /* 少し小さめのフォント */
+        }
+
+        /* フッターヘッダー表示時のボディ下部余白 */
+        body.footer-header-visible {
+            padding-bottom: 60px;
+        }
     </style>
 </head>
 <body>
@@ -423,13 +448,19 @@
     </div>
 
     <div class="calendar-container">
+        <div class="calendar-header">
+            <div class="time-header">時間</div>
+            <div class="stage-header">AWS Village Stage</div>
+            <div class="stage-header">Developers on Live</div>
+            <div class="stage-header">Community Stage</div>
+        </div>
         <div class="calendar-body" id="calendar-body">
             <div class="loading">スケジュールを読み込み中...</div>
         </div>
     </div>
 
-    <!-- カレンダーヘッダーを独立させる -->
-    <div class="calendar-header" id="calendar-header" style="display: none;">
+    <!-- フッター固定のヘッダー -->
+    <div class="footer-header" id="footer-header" style="display: none;">
         <div class="time-header">時間</div>
         <div class="stage-header">AWS Village Stage</div>
         <div class="stage-header">Developers on Live</div>
@@ -482,11 +513,7 @@
         // カレンダーをレンダリング
         function renderCalendar() {
             const calendarBody = document.getElementById('calendar-body');
-            const calendarHeader = document.getElementById('calendar-header');
             const stages = ['AWS Village Stage', 'Developers on Live', 'Community Stage'];
-            
-            // ヘッダーを表示
-            calendarHeader.style.display = 'grid';
             
             // 表示用時間スロット（30分刻み）
             const displayTimeSlots = [];
@@ -687,13 +714,33 @@
             });
         }
 
-        // スクロール時のトップに戻るボタン表示制御
+        // スクロール時のトップに戻るボタンとフッターヘッダー表示制御
         window.addEventListener('scroll', () => {
             const backToTopBtn = document.getElementById('backToTop');
+            const footerHeader = document.getElementById('footer-header');
+            const calendarContainer = document.querySelector('.calendar-container');
+            
+            // トップに戻るボタンの表示制御
             if (window.pageYOffset > 300) {
                 backToTopBtn.classList.add('show');
             } else {
                 backToTopBtn.classList.remove('show');
+            }
+            
+            // フッターヘッダーの表示制御
+            if (calendarContainer) {
+                const containerRect = calendarContainer.getBoundingClientRect();
+                const calendarHeader = document.querySelector('.calendar-header');
+                const headerRect = calendarHeader ? calendarHeader.getBoundingClientRect() : null;
+                
+                // カレンダーヘッダーが画面上部から見えなくなったらフッターヘッダーを表示
+                if (headerRect && headerRect.bottom < 0) {
+                    footerHeader.style.display = 'grid';
+                    document.body.classList.add('footer-header-visible');
+                } else {
+                    footerHeader.style.display = 'none';
+                    document.body.classList.remove('footer-header-visible');
+                }
             }
         });
     </script>

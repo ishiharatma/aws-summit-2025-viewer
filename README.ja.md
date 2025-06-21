@@ -31,5 +31,3 @@ https://github.com/ishiharatma/devcontainer-amazon-q-cli
 ## 📄 ライセンス
 
 このプロジェクトは[MITライセンス](./LICENSE)の下で公開されています。
-
-
