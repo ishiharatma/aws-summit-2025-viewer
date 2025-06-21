@@ -59,6 +59,62 @@ Use the template repository below to start with a pre-configured environment wit
 
 https://github.com/ishiharatma/devcontainer-amazon-q-cli
 
+## 📋 Development Rules & Guidelines
+
+### **🚨 MANDATORY: Pre-Commit Checklist**
+
+**CRITICAL**: Before any commit or push, verify these settings in `docs/js/script.js`:
+
+```javascript
+// ✅ MUST BE FALSE for production
+const DEBUG_MODE = false;           // ❌ Never commit with true
+const TEST_ACTIVE_SESSION = false;  // ❌ Never commit with true
+```
+
+#### **Pre-Commit Verification Steps**
+1. **[ ] DEBUG_MODE = false** - Disable debug console logging
+2. **[ ] TEST_ACTIVE_SESSION = false** - Disable test active session display
+3. **[ ] Test both designs** - Verify modern and 1990s versions work
+4. **[ ] Mobile responsive** - Check on mobile devices
+5. **[ ] No console errors** - Verify clean browser console
+
+### **⚠️ Why These Rules Matter**
+
+#### **TEST_ACTIVE_SESSION = false**
+- **Production Impact**: If `true`, random sessions show as "active" 
+- **User Confusion**: Misleading active session indicators
+- **Data Integrity**: Only real-time sessions should be highlighted
+
+#### **DEBUG_MODE = false**
+- **Performance**: Reduces console logging overhead
+- **User Experience**: Clean browser console for end users
+- **Security**: Prevents debug information exposure
+
+### **🧪 Development Testing**
+
+#### **To Test Active Sessions During Development:**
+
+1. **Temporarily enable test mode**:
+   ```javascript
+   const TEST_ACTIVE_SESSION = true;  // Only for testing
+   ```
+
+2. **Target sessions**: `13:00 - 13:20` will show as active
+
+3. **Visual verification**:
+   - **Modern**: Green gradient + pulse animation
+   - **1990s**: Green→yellow flash + red border
+
+4. **⚠️ REMEMBER**: Set back to `false` before commit!
+
+### **🔍 Quick Verification Command**
+
+Before committing, run this check:
+```bash
+grep -n "TEST_ACTIVE_SESSION.*true\|DEBUG_MODE.*true" docs/js/script.js
+```
+**Expected result**: No output (both should be `false`)
+
 ---
 
 **AWS Summit Japan 2025**  
