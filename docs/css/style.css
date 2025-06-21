@@ -521,6 +521,78 @@ body {
     box-shadow: 0 6px 20px rgba(35, 47, 62, 0.4);
 }
 
+/* フッターヘッダー表示時のトップに戻るボタン位置調整 */
+body.footer-header-visible .back-to-top {
+    bottom: 100px; /* フッターヘッダーの高さ + マージン */
+}
+
+/* フッター固定ヘッダー */
+.footer-header {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: grid;
+    grid-template-columns: 100px repeat(3, 1fr);
+    background: #232f3e;
+    color: white;
+    font-weight: bold;
+    z-index: 180; /* モーダル(2000)とトップに戻るボタン(1000)より下層 */
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+    max-width: 1400px;
+    margin: 0 auto;
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-header .time-header,
+.footer-header .stage-header {
+    padding: 15px;
+    text-align: center;
+    border-right: 1px solid #4a5568;
+    background: #232f3e;
+    font-size: 0.9em; /* 少し小さめのフォント */
+}
+
+/* フッターヘッダー表示時のボディ下部余白 */
+body.footer-header-visible {
+    padding-bottom: 70px; /* フッターヘッダーの高さに合わせて調整 */
+}
+
+/* レスポンシブ対応 - モバイルでの調整 */
+@media (max-width: 768px) {
+    .footer-header {
+        grid-template-columns: 80px repeat(3, 1fr);
+        left: 0;
+        right: 0;
+        margin: 0;
+        max-width: 100%;
+        border-radius: 0;
+    }
+    
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+    
+    body.footer-header-visible .back-to-top {
+        bottom: 90px; /* モバイルでのフッターヘッダー高さに合わせて調整 */
+    }
+    
+    .footer-header .time-header,
+    .footer-header .stage-header {
+        padding: 12px 5px; /* カレンダーヘッダーに近い高さ */
+        font-size: 0.75em;
+        text-align: center;
+        word-break: break-word;
+        line-height: 1.2;
+    }
+}
+
 /* 小さなスマホ画面用の追加調整 */
 @media (max-width: 480px) {
     .header-links {
@@ -530,5 +602,19 @@ body {
     .header-links a {
         font-size: 0.7em; /* 更に小さく */
         padding: 5px 10px;
+    }
+    
+    .footer-header {
+        grid-template-columns: 60px repeat(3, 1fr);
+    }
+    
+    .footer-header .time-header,
+    .footer-header .stage-header {
+        padding: 10px 3px; /* 小さなスマホでもある程度の高さを確保 */
+        font-size: 0.7em;
+    }
+    
+    .footer-header .stage-header {
+        font-size: 0.65em;
     }
 }
