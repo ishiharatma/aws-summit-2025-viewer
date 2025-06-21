@@ -173,6 +173,7 @@ body {
     color: white;
     font-weight: bold;
     font-family: 'Times New Roman', serif;
+    box-sizing: border-box;
 }
 
 .time-header, .stage-header {
@@ -182,11 +183,12 @@ body {
     background: #008080;
 }
 
-        .calendar-body {
-            display: grid;
-            grid-template-columns: 100px repeat(3, 1fr);
-            min-height: 600px;
-        }
+.calendar-body {
+    display: grid;
+    grid-template-columns: 100px repeat(3, 1fr);
+    min-height: 600px;
+    box-sizing: border-box;
+}
 
 .time-column {
     background: #ffff00;
@@ -611,6 +613,10 @@ body {
             .header-links a {
                 font-size: 0.7em; /* 更に小さく */
                 padding: 5px 10px;
+            }
+            
+            .calendar-header, .calendar-body {
+                grid-template-columns: 60px repeat(3, 1fr);
             }
             
             .footer-header {
