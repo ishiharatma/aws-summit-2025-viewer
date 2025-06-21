@@ -544,7 +544,7 @@
 
     <div class="controls">
         <div class="day-selector">
-            <button class="day-btn active" data-day="Day 1">Day 1 (6/25)</button>
+            <button class="day-btn" data-day="Day 1">Day 1 (6/25)</button>
             <button class="day-btn" data-day="Day 2">Day 2 (6/26)</button>
         </div>
     </div>
@@ -805,7 +805,34 @@
             }
         });
 
+        // 現在の日付に基づいてDay1/Day2を自動選択
+        function autoSelectDay() {
+            const now = new Date();
+            const summitDay2 = new Date('2025-06-26');
+            
+            // 2025/6/26の場合はDay2、それ以外はDay1
+            if (now.toDateString() === summitDay2.toDateString()) {
+                currentDay = 'Day 2';
+            } else {
+                currentDay = 'Day 1';
+            }
+            
+            // ボタンの状態を更新
+            updateDayButtons();
+        }
+
+        // Day切り替えボタンの状態を更新
+        function updateDayButtons() {
+            document.querySelectorAll('.day-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.textContent === currentDay) {
+                    btn.classList.add('active');
+                }
+            });
+        }
+
         // 初期化
+        autoSelectDay(); // 自動選択を最初に実行
         loadSessions();
 
         // トップに戻るボタンの機能
