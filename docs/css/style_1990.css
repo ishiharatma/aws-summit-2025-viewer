@@ -247,7 +247,6 @@ body {
     margin: 2px 0;
     font-family: 'Times New Roman', serif;
 }
-}
 
 .session.active-session {
     background: linear-gradient(to bottom, #00ff00, #008000) !important;
