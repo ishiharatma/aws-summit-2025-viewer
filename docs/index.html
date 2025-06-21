@@ -15,6 +15,8 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f5f5f5;
             color: #333;
+            margin: 0;
+            padding: 0;
         }
 
         .header {
@@ -87,7 +89,7 @@
             background: white;
             border-radius: 10px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            overflow: hidden;
+            overflow: visible; /* hiddenからvisibleに変更 */
             position: relative;
         }
 
@@ -98,8 +100,12 @@
             color: white;
             font-weight: bold;
             position: sticky;
-            top: 80px; /* controlsの実際の高さに合わせて調整 */
+            top: 80px; /* controlsの高さに合わせて調整 */
             z-index: 150;
+            max-width: 1400px;
+            margin: 0 auto;
+            border-radius: 10px 10px 0 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
         .time-header, .stage-header {
@@ -378,13 +384,13 @@
             right: 30px;
             width: 50px;
             height: 50px;
-            background: #ff9900;
+            background: linear-gradient(135deg, #232f3e, #4a5568); /* ヘッダーと同じグラデーション */
             color: white;
             border: none;
             border-radius: 50%;
             cursor: pointer;
             font-size: 20px;
-            box-shadow: 0 4px 15px rgba(255, 153, 0, 0.3);
+            box-shadow: 0 4px 15px rgba(35, 47, 62, 0.3);
             transition: all 0.3s ease;
             opacity: 0;
             visibility: hidden;
@@ -397,9 +403,9 @@
         }
 
         .back-to-top:hover {
-            background: #e68900;
+            background: linear-gradient(135deg, #4a5568, #232f3e); /* ホバー時は逆グラデーション */
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 153, 0, 0.4);
+            box-shadow: 0 6px 20px rgba(35, 47, 62, 0.4);
         }
     </style>
 </head>
@@ -417,15 +423,17 @@
     </div>
 
     <div class="calendar-container">
-        <div class="calendar-header">
-            <div class="time-header">時間</div>
-            <div class="stage-header">AWS Village Stage</div>
-            <div class="stage-header">Developers on Live</div>
-            <div class="stage-header">Community Stage</div>
-        </div>
         <div class="calendar-body" id="calendar-body">
             <div class="loading">スケジュールを読み込み中...</div>
         </div>
+    </div>
+
+    <!-- カレンダーヘッダーを独立させる -->
+    <div class="calendar-header" id="calendar-header" style="display: none;">
+        <div class="time-header">時間</div>
+        <div class="stage-header">AWS Village Stage</div>
+        <div class="stage-header">Developers on Live</div>
+        <div class="stage-header">Community Stage</div>
     </div>
 
     <!-- モーダル -->
@@ -474,7 +482,11 @@
         // カレンダーをレンダリング
         function renderCalendar() {
             const calendarBody = document.getElementById('calendar-body');
+            const calendarHeader = document.getElementById('calendar-header');
             const stages = ['AWS Village Stage', 'Developers on Live', 'Community Stage'];
+            
+            // ヘッダーを表示
+            calendarHeader.style.display = 'grid';
             
             // 表示用時間スロット（30分刻み）
             const displayTimeSlots = [];
