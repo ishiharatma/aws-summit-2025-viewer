@@ -67,9 +67,14 @@
         }
 
         .day-btn:hover {
+            background: rgba(255, 153, 0, 0.3);
+            color: #ff9900;
+            transform: translateY(-2px);
+        }
+
+        .day-btn.active:hover {
             background: #ff9900;
             color: white;
-            transform: translateY(-2px);
         }
 
         .calendar-container {
@@ -79,6 +84,7 @@
             border-radius: 10px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
             overflow: hidden;
+            position: relative;
         }
 
         .calendar-header {
@@ -87,17 +93,16 @@
             background: #232f3e;
             color: white;
             font-weight: bold;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         .time-header, .stage-header {
             padding: 15px;
             text-align: center;
             border-right: 1px solid #4a5568;
-        }
-
-        .stage-header {
-            background: #ff9900;
-            color: white;
+            background: #232f3e;
         }
 
         .calendar-body {
@@ -117,7 +122,7 @@
             font-weight: bold;
             color: #666;
             border-bottom: 1px solid #dee2e6;
-            height: 60px;
+            height: 80px; /* 高さを60pxから80pxに増加 */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -136,7 +141,7 @@
         .session-slot {
             position: relative;
             border-bottom: 1px solid #eee;
-            height: 60px;
+            height: 80px; /* 高さを60pxから80pxに増加 */
         }
 
         .session {
@@ -259,7 +264,7 @@
             font-size: 1.5em;
             font-weight: bold;
             margin-bottom: 20px;
-            color: #232f3e;
+            color: white; /* 白色に変更 */
             line-height: 1.4;
         }
 
@@ -454,7 +459,7 @@
 
                     if (session) {
                         const duration = calculateDuration(session.time);
-                        const height = duration * 60; // 1時間 = 60px
+                        const height = duration * 80; // 1時間 = 80px（60pxから80pxに変更）
                         
                         html += `
                             <div class="session" style="height: ${height}px;" 

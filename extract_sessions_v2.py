@@ -55,36 +55,40 @@ def extract_sessions_from_html(html_content):
                         if title_span:
                             title = title_span.text.strip()
                             
-                            # HTMLの内容を取得
+                            # HTMLの内容を解析
+                            # 構造: <span>タイトル</span><br /><br />概要<br /><br />発表者
                             cell_html = str(content_cell)
                             
-                            # タイトル部分を除去してテキストを取得
-                            temp_soup = BeautifulSoup(cell_html, 'html.parser')
-                            title_span_in_temp = temp_soup.find('span', style=lambda x: x and 'font-weight: bold' in x)
-                            if title_span_in_temp:
-                                title_span_in_temp.decompose()
+                            # <br /><br />で分割
+                            parts = re.split(r'<br\s*/?\s*>\s*<br\s*/?\s*>', cell_html, flags=re.IGNORECASE)
                             
-                            # 残りのテキストを取得
-                            remaining_text = temp_soup.get_text().strip()
-                            
-                            # 改行で分割して空行を除去
-                            lines = [line.strip() for line in remaining_text.split('\n') if line.strip()]
-                            
-                            # 概要と発表者を分離
                             description = ""
                             speaker = ""
                             
-                            if len(lines) >= 2:
-                                # 最後の行が発表者、それ以外が概要
-                                speaker = lines[-1]
-                                description = ' '.join(lines[:-1]).strip()
-                            elif len(lines) == 1:
-                                # 1行しかない場合、AWSで始まるなら発表者、そうでなければ概要
-                                if lines[0].startswith(('AWS', 'Amazon', '株式会社', '合同会社', 'JSR', '三井住友', '独立行政法人')):
-                                    speaker = lines[0]
+                            if len(parts) >= 3:
+                                # parts[0]: タイトル部分
+                                # parts[1]: 概要部分
+                                # parts[2]: 発表者部分
+                                
+                                # 概要を抽出
+                                desc_soup = BeautifulSoup(parts[1], 'html.parser')
+                                description = desc_soup.get_text().strip()
+                                
+                                # 発表者を抽出
+                                speaker_soup = BeautifulSoup(parts[2], 'html.parser')
+                                speaker = speaker_soup.get_text().strip()
+                                
+                            elif len(parts) == 2:
+                                # タイトルと1つの内容のみ
+                                content_soup = BeautifulSoup(parts[1], 'html.parser')
+                                content_text = content_soup.get_text().strip()
+                                
+                                # AWSで始まるなら発表者、そうでなければ概要
+                                if content_text.startswith(('AWS', 'Amazon', '株式会社', '合同会社', 'JSR', '三井住友', '独立行政法人')):
+                                    speaker = content_text
                                     description = "セッション概要は準備中です。"
                                 else:
-                                    description = lines[0]
+                                    description = content_text
                                     speaker = "未定"
                             else:
                                 description = "セッション概要は準備中です。"
