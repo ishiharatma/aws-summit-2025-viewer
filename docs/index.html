@@ -161,27 +161,28 @@
         .session {
             background: linear-gradient(135deg, #ff9900, #ffb84d);
             color: white;
-            border-radius: 8px;
-            padding: 6px;
+            border-radius: 6px;
+            padding: 4px 6px;
             cursor: pointer;
             box-shadow: 0 2px 8px rgba(255, 153, 0, 0.3);
             transition: all 0.3s ease;
             overflow: hidden;
             z-index: 10;
-            margin: 3px 0; /* 上下に3pxの隙間 */
+            margin: 2px 0; /* 上下マージンを2pxに調整 */
+            border: 1px solid rgba(255, 255, 255, 0.2); /* 境界線を追加 */
         }
 
         .session:hover {
-            transform: translateY(-2px);
+            transform: translateY(-1px); /* 2pxから1pxに縮小 */
             box-shadow: 0 4px 15px rgba(255, 153, 0, 0.4);
-            z-index: 2;
+            z-index: 20; /* ホバー時により前面に */
         }
 
         .session-title {
             font-weight: bold;
-            font-size: 0.85em;
-            line-height: 1.2;
-            margin-bottom: 4px;
+            font-size: 0.8em; /* 0.85emから0.8emに縮小 */
+            line-height: 1.1; /* 1.2から1.1に縮小 */
+            margin-bottom: 2px; /* 4pxから2pxに縮小 */
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
@@ -189,7 +190,7 @@
         }
 
         .session-speaker {
-            font-size: 0.75em;
+            font-size: 0.7em; /* 0.75emから0.7emに縮小 */
             opacity: 0.9;
             display: -webkit-box;
             -webkit-line-clamp: 1;
@@ -198,9 +199,9 @@
         }
 
         .session-time {
-            font-size: 0.7em;
+            font-size: 0.65em; /* 0.7emから0.65emに縮小 */
             opacity: 0.8;
-            margin-bottom: 2px;
+            margin-bottom: 1px; /* 2pxから1pxに縮小 */
         }
 
         /* モーダル */
@@ -467,7 +468,14 @@
                 // このステージの全セッションを取得してオーバーレイとして配置
                 const sessions = sessionsData[stage]?.[currentDay] || [];
                 
-                sessions.forEach(session => {
+                // セッションを時間順にソート
+                sessions.sort((a, b) => {
+                    const aStart = parseTime(a.time.split(' - ')[0]);
+                    const bStart = parseTime(b.time.split(' - ')[0]);
+                    return aStart - bStart;
+                });
+                
+                sessions.forEach((session, index) => {
                     const [startTime, endTime] = session.time.split(' - ');
                     
                     // 開始時間を基準時間（11:00）からの分数で計算
@@ -475,15 +483,29 @@
                     const sessionStartMinutes = parseTime(startTime);
                     const minutesFromBase = sessionStartMinutes - baseTime;
                     
+                    // 前のセッションとの重複チェック
+                    let topOffset = 2; // 基本の上マージン
+                    if (index > 0) {
+                        const prevSession = sessions[index - 1];
+                        const prevEndTime = prevSession.time.split(' - ')[1];
+                        const prevEndMinutes = parseTime(prevEndTime);
+                        
+                        // 前のセッションの終了時間と現在のセッションの開始時間が同じ、または重複している場合
+                        if (prevEndMinutes >= sessionStartMinutes) {
+                            topOffset = 4; // マージンを増やす
+                        }
+                    }
+                    
                     // 30分刻みの表示スロットでの位置を計算
-                    const top = (minutesFromBase / 30) * 80;
+                    const top = (minutesFromBase / 30) * 80 + topOffset;
                     
                     const duration = calculateDurationInMinutes(session.time);
-                    const height = Math.max((duration / 30) * 80, 60); // 30分 = 80px、最小60px
+                    // 高さからマージン分を差し引く
+                    const height = Math.max((duration / 30) * 80 - (topOffset + 2), 50); // 最小50px
                     
                     // デバッグログ
                     if (stage === 'AWS Village Stage' && currentDay === 'Day 1') {
-                        console.log(`${session.time}: start=${sessionStartMinutes}, base=${baseTime}, diff=${minutesFromBase}, top=${top}px, height=${height}px`);
+                        console.log(`${session.time}: start=${sessionStartMinutes}, top=${top}px, height=${height}px, offset=${topOffset}px`);
                     }
                     
                     html += `
