@@ -401,6 +401,11 @@
             box-shadow: 0 6px 20px rgba(35, 47, 62, 0.4);
         }
 
+        /* フッターヘッダー表示時のトップに戻るボタン位置調整 */
+        body.footer-header-visible .back-to-top {
+            bottom: 90px; /* フッターヘッダーの高さ + マージン */
+        }
+
         /* フッター固定ヘッダー */
         .footer-header {
             position: fixed;
@@ -431,6 +436,27 @@
         /* フッターヘッダー表示時のボディ下部余白 */
         body.footer-header-visible {
             padding-bottom: 60px;
+        }
+
+        /* レスポンシブ対応 - モバイルでの調整 */
+        @media (max-width: 768px) {
+            .back-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+            
+            body.footer-header-visible .back-to-top {
+                bottom: 80px; /* モバイルでは少し小さめの調整 */
+            }
+            
+            .footer-header .time-header,
+            .footer-header .stage-header {
+                padding: 8px 10px;
+                font-size: 0.8em;
+            }
         }
     </style>
 </head>
