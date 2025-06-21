@@ -250,10 +250,32 @@
             border: 1px solid rgba(255, 255, 255, 0.2); /* 境界線を追加 */
         }
 
+        .session.active-session {
+            background: linear-gradient(135deg, #4caf50, #66bb6a) !important;
+            border: 2px solid #2e7d32;
+            box-shadow: 0 4px 20px rgba(76, 175, 80, 0.4);
+            animation: pulse-active 2s infinite;
+        }
+
         .session:hover {
             transform: translateY(-1px); /* 2pxから1pxに縮小 */
             box-shadow: 0 4px 15px rgba(255, 153, 0, 0.4);
             z-index: 20; /* ホバー時により前面に */
+        }
+
+        @keyframes pulse-active {
+            0% { 
+                box-shadow: 0 4px 20px rgba(76, 175, 80, 0.4);
+                transform: scale(1);
+            }
+            50% { 
+                box-shadow: 0 6px 25px rgba(76, 175, 80, 0.6);
+                transform: scale(1.02);
+            }
+            100% { 
+                box-shadow: 0 4px 20px rgba(76, 175, 80, 0.4);
+                transform: scale(1);
+            }
         }
 
         .session-title {
@@ -658,6 +680,24 @@
     <script>
         let sessionsData = {};
         let currentDay = 'Day 1';
+        
+        // デバッグモード設定
+        const DEBUG_MODE = false; // true: デバッグログ表示, false: ログ非表示
+        
+        // デバッグログ関数
+        function debugLog(category, message, ...args) {
+            if (DEBUG_MODE) {
+                const timestamp = new Date().toLocaleTimeString('ja-JP');
+                console.log(`[${timestamp}][${category}] ${message}`, ...args);
+            }
+        }
+        
+        // デバッグログ（区切り線）
+        function debugSeparator() {
+            if (DEBUG_MODE) {
+                console.log('='.repeat(50));
+            }
+        }
 
         // セッションデータを読み込み
         async function loadSessions() {
@@ -746,8 +786,12 @@
                         console.log(`${session.time}: start=${sessionStartMinutes}, top=${top}px, height=${height}px, offset=${topOffset}px`);
                     }
                     
+                    // セッションがアクティブかどうかを判定
+                    const isActive = isSessionActive(session.time, currentDay);
+                    const activeClass = isActive ? ' active-session' : '';
+                    
                     html += `
-                        <div class="session" style="height: ${height}px; top: ${top}px; position: absolute; left: 8px; right: 8px; z-index: 10;" 
+                        <div class="session${activeClass}" style="height: ${height}px; top: ${top}px; position: absolute; left: 8px; right: 8px; z-index: 10;" 
                              onclick="showSessionDetail('${stage}', '${session.time}', '${currentDay}')">
                             <div class="session-time">${session.time}</div>
                             <div class="session-title">${session.title}</div>
@@ -852,6 +896,8 @@
                 btn.classList.add('active');
                 currentDay = btn.dataset.day;
                 renderCalendar();
+                // Day切り替え後にアクティブセッションを更新
+                setTimeout(updateActiveSessionsDisplay, 100);
             });
         });
 
@@ -867,6 +913,53 @@
             }
         });
 
+        // セッションがアクティブ（現在進行中）かどうかを判定
+        function isSessionActive(sessionTime, day) {
+            const now = new Date();
+            const currentDate = now.toDateString();
+            
+            // 開催日の判定
+            const summitDay1 = new Date('2025-06-25').toDateString();
+            const summitDay2 = new Date('2025-06-26').toDateString();
+            
+            let targetDate = '';
+            if (day === 'Day 1') {
+                targetDate = summitDay1;
+            } else if (day === 'Day 2') {
+                targetDate = summitDay2;
+            }
+            
+            // デバッグログ: 日付判定
+            debugLog('日付判定', `現在日付: ${currentDate}, 対象日付: ${targetDate}, Day: ${day}`);
+            
+            // 現在日付が対象日でない場合はアクティブではない
+            if (currentDate !== targetDate) {
+                debugLog('日付判定', '日付不一致のためアクティブではない');
+                return false;
+            }
+            
+            // セッション時間の解析
+            const [startTime, endTime] = sessionTime.split(' - ');
+            const sessionStartMinutes = parseTime(startTime);
+            const sessionEndMinutes = parseTime(endTime);
+            
+            // 現在時刻の分数変換
+            const currentMinutes = now.getHours() * 60 + now.getMinutes();
+            
+            // デバッグログ: 時刻判定
+            debugLog('時刻判定', `セッション: ${sessionTime}`);
+            debugLog('時刻判定', `開始: ${startTime} (${sessionStartMinutes}分), 終了: ${endTime} (${sessionEndMinutes}分)`);
+            debugLog('時刻判定', `現在: ${now.getHours()}:${now.getMinutes().toString().padStart(2, '0')} (${currentMinutes}分)`);
+            
+            // セッション開始時刻 <= 現在時刻 < セッション終了時刻
+            const isActive = currentMinutes >= sessionStartMinutes && currentMinutes < sessionEndMinutes;
+            
+            debugLog('判定結果', `${sessionTime} → ${isActive ? 'アクティブ' : '非アクティブ'}`);
+            debugLog('判定結果', '---');
+            
+            return isActive;
+        }
+
         // 現在時刻と開催状況を更新
         function updateCurrentTime() {
             const now = new Date();
@@ -874,6 +967,9 @@
                 hour: '2-digit', 
                 minute: '2-digit' 
             });
+            
+            // デバッグログ: 現在時刻
+            debugLog('現在時刻更新', `${now.toLocaleString('ja-JP')} (${now.toDateString()})`);
             
             // 時計の絵文字付きで表示
             document.getElementById('current-time').textContent = `🕐 ${timeString}`;
@@ -887,6 +983,12 @@
             let status = '';
             let statusClass = '';
             
+            // デバッグログ: 開催状況判定
+            debugLog('開催状況判定', `現在日付: ${currentDate}`);
+            debugLog('開催状況判定', `Day1日付: ${summitDay1}`);
+            debugLog('開催状況判定', `Day2日付: ${summitDay2}`);
+            debugLog('開催状況判定', `現在時刻: ${currentHour}時`);
+            
             if (currentDate === summitDay1 || currentDate === summitDay2) {
                 // 開催日の場合、時間で判定
                 if (currentHour < 11) {
@@ -899,6 +1001,7 @@
                     status = '✅ 本日終了';
                     statusClass = 'ended';
                 }
+                debugLog('開催状況判定', `開催日 → ${status}`);
             } else {
                 // 開催日以外の場合
                 const summitStart = new Date('2025-06-25');
@@ -914,11 +1017,82 @@
                     status = '📅 開催期間';
                     statusClass = 'active';
                 }
+                debugLog('開催状況判定', `開催日以外 → ${status}`);
             }
             
             const statusElement = document.getElementById('summit-status');
             statusElement.textContent = status;
             statusElement.className = `summit-status ${statusClass}`;
+            
+            // アクティブセッションの更新
+            debugLog('アクティブセッション更新開始', `現在表示: ${currentDay}`);
+            updateActiveSessionsDisplay();
+        }
+
+        // アクティブセッションの表示を更新
+        function updateActiveSessionsDisplay() {
+            debugLog('アクティブセッション更新', '開始');
+            
+            // 開催日・開催時間帯の判定
+            const now = new Date();
+            const currentDate = now.toDateString();
+            const summitDay1 = new Date('2025-06-25').toDateString();
+            const summitDay2 = new Date('2025-06-26').toDateString();
+            const currentHour = now.getHours();
+            
+            // 開催日以外はスキップ
+            if (currentDate !== summitDay1 && currentDate !== summitDay2) {
+                debugLog('アクティブセッション更新', `開催日以外のためスキップ (現在: ${currentDate})`);
+                return;
+            }
+            
+            // 開催時間外（11:00-19:00以外）はスキップ
+            if (currentHour < 11 || currentHour >= 19) {
+                debugLog('アクティブセッション更新', `開催時間外のためスキップ (現在: ${currentHour}時)`);
+                return;
+            }
+            
+            debugLog('アクティブセッション更新', '開催日・開催時間内のため判定実行');
+            
+            // 全てのセッション要素からactive-sessionクラスを削除
+            const allSessions = document.querySelectorAll('.session');
+            debugLog('アクティブセッション更新', `全セッション数: ${allSessions.length}`);
+            
+            allSessions.forEach(sessionElement => {
+                sessionElement.classList.remove('active-session');
+            });
+            
+            // 現在表示中の日のアクティブセッションを検索
+            const stages = ['AWS Village Stage', 'Developers on Live', 'Community Stage'];
+            let activeSessionCount = 0;
+            
+            stages.forEach(stage => {
+                const sessions = sessionsData[stage]?.[currentDay] || [];
+                debugLog('アクティブセッション更新', `${stage} (${currentDay}): ${sessions.length}セッション`);
+                
+                sessions.forEach(session => {
+                    if (isSessionActive(session.time, currentDay)) {
+                        activeSessionCount++;
+                        debugLog('アクティブセッション発見', `${stage}: ${session.time} - ${session.title}`);
+                        
+                        // 該当するセッション要素を検索してクラスを追加
+                        const sessionElements = document.querySelectorAll('.session');
+                        sessionElements.forEach(element => {
+                            const timeElement = element.querySelector('.session-time');
+                            const titleElement = element.querySelector('.session-title');
+                            if (timeElement && titleElement && 
+                                timeElement.textContent === session.time && 
+                                titleElement.textContent === session.title) {
+                                element.classList.add('active-session');
+                                debugLog('アクティブセッション適用', 'DOM要素にactive-sessionクラスを追加');
+                            }
+                        });
+                    }
+                });
+            });
+            
+            debugLog('アクティブセッション更新', `完了 - アクティブセッション数: ${activeSessionCount}`);
+            debugSeparator();
         }
 
         // 現在の日付に基づいてDay1/Day2を自動選択
