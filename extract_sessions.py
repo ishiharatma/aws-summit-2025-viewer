@@ -4,6 +4,21 @@ import json
 from bs4 import BeautifulSoup
 import requests
 
+def normalize_speaker_spaces(speaker_text):
+    """
+    発表者名の連続するスペース（半角・全角）を全角スペース1つに置き換える
+    """
+    if not speaker_text:
+        return speaker_text
+    
+    # 連続する半角スペース、全角スペース、混在を全角スペース1つに置き換え
+    # \s+ は半角スペース、タブ、改行などの空白文字
+    # 　+ は全角スペースの連続
+    # [\s　]+ は半角・全角スペースの混在した連続
+    normalized = re.sub(r'[\s　]{2,}', '　', speaker_text)
+    
+    return normalized
+
 def extract_sessions_from_html(html_content):
     soup = BeautifulSoup(html_content, 'html.parser')
     
@@ -87,7 +102,9 @@ def extract_sessions_from_html(html_content):
                                         # AWS、Amazon、会社名で始まる行を発表者として認識
                                         if (speaker_text.startswith(('AWS', 'Amazon', '株式会社', '合同会社', 'JSR', '三井住友', '独立行政法人')) or
                                             '　' in speaker_text or '氏' in speaker_text or '様' in speaker_text):
-                                            speakers.append(speaker_text)
+                                            # スペースを正規化してから追加
+                                            normalized_speaker = normalize_speaker_spaces(speaker_text)
+                                            speakers.append(normalized_speaker)
                                 
                                 # 複数発表者を改行で結合
                                 speaker = '\n'.join(speakers) if speakers else "未定"
@@ -101,7 +118,7 @@ def extract_sessions_from_html(html_content):
                                 
                                 # 内容が発表者情報かどうかを判定
                                 if content_text.startswith(('AWS', 'Amazon', '株式会社', '合同会社', 'JSR', '三井住友', '独立行政法人')):
-                                    speaker = content_text
+                                    speaker = normalize_speaker_spaces(content_text)
                                     description = "セッション概要は準備中です。"
                                 else:
                                     description = content_text
@@ -118,11 +135,11 @@ def extract_sessions_from_html(html_content):
                                 
                                 if len(lines) >= 2:
                                     # 最後の行が発表者、それ以外が概要
-                                    speaker = lines[-1]
+                                    speaker = normalize_speaker_spaces(lines[-1])
                                     description = ' '.join(lines[:-1]).strip()
                                 elif len(lines) == 1:
                                     if lines[0].startswith(('AWS', 'Amazon', '株式会社', '合同会社', 'JSR', '三井住友', '独立行政法人')):
-                                        speaker = lines[0]
+                                        speaker = normalize_speaker_spaces(lines[0])
                                         description = "セッション概要は準備中です。"
                                     else:
                                         description = lines[0]
