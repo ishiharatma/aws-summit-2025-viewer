@@ -5,7 +5,7 @@ let currentDay = 'Day 1';
 const DEBUG_MODE = false; // true: デバッグログ表示, false: ログ非表示
 
 // テストモード設定（アクティブセッション表示テスト用）
-const TEST_ACTIVE_SESSION = true; // true: テスト用アクティブセッション表示, false: 実際の日時判定
+const TEST_ACTIVE_SESSION = false; // true: テスト用アクティブセッション表示, false: 実際の日時判定
 
 // デバッグログ関数
 function debugLog(category, message, ...args) {
