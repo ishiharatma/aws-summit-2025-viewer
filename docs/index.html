@@ -46,24 +46,30 @@
             opacity: 0.9;
         }
 
-        .header-link {
+        .header-links {
             margin-top: 15px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: nowrap; /* 改行を防ぐ */
         }
 
-        .header-link a {
+        .header-links a {
             display: inline-block;
             background: rgba(255, 255, 255, 0.2);
             color: white;
             text-decoration: none;
-            padding: 10px 20px;
+            padding: 8px 14px;
             border-radius: 25px;
             border: 2px solid rgba(255, 255, 255, 0.3);
             font-weight: bold;
-            font-size: 1em;
+            font-size: 0.85em; /* 文字サイズを小さく調整 */
             transition: all 0.3s ease;
+            white-space: nowrap; /* テキストの改行を防ぐ */
+            flex-shrink: 0; /* 縮小を防ぐ */
         }
 
-        .header-link a:hover {
+        .header-links a:hover {
             background: rgba(255, 255, 255, 0.3);
             border-color: rgba(255, 255, 255, 0.5);
             transform: translateY(-2px);
@@ -476,9 +482,13 @@
                 font-size: 2em;
             }
             
-            .header-link a {
-                font-size: 0.9em;
-                padding: 8px 16px;
+            .header-links {
+                gap: 8px; /* スマホでは間隔を狭く */
+            }
+            
+            .header-links a {
+                font-size: 0.75em; /* スマホでは更に小さく */
+                padding: 6px 12px;
             }
         }
 
@@ -601,6 +611,15 @@
 
         /* 小さなスマホ画面用の追加調整 */
         @media (max-width: 480px) {
+            .header-links {
+                gap: 6px; /* 更に狭く */
+            }
+            
+            .header-links a {
+                font-size: 0.7em; /* 更に小さく */
+                padding: 5px 10px;
+            }
+            
             .footer-header {
                 grid-template-columns: 60px repeat(3, 1fr);
             }
@@ -621,9 +640,12 @@
     <div class="header">
         <h1>AWS Summit 2025</h1>
         <p>ミニステージ スケジュールビューアー</p>
-        <div class="header-link">
+        <div class="header-links">
             <a href="https://pages.awscloud.com/summit-japan-2025-aws-expo-booth.html" target="_blank" rel="noopener noreferrer">
-                AWS Expo 詳細はこちら
+                AWS Expo 詳細
+            </a>
+            <a href="https://jpsummit-smp25.awsevents.com/public/mypage/top/plain?lang=ja" target="_blank" rel="noopener noreferrer">
+                マイページログイン
             </a>
         </div>
     </div>
