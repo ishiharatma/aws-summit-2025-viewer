@@ -132,6 +132,7 @@
         .stage-column {
             border-right: 1px solid #dee2e6;
             position: relative;
+            min-height: 1280px; /* 16スロット × 80px */
         }
 
         .stage-column:last-child {
@@ -144,10 +145,17 @@
             height: 80px; /* 高さを60pxから80pxに増加 */
         }
 
-        .session {
+        .session-continuing {
             position: absolute;
             left: 5px;
             right: 5px;
+            top: 0;
+            border-left: 4px solid #ff9900;
+            background: rgba(255, 153, 0, 0.1);
+            pointer-events: none;
+        }
+
+        .session {
             background: linear-gradient(135deg, #ff9900, #ffb84d);
             color: white;
             border-radius: 8px;
@@ -156,7 +164,8 @@
             box-shadow: 0 2px 8px rgba(255, 153, 0, 0.3);
             transition: all 0.3s ease;
             overflow: hidden;
-            z-index: 1;
+            z-index: 10;
+            margin: 2px;
         }
 
         .session:hover {
@@ -445,24 +454,27 @@
 
             // 各ステージのカラムを生成
             stages.forEach(stage => {
-                html += '<div class="stage-column">';
+                html += '<div class="stage-column" style="position: relative;">';
                 
+                // 基本的な時間スロットを作成
                 timeSlots.forEach((time, index) => {
-                    html += `<div class="session-slot" data-time="${time}" data-stage="${stage}">`;
+                    html += `<div class="session-slot" data-time="${time}" data-stage="${stage}"></div>`;
+                });
+                
+                // このステージの全セッションを取得してオーバーレイとして配置
+                const sessions = sessionsData[stage]?.[currentDay] || [];
+                
+                sessions.forEach(session => {
+                    const [startTime, endTime] = session.time.split(' - ');
+                    const startIndex = timeSlots.findIndex(slot => slot === startTime);
                     
-                    // このタイムスロットにセッションがあるかチェック
-                    const sessions = sessionsData[stage]?.[currentDay] || [];
-                    const session = sessions.find(s => {
-                        const sessionStart = s.time.split(' - ')[0];
-                        return sessionStart === time;
-                    });
-
-                    if (session) {
-                        const duration = calculateDuration(session.time);
-                        const height = duration * 80; // 1時間 = 80px（60pxから80pxに変更）
+                    if (startIndex !== -1) {
+                        const duration = calculateDuration(session.time); // 30分単位での継続時間
+                        const height = Math.max(duration * 80, 80); // 30分 = 80px
+                        const top = startIndex * 80;
                         
                         html += `
-                            <div class="session" style="height: ${height}px;" 
+                            <div class="session" style="height: ${height}px; top: ${top}px; position: absolute; left: 5px; right: 5px; z-index: 10;" 
                                  onclick="showSessionDetail('${stage}', '${session.time}', '${currentDay}')">
                                 <div class="session-time">${session.time}</div>
                                 <div class="session-title">${session.title}</div>
@@ -470,8 +482,6 @@
                             </div>
                         `;
                     }
-                    
-                    html += '</div>';
                 });
                 
                 html += '</div>';
@@ -480,12 +490,13 @@
             calendarBody.innerHTML = html;
         }
 
-        // セッションの継続時間を計算
+        // セッションの継続時間を計算（30分単位）
         function calculateDuration(timeRange) {
             const [start, end] = timeRange.split(' - ');
             const startTime = parseTime(start);
             const endTime = parseTime(end);
-            return (endTime - startTime) / 60; // 分を時間に変換
+            const durationMinutes = endTime - startTime;
+            return durationMinutes / 30; // 30分を1単位とする
         }
 
         // 時間文字列を分に変換
