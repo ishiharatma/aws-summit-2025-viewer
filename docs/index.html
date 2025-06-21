@@ -451,6 +451,8 @@
             max-width: 1400px;
             margin: 0 auto;
             border-radius: 10px 10px 0 0;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .footer-header .time-header,
@@ -469,6 +471,15 @@
 
         /* レスポンシブ対応 - モバイルでの調整 */
         @media (max-width: 768px) {
+            .footer-header {
+                grid-template-columns: 80px repeat(3, 1fr);
+                left: 0;
+                right: 0;
+                margin: 0;
+                max-width: 100%;
+                border-radius: 0;
+            }
+            
             .back-to-top {
                 bottom: 20px;
                 right: 20px;
@@ -483,8 +494,28 @@
             
             .footer-header .time-header,
             .footer-header .stage-header {
-                padding: 8px 10px;
-                font-size: 0.8em;
+                padding: 8px 5px;
+                font-size: 0.75em;
+                text-align: center;
+                word-break: break-word;
+                line-height: 1.2;
+            }
+        }
+
+        /* 小さなスマホ画面用の追加調整 */
+        @media (max-width: 480px) {
+            .footer-header {
+                grid-template-columns: 60px repeat(3, 1fr);
+            }
+            
+            .footer-header .time-header,
+            .footer-header .stage-header {
+                padding: 6px 3px;
+                font-size: 0.7em;
+            }
+            
+            .footer-header .stage-header {
+                font-size: 0.65em;
             }
         }
     </style>
