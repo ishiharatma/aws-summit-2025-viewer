@@ -1,4 +1,43 @@
-# AWS Summit 2025 Mini-Stage Schedule Viewer - 修正履歴
+# AWS Summit Japan 2025 Mini-Stage Schedule Viewer - 修正履歴
+
+## 2024-06-22
+
+### X投稿リンク機能の実装
+- sessions.jsonに`x_post`フィールドを追加（Community Stage登壇者向け）
+- セッション詳細モーダルの「Googleカレンダーに追加」ボタン右側にX投稿リンクを配置
+- `x_post`がある場合のみXロゴ付きボタンを表示する条件付き表示機能
+- 別ウィンドウでX投稿を開く機能（`target="_blank"`）
+- 複数発表者でも混乱しないセッション全体に関連する投稿として配置
+
+#### デザイン統一
+- **モダン版**: 黒背景ボタン + 白Xロゴ（logo-white.png）
+- **1990年代風版**: Windows 95風グレーボタン + 黒Xロゴ（logo-black.png）
+- **Claude版**: Windows 95風グレーボタン + 黒Xロゴ（logo-black.png）
+
+#### レスポンシブ対応
+- デスクトップ: 横並び表示（flex-direction: row）
+- モバイル: 縦並び表示（flex-direction: column）
+- スマホ表示でのボタンサイズ最適化（自然なサイズでGoogleカレンダーボタンと統一）
+
+### スマートフォンでのヘッダタイトル改行問題解決
+- Google Pixel 8等での「AWS Summit Japan 2025」タイトル2段表示を防止
+- `white-space: nowrap`で強制的に1行表示
+- 段階的フォントサイズ調整（768px以下: 1.8em/18px、480px以下: 1.4em/16px）
+- `letter-spacing`で文字間隔を最適化（-0.3px、-0.5px）
+- `overflow: hidden`と`text-overflow: ellipsis`で長すぎる場合の対応
+
+### 1990年代風トップへ戻るボタンのデザイン統一
+- 円形モダンボタンから1990年代風の角型ボタンに変更
+- Windows 95風のoutset/insetボーダー効果を追加
+- ボタンテキストを「↑」から「TOP」に変更
+- MS Sans Serifフォントで統一感を向上
+- モバイル版も同様に1990年代風デザインに調整
+
+### タイトル正式名称統一
+- 全HTMLファイルのtitleタグを「AWS Summit Japan 2025」の正式名称に変更
+- ヘッダーのh1タグも正式名称に統一
+- README.md、README.ja.mdも正式名称に更新
+- 公式イベント名との整合性を確保
 
 ## 2024-06-21
 
