@@ -589,6 +589,10 @@ body.footer-header-visible {
         padding: 5px 10px;
     }
     
+    .calendar-header, .calendar-body {
+        grid-template-columns: 60px repeat(3, 1fr);
+    }
+    
     .footer-header {
         grid-template-columns: 60px repeat(3, 1fr);
     }
