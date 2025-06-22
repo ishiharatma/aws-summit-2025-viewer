@@ -39,7 +39,9 @@ body {
 }
 
 .header-links a {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     background: rgba(255, 255, 255, 0.2);
     color: white;
     text-decoration: none;
@@ -53,11 +55,32 @@ body {
     flex-shrink: 0; /* 縮小を防ぐ */
 }
 
+/* リンクアイコンのスタイル */
+.link-icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
 .header-links a:hover {
     background: rgba(255, 255, 255, 0.3);
     border-color: rgba(255, 255, 255, 0.5);
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ハッシュタグリンクの特別スタイル */
+.hashtag-link {
+    background: #000000 !important;
+    color: white !important;
+    border-color: #000000 !important;
+    position: relative;
+}
+
+.hashtag-link:hover {
+    background: #1a1a1a !important;
+    color: white !important;
+    border-color: #1a1a1a !important;
 }
 
 .controls {
@@ -650,8 +673,17 @@ body.footer-header-visible {
     }
     
     .header-links a {
-        font-size: 0.7em; /* 更に小さく */
-        padding: 5px 10px;
+        font-size: 0.65em; /* 更に小さく */
+        padding: 4px 8px;
+    }
+    
+    .header-links {
+        gap: 4px; /* さらに狭く */
+    }
+    
+    .link-icon {
+        width: 12px;
+        height: 12px;
     }
     
     .calendar-header, .calendar-body {
