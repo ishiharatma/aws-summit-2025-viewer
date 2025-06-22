@@ -372,20 +372,21 @@
         "title": "“社内だけ”で完結していた私が、AWS Community Builder になるまで",
         "description": "かつては社外との接点もなく、情報発信にも自信がなかった私が、一歩を踏み出し、技術イベントへの参加や登壇、ブログでの発信などに挑戦。試行錯誤を重ねながら、AWS Community Builder として活動するようになるまでの実体験と、そこで得た学びをお話しします。",
         "speaker": "AWS Community Builder　五味なぎさ",
-        "x_post": "https://x.com/nagisa_gomi/status/1234567890"
+        "x_post": "https://x.com/nagisa_53/status/1935629413938561221"
       },
       {
         "time": "12:30 - 12:50",
         "title": "なんでも効率化！AWS Community Builder が伝える AWS Developer Tools の魅力",
         "description": "AWS の Developer Tools の種類や使い方は様々であり、設計、開発、テスト、レビュー、デプロイなどあらゆる工程の作業を効率化してくれます。AWS CDK、AWS CloudFormation、Amazon Q Developerなどの様々なDeveloper Tools の活用方法や効率化のための工夫の仕方を紹介。2025年のDevTools 領域の AWS Community Builder として AWS Developer Toolsの魅力を発信します。",
         "speaker": "AWS Community Builder　山本 直弥",
-        "x_post": "https://x.com/naoya_yamamoto/status/1234567891"
+        "x_post": "https://x.com/nananaonana7/status/1935621072168370494"
       },
       {
         "time": "13:00 - 13:20",
         "title": "2年でここまで成長！AWSで育てたAI Slack botの軌跡",
         "description": "2023年5月にAmazon EC2インスタンス上で産声を上げた、ENECHANGE社内向けAI Slack bot。この2年間で、Amazon ECSへの移行、KPIの可視化、Amazon Bedrockの活用、MCPへの対応など、さまざまな改善を経て大きく成長しました。AWSの各種サービスを組み合わせて改善を重ねた軌跡を振り返り、運用の工夫や学びを共有します。",
-        "speaker": "AWS Community Builder　岩本隆史"
+        "speaker": "AWS Community Builder　岩本隆史",
+        "x_post": "https://x.com/iwamot/status/1935621144473948213"
       },
       {
         "time": "13:30 - 13:50",
@@ -397,7 +398,8 @@
         "time": "14:00 - 14:25",
         "title": "組織のAWSセキュリティ対策方針を決めるためのAWS Security Hubカテゴライズ手法",
         "description": "AWSのセキュリティ対策にかかせないAWS Security Hubですが、特に組織全体でセキュリティ運用をしているとより苦労していませんか？組織内で適切な方針を定め、効率的かつ合理的なセキュリティ強化のためのカテゴライズ方法を紹介します。",
-        "speaker": "AWS HERO　臼田佳祐"
+        "speaker": "AWS HERO　臼田佳祐",
+        "x_post": "https://x.com/ke_ni_/status/1934495375177507127"
       },
       {
         "time": "14:30 - 14:55",
@@ -415,25 +417,29 @@
         "time": "15:30 - 15:55",
         "title": "AWS アーキテクチャー作図入門 2025年 Summer Ver.",
         "description": "AWSを用いたサービス設計の第一歩として欠かせない「AWSアーキテクチャー図」の作り方を解説します。2025年最新版のアイコンや構成トレンドを踏まえ、見やすく伝わる図を作成するための基本を紹介。設計意図を正しく伝えるための工夫や、よくある落とし穴もあわせて学べます。初学者の方から図の質を上げたい方まで振り返ることができる内容です。",
-        "speaker": "AWS HERO　松下 享平 (Max)"
+        "speaker": "AWS HERO　松下 享平 (Max)",
+        "x_post": "https://x.com/ma2shita/status/1934412447366139998"
       },
       {
         "time": "16:00 - 16:25",
         "title": "米国国防総省の DevSecOps ライフサイクルをAWSのセキュリティサービスとOSS で実現",
         "description": "米国国防総省（DoD）が策定した DevSecOps ライフサイクルではどのようなセキュリティプロセスが必要であるかの記述がされています。このセッションではセキュリティを取り入れた CI/CD パイプラインを 2025 年 6 月時点の AWS と OSS でどのように実現できるか、取り上げるサービスの紹介とともに解説します。",
-        "speaker": "AWS HERO　吉江 瞬"
+        "speaker": "AWS HERO　吉江 瞬",
+        "x_post": "https://x.com/Typhon666_death/status/1933079986124300676"
       },
       {
         "time": "16:30 - 16:55",
         "title": "Amazon ECS & AWS Fargate 運用アーキテクチャ 2025",
         "description": "Amazon ECSが登場し早10年が経過しましたが、その間非常に多くの機能追加がなされました。同時に周辺のAWSサービスも多数登場し、Amazon ECS & AWS Fargateを取り巻くワークロードの最適解がより複雑化しています。2025年、現在において非機能観点、特に優れた運用性における Amazon ECS & AWS Fargateのベストプラクティスはどのようなものが挙げられるのでしょうか？AWSコンテナヒーローが余すことなく、30分に凝縮してその内容をお伝えします。",
-        "speaker": "AWS HERO　新井雅也"
+        "speaker": "AWS HERO　新井雅也",
+        "x_post": "https://x.com/msy78/status/1930418392239919479"
       },
       {
         "time": "17:00 - 17:25",
         "title": "AWS Step Functions で挑むアプリケーションワークフロー自動化",
         "description": "AWS上でアプリケーションをデプロイすることはゴールではありません。実運用の現場では様々なオペレーションを自動化するニーズがあります。このセッションではAWS Step Functionsを活用し、安心・安全・高効率・低コストなオペレーションをサーバーレスで実現する実践的なTipsを紹介します。",
-        "speaker": "AWS HERO　松井 英俊"
+        "speaker": "AWS HERO　松井 英俊",
+        "x_post": "https://x.com/hide04241990/status/1933102234495242248"
       }
     ],
     "Day 2": [
@@ -447,43 +453,50 @@
         "time": "12:00 - 12:20",
         "title": "今なら Amazon ECS サービス間通信をどう選ぶか",
         "description": "AWS App Mesh のサポート終了が告知され、Amazon ECS のサービス間通信やアプリケーションの分割方法に悩んでいませんか？本セッションでは、Amazon VPC Lattice / Amazon ECS Service Connect / Application Load Balancer など5つの代表的な通信方法や「サービスメッシュを使わない」選択肢を多角的に比較し、選定時の判断軸をお伝えします。",
-        "speaker": "AWS Community Builder　菊池 哲哉"
+        "speaker": "AWS Community Builder　菊池 哲哉",
+        "x_post": "https://x.com/t_kikuc/status/1935657574772465722"
       },
       {
         "time": "12:30 - 12:50",
         "title": "AWS テクニカルサポートとエンドカスタマーの中間地点から見えるより良いサポートの活用方法",
         "description": "リセラーのテクニカルサポート部門に所属する立場から、AWS からの回答を引き出しにくいような質問や根本的な考え方を理解していれば質問する必要がなかったような問い合わせを一例として紹介します。 AWS として公開しているドキュメントや考え方を紹介し AWS のスタンスをあらかじめ理解しておくことで、より良いサポート体験が受けられる可能性を秘めていることを解説します。",
-        "speaker": "AWS Community Builder　市野 和明"
+        "speaker": "AWS Community Builder　市野 和明",
+        "x_post": "https://x.com/serverworks/status/1935642843881808221"
       },
       {
         "time": "13:00 - 13:20",
         "title": "Windows 11 で AWS Documentation MCP Server 接続実践",
         "description": "Mac 中心の記事が多い MCP Server ですが、Windows 11でも問題なく接続できます！WSL2 を活用した Linux 環境セットアップから、Visual Studio Code 設定、Windows 特有の接続のポイント、使い方など、実際の手順を解説します。Windows でもスムーズに AWS MCP Server に接続するための実践的なノウハウを共有し、Windows 開発者の皆さんをサポートします。",
-        "speaker": "AWS Community Builder　木谷 映見"
+        "speaker": "AWS Community Builder　木谷 映見",
+        "x_post": "https://x.com/shiranui_it/status/1935668275318579617"
       },
       {
         "time": "13:30 - 13:50",
         "title": "社内コミュニティによる企業文化創り ～MAWS-UGの挑戦とこれから～",
         "description": "JAWS-UG などのオープンなコミュニティが盛り上がりを見せている一方、いきなり知り合いゼロのコミュニティに参加するのはハードルが高いと感じる方も多いと思います。三菱電機では社内有志メンバーで MAWS-UG を創り、気軽に話ができる関係性を維持しながら、AWS 技術や事例のインプット/アウトプットの場を設けています。また、サイロ化された事業部門を超えたエンジニア同士の繋がりや、自部門にはいない社内ロールモデルやキャリアパスの発見など、伝統的な大企業の文化の変革として社内でも期待いただいています。本登壇では、これまでの MAWS-UG の歩みと今後の挑戦についてお話いたします。",
-        "speaker": "AWS Community Builder　小川 雄喜"
+        "speaker": "AWS Community Builder　小川 雄喜",
+        "x_post": "https://x.com/_YukiOgawa/status/1936444035398615189"
       },
       {
         "time": "14:00 - 14:25",
         "title": "AWS CDK 実践的アプローチN選",
         "description": "AWS CDKでインフラを構築する際、知っておくと役に立つTIPSがあります。それにより保守性や拡張性が向上したり、従来のIaCと比べて構築の幅が広がったりと、CDKがより一層便利になるでしょう。そんな実践的なアプローチを紹介します。",
-        "speaker": "AWS HERO　後藤 健太"
+        "speaker": "AWS HERO　後藤 健太",
+        "x_post": "https://x.com/365_step_tech/status/1934544377227178010"
       },
       {
         "time": "14:30 - 14:55",
         "title": "強化されたAmazon Location Serviceによる新機能と開発者体験",
         "description": "位置情報アプリケーション開発には、位置情報データの取り扱いやシステム設計など、専門知識が求められます。Amazon Location Serviceを利用することで、これらの複雑さを大幅に軽減できます。このセッションでは、その進化した新機能と活用方法について解説します。",
-        "speaker": "AWS HERO　桐本 靖規"
+        "speaker": "AWS HERO　桐本 靖規",
+        "x_post": "https://x.com/dayjournal_nori/status/1930040550914437644"
       },
       {
         "time": "15:00 - 15:25",
         "title": "AIエージェント最前線！ Amazon Bedrock、Amazon Q、そしてMCPを使いこなそう",
         "description": "今年注目のAIエージェント。AWSでは今、何をどこまで実現できるのか？Amazon Bedrockを使ったLLMアプリケーション開発や、Amazon Q Developerを使ったAIコーディング、そして話題のModel Context Protocolの活用方法まで、最新機能をわかりやすく整理して紹介します。",
-        "speaker": "AWS HERO　御田 稔"
+        "speaker": "AWS HERO　御田 稔",
+        "x_post": "https://x.com/minorun365/status/1929005365624226209"
       },
       {
         "time": "15:30 - 15:55",
