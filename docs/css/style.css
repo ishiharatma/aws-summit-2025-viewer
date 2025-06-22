@@ -35,7 +35,7 @@ body {
     display: flex;
     gap: 10px;
     justify-content: center;
-    flex-wrap: nowrap; /* 改行を防ぐ */
+    flex-wrap: wrap; /* 改行を許可 */
 }
 
 .header-links a {
@@ -679,6 +679,7 @@ body.footer-header-visible {
     
     .header-links {
         gap: 4px; /* さらに狭く */
+        flex-wrap: wrap; /* 改行を許可 */
     }
     
     .link-icon {

@@ -674,6 +674,7 @@ body.footer-header-visible {
     
     .header-links {
         gap: 4px;
+        flex-wrap: wrap; /* 改行を許可 */
     }
     
     .header-links a {
