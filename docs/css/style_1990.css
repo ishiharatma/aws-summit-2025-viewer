@@ -516,19 +516,23 @@ body {
             position: fixed;
             bottom: 30px;
             right: 30px;
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #232f3e, #4a5568); /* ヘッダーと同じグラデーション */
-            color: white;
-            border: none;
-            border-radius: 50%;
+            width: 60px;
+            height: 30px;
+            background: #c0c0c0;
+            color: #000000;
+            border: 2px outset #c0c0c0;
+            border-radius: 0;
             cursor: pointer;
-            font-size: 20px;
-            box-shadow: 0 4px 15px rgba(35, 47, 62, 0.3);
-            transition: all 0.3s ease;
+            font-size: 12px;
+            font-family: 'MS Sans Serif', 'Arial', sans-serif;
+            font-weight: bold;
+            text-align: center;
+            line-height: 26px;
+            transition: all 0.1s ease;
             opacity: 0;
             visibility: hidden;
-            z-index: 1000; /* モーダル(2000)より下層 */
+            z-index: 1000;
+            box-shadow: 1px 1px 0px #808080, 2px 2px 0px #404040;
         }
 
         .back-to-top.show {
@@ -537,9 +541,14 @@ body {
         }
 
         .back-to-top:hover {
-            background: linear-gradient(135deg, #4a5568, #232f3e); /* ホバー時は逆グラデーション */
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(35, 47, 62, 0.4);
+            background: #e0e0e0;
+            border: 2px inset #c0c0c0;
+        }
+
+        .back-to-top:active {
+            background: #a0a0a0;
+            border: 2px inset #c0c0c0;
+            box-shadow: inset 1px 1px 2px #808080;
         }
 
         /* フッターヘッダー表示時のトップに戻るボタン位置調整 */
@@ -606,9 +615,10 @@ body {
             .back-to-top {
                 bottom: 20px;
                 right: 20px;
-                width: 45px;
-                height: 45px;
-                font-size: 18px;
+                width: 50px;
+                height: 25px;
+                font-size: 10px;
+                line-height: 21px;
             }
             
             body.footer-header-visible .back-to-top {
