@@ -450,7 +450,9 @@ body {
     }
     
     .header h1 {
-        font-size: 20px;
+        font-size: 18px; /* 少し小さく */
+        white-space: nowrap; /* 改行を防ぐ */
+        letter-spacing: -0.3px; /* 文字間隔を少し狭く */
     }
     
     .header-links {
@@ -592,6 +594,14 @@ body.footer-header-visible {
 
 /* 小さなスマホ画面用の追加調整 */
 @media (max-width: 480px) {
+    .header h1 {
+        font-size: 16px; /* さらに小さく */
+        white-space: nowrap; /* 改行を防ぐ */
+        overflow: hidden; /* はみ出し部分を隠す */
+        text-overflow: ellipsis; /* 必要に応じて省略記号 */
+        letter-spacing: -0.5px; /* 文字間隔を狭く */
+    }
+    
     .header-links {
         gap: 6px;
     }
