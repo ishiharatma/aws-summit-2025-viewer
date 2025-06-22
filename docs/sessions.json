@@ -371,13 +371,15 @@
         "time": "12:00 - 12:20",
         "title": "“社内だけ”で完結していた私が、AWS Community Builder になるまで",
         "description": "かつては社外との接点もなく、情報発信にも自信がなかった私が、一歩を踏み出し、技術イベントへの参加や登壇、ブログでの発信などに挑戦。試行錯誤を重ねながら、AWS Community Builder として活動するようになるまでの実体験と、そこで得た学びをお話しします。",
-        "speaker": "AWS Community Builder　五味なぎさ"
+        "speaker": "AWS Community Builder　五味なぎさ",
+        "x_post": "https://x.com/nagisa_gomi/status/1234567890"
       },
       {
         "time": "12:30 - 12:50",
         "title": "なんでも効率化！AWS Community Builder が伝える AWS Developer Tools の魅力",
         "description": "AWS の Developer Tools の種類や使い方は様々であり、設計、開発、テスト、レビュー、デプロイなどあらゆる工程の作業を効率化してくれます。AWS CDK、AWS CloudFormation、Amazon Q Developerなどの様々なDeveloper Tools の活用方法や効率化のための工夫の仕方を紹介。2025年のDevTools 領域の AWS Community Builder として AWS Developer Toolsの魅力を発信します。",
-        "speaker": "AWS Community Builder　山本 直弥"
+        "speaker": "AWS Community Builder　山本 直弥",
+        "x_post": "https://x.com/naoya_yamamoto/status/1234567891"
       },
       {
         "time": "13:00 - 13:20",

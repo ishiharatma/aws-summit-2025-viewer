@@ -422,6 +422,43 @@ body {
     transform: translateY(-2px);
 }
 
+/* モーダルアクション */
+.modal-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.x-post-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #000000;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-size: 1em;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.x-post-btn:hover {
+    background: #1a1a1a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    text-decoration: none;
+    color: white;
+}
+
+.x-logo {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -462,6 +499,16 @@ body {
     .modal-content {
         width: 95%;
         margin: 10% auto;
+    }
+    
+    .modal-actions {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .x-post-btn {
+        width: 100%;
+        justify-content: center;
     }
     
     .header h1 {

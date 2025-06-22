@@ -221,6 +221,15 @@ function showSessionDetail(stage, time, day) {
         speakerElement.textContent = speakerText;
     }
     
+    // X投稿リンクの設定
+    const xPostLink = document.getElementById('x-post-link');
+    if (session.x_post) {
+        xPostLink.href = session.x_post;
+        xPostLink.style.display = 'inline-flex';
+    } else {
+        xPostLink.style.display = 'none';
+    }
+    
     // Googleカレンダー追加ボタンのイベント設定
     const addToCalendarBtn = document.getElementById('add-to-calendar');
     addToCalendarBtn.onclick = () => addToGoogleCalendar(session, day);
