@@ -168,7 +168,7 @@ body {
 
 .calendar-header {
     display: grid;
-    grid-template-columns: 100px repeat(3, 1fr);
+    grid-template-columns: 100px calc((100% - 100px) / 3) calc((100% - 100px) / 3) calc((100% - 100px) / 3);
     background: #008080;
     color: white;
     font-weight: bold;
@@ -179,13 +179,23 @@ body {
 .time-header, .stage-header {
     padding: 15px;
     text-align: center;
-    border-right: 2px solid #000000;
     background: #008080;
+    position: relative;
+}
+
+.time-header::after, .stage-header:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #000000;
 }
 
 .calendar-body {
     display: grid;
-    grid-template-columns: 100px repeat(3, 1fr);
+    grid-template-columns: 100px calc((100% - 100px) / 3) calc((100% - 100px) / 3) calc((100% - 100px) / 3);
     min-height: 600px;
     box-sizing: border-box;
 }
@@ -457,7 +467,7 @@ body {
             }
             
             .calendar-header, .calendar-body {
-                grid-template-columns: 80px repeat(3, 1fr);
+                grid-template-columns: 80px calc((100% - 80px) / 3) calc((100% - 80px) / 3) calc((100% - 80px) / 3);
             }
             
             .session-title {
@@ -544,7 +554,7 @@ body {
     left: 0;
     right: 0;
     display: grid;
-    grid-template-columns: 100px repeat(3, 1fr);
+    grid-template-columns: 100px calc((100% - 100px) / 3) calc((100% - 100px) / 3) calc((100% - 100px) / 3);
     background: #008080;
     color: white;
     font-weight: bold;
@@ -561,9 +571,20 @@ body {
 .footer-header .stage-header {
     padding: 15px;
     text-align: center;
-    border-right: 2px solid #000000;
     background: #008080;
     font-size: 0.9em;
+    position: relative;
+}
+
+.footer-header .time-header::after, 
+.footer-header .stage-header:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #000000;
 }
 
         /* フッターヘッダー表示時のボディ下部余白 */
@@ -574,7 +595,7 @@ body {
         /* レスポンシブ対応 - モバイルでの調整 */
         @media (max-width: 768px) {
             .footer-header {
-                grid-template-columns: 80px repeat(3, 1fr);
+                grid-template-columns: 80px calc((100% - 80px) / 3) calc((100% - 80px) / 3) calc((100% - 80px) / 3);
                 left: 0;
                 right: 0;
                 margin: 0;
@@ -616,11 +637,11 @@ body {
             }
             
             .calendar-header, .calendar-body {
-                grid-template-columns: 60px repeat(3, 1fr);
+                grid-template-columns: 60px calc((100% - 60px) / 3) calc((100% - 60px) / 3) calc((100% - 60px) / 3);
             }
             
             .footer-header {
-                grid-template-columns: 60px repeat(3, 1fr);
+                grid-template-columns: 60px calc((100% - 60px) / 3) calc((100% - 60px) / 3) calc((100% - 60px) / 3);
             }
             
             .footer-header .time-header,
