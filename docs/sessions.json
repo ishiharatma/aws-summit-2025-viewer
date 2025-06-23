@@ -365,7 +365,8 @@
         "time": "11:30 - 12:00",
         "title": "AWS コミュニティプログラムと日本のユーザーグループのご紹介",
         "description": "AWS は世界各国でユーザーコミュニティ支援を行なっています。日本には60以上のユーザーグループが活動し、100人以上のユーザーが AWS コミュニティビルダーとしてアウトプットを積極的に行ない、20人弱が AWS ヒーローとして影響力のある活動をしています。現状の日本の AWS コミュニティとその支援プログラムをご紹介します。",
-        "speaker": "AWS　沼口繁"
+        "speaker": "AWS　沼口繁",
+        "x_post": "https://x.com/numaguchi"
       },
       {
         "time": "12:00 - 12:20",
@@ -392,7 +393,8 @@
         "time": "13:30 - 13:50",
         "title": "あなたの AWS 学習を加速させる、コミュニティとの付き合い方",
         "description": "40代・メインフレーム担当だった私が、AWS コミュニティと出会い人生を変えた物語です。 閉塞感を感じていた私がなぜ学び続け、成長できたのか？その答えはコミュニティにありました。 本セッションでは、「もらう人」「参加する人」「与える人」へと進化する、私が実践した「コミュニティの歩き方」を3つのステップで具体的に紹介。技術習得に悩む方、コミュニティ参加をためらう方に、明日から踏み出す勇気とヒントを届けます。",
-        "speaker": "AWS Community Builder　上地 申吾"
+        "speaker": "AWS Community Builder　上地 申吾",
+        "x_post": "https://x.com/uechi405/status/1935611688826577189"
       },
       {
         "time": "14:00 - 14:25",
@@ -448,7 +450,8 @@
         "time": "11:30 - 12:00",
         "title": "AWS コミュニティプログラムと日本のユーザーグループのご紹介",
         "description": "AWS は世界各国でユーザーコミュニティ支援を行なっています。日本には60以上のユーザーグループが活動し、100人以上のユーザーが AWS コミュニティビルダーとしてアウトプットを積極的に行ない、20人弱が AWS ヒーローとして影響力のある活動をしています。現状の日本の AWS コミュニティとその支援プログラムをご紹介します。",
-        "speaker": "AWS　沼口繁"
+        "speaker": "AWS　沼口繁",
+        "x_post": "https://x.com/numaguchi"
       },
       {
         "time": "12:00 - 12:20",
@@ -503,13 +506,15 @@
         "time": "15:30 - 15:55",
         "title": "How Community Opened Global Doors",
         "description": "テクノロジーが進化しても、成長の鍵は「人」とのつながり。世界とつながるのは特別な人の特権ではありません。 日本と世界の仲間と築いた信頼から学んだヒントを共有します。",
-        "speaker": "AWS HERO　伊藤 博美"
+        "speaker": "AWS HERO　伊藤 博美",
+        "x_post": "https://x.com/hiro_baila"
       },
       {
         "time": "16:00 - 16:25",
         "title": "Amazon S3標準/S3 Tables/S3 Express One Zoneを使ったログ分析",
         "description": "Amazon S3には用途に応じて様々ストレージクラスが用意されています。Amazon Athena/Amazon OpenSearch Serviceを利用して、各Amazon S3ストレージクラスに対して分析した場合の違いや利用シーンについて紹介します",
-        "speaker": "AWS HERO　織田 繁"
+        "speaker": "AWS HERO　織田 繁",
+        "x_post": "https://x.com/OutputSeq"
       }
     ]
   }
