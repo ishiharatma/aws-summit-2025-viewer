@@ -399,7 +399,8 @@
         "title": "組織のAWSセキュリティ対策方針を決めるためのAWS Security Hubカテゴライズ手法",
         "description": "AWSのセキュリティ対策にかかせないAWS Security Hubですが、特に組織全体でセキュリティ運用をしているとより苦労していませんか？組織内で適切な方針を定め、効率的かつ合理的なセキュリティ強化のためのカテゴライズ方法を紹介します。",
         "speaker": "AWS HERO　臼田佳祐",
-        "x_post": "https://x.com/ke_ni_/status/1937515432765980767"
+        "x_post": "https://x.com/ke_ni_/status/1937736731224351168",
+        "document": "https://dev.classmethod.jp/articles/aws-security-hub-control-categorize/"
       },
       {
         "time": "14:30 - 14:55",
@@ -519,7 +520,8 @@
         "title": "How Community Opened Global Doors",
         "description": "テクノロジーが進化しても、成長の鍵は「人」とのつながり。世界とつながるのは特別な人の特権ではありません。 日本と世界の仲間と築いた信頼から学んだヒントを共有します。",
         "speaker": "AWS HERO　伊藤 博美",
-        "x_post": "https://x.com/hiro_baila/status/1937514457594577090"
+        "x_post": "https://x.com/hiro_baila/status/1937514457594577090",
+        "document": "https://x.com/hiro_baila/status/1938848246459498838"
       },
       {
         "time": "16:00 - 16:25",
