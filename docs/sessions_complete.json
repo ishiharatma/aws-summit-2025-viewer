@@ -1,0 +1,1533 @@
+{
+  "event": {
+    "name": "AWS Summit Japan 2025",
+    "date": "2025年6月25日（水）- 6月26日（木）",
+    "venue": "幕張メッセ",
+    "total_sessions": 168
+  },
+  "session_categories": {
+    "keynote_sessions": {
+      "count": 2,
+      "description": "基調講演",
+      "directory": null
+    },
+    "aws_sessions": {
+      "count": 72,
+      "description": "AWSセッション（AA-*, AWS-*）",
+      "directory": "aws_p/"
+    },
+    "partner_sessions": {
+      "count": 43,
+      "description": "パートナーセッション（AP-*）",
+      "directory": "partner_p/"
+    },
+    "customer_sessions": {
+      "count": 51,
+      "description": "CUSセッション（CUS-01 ～ CUS-52）",
+      "directory": null
+    }
+  },
+  "keynote_sessions": [
+    {
+      "id": "KEY-01",
+      "title": "基調講演 ビルダーと描く新たな価値創造",
+      "description": "AWS は、ビジネスや社会の課題に挑戦するビルダーの大胆なビジョンの実行、実現に伴走します。基調講演では日本のお客様の成長と社会課題の解決のために AWS が進める取り組みと、最もセキュアで日本のお客様にお応えする品質を備えたクラウドサービスの進化をご紹介します。また、実際に AWS を活用して課題を克服し新たな可能性を見出しているお客様に、先進的なお取り組みを紹介いただきます。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": null,
+      "download_url": null,
+      "session_url": "https://summitjapan.awslivestream.com/key-01/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "SP-01",
+      "title": "スペシャルセッション ビルダーのための AWS テクノロジー：その深化と進化",
+      "description": "AWS のサービスは、Amazon のビジネス課題を起点に生まれ、インフラを支える革新的な技術の「深化」と、お客様からいただくご要望に基づくサービスの「進化」を続けてきました。このセッションでは、AWS がインフラ領域において重ねてきた技術革新を掘り下げ、なぜ「ビルダーが描く価値創造」をセキュアかつスピーディに実現できるのか、その背景を紐解きます。さらに、AWS を活用して変革を実現されてきたお客様のお取組みと、お客様の声から生まれた最新のサービスをご紹介します 。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": null,
+      "download_url": null,
+      "session_url": "https://summitjapan.awslivestream.com/sp-01/live/",
+      "show_completed_as_vod": true
+    }
+  ],
+  "aws_sessions": [
+    {
+      "id": "AA-01",
+      "title": "実践的な生成 AI 活用の推進: PoC から価値創出へ",
+      "description": "Bundesliga や Trellix のように、多くのグローバル企業は生成 AI を本格的に活用し、イノベーションの加速、生産性の向上、コスト削減などのビジネス成果を生み出しています。AWS は、トレーニング、専門家による支援、包括的な生成 AI ソリューションを提供することによって、お客様が素早くアプリケーションを本番稼働へ移行し、安心して拡張できるよう支援しています。本セッションでは、お客様が生成 AI でビジネス価値を創出するための勘所と、AWS がどのように貢献できるかについて解説します。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AA-01.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AA-01_AI_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aa-01/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AA-02",
+      "title": "AWS クラウドインフラで制限のないシステムを実現する",
+      "description": "AWS は、高性能で低コスト、そして無制限にスケール可能な安全で信頼性の高いインフラストラクチャを提供しています。シリコンレベルからグローバルなデータセンターまでのイノベーションを通じて、組織固有の要件に合わせた技術選択を可能にし、イノベーションの加速、効率性の向上、そしてグローバル展開まで支援します。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AA-02.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AA-02_Cloud-Infrastructure_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aa-02/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AA-03",
+      "title": "企業内に分散したデータの分析と AI 活用を推進する：AWS で実現するデータ活用の民主化",
+      "description": "AI 技術の普及により分析（アナリティクス）と AI の境界がなくなりつつあり、両技術またがった活用が企業成長の鍵になっています。一方で企業内には多くのシステムが組織ごとに構築されており、データの分断（サイロ化）、運用負担の増加が課題になっています。これらの課題に対応するため、AWS では 次世代の Amazon SageMaker をリリースしました。これは企業内に散らばったデータを統合的に管理できる仕組みと、統合された分析 ＆ AI 環境を用意することで、データサイエンティスト、アナリスト、基盤エンジニアがシームレスに協働できる環境を提供するものです。本講演では、今後の AWS AI & アナリティクスサービスの中心である 次世代の Amazon SageMaker がこれらの課題にどのように対応し、解決するかをご説明します。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AA-03.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AA-03_Data_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aa-03/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AA-04",
+      "title": "AWS で実現する包括的セキュリティ: 開発から本番環境まで",
+      "description": "本セッションでは、開発環境から本番環境に至るまで、クラウドによりセキュリティを強化する方法をご紹介します。識別、予防、検知、対応、是正といった AWS の包括的なセキュリティアプローチについて解説し、環境全体にセキュリティ・バイ・デザインの原則を組み込む方法や、高度な検知・対応機能の活用方法をご説明します。また、生成 AI を活用したセキュリティ分析の強化や運用の自動化についても解説します。本セッションを通じて、進化し続ける脅威に対応可能なレジリエントなアーキテクチャの構築についての理解を深め、より安全でスケーラブルなクラウド環境を実現する方法を学ぶことができます。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AA-04.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AA-04_Security_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aa-04/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AA-05",
+      "title": "AWS への移行とモダナイゼーションで加速するビジネス変革",
+      "description": "AWS は、レガシーシステムの価値を最大化しながら、クラウドへの移行とモダナイゼーションを加速するための包括的なソリューションを提供しています。本セッションでは、AI を活用したディスカバリーツールから自動リファクタリングソリューションまで、最先端のサービスをご紹介します。業界リーダー企業がこれらのツールを活用してコスト削減、ライセンス問題の解決、イノベーションの加速を実現した事例とともに、組織のクラウド変革を推進するための実践的な戦略をお伝えします。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AA-05.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AA-05_Migration_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aa-05/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-01",
+      "title": "外部ネットワークとクラウドのつなぎ方 再入門",
+      "description": "外部ネットワークと AWS クラウドの接続方式は、新サービスや機能の追加により多様化しています。国内オンプレミスとの接続ひとつとっても、大阪リージョン初の AWS Direct Connect ロケーションが 2024 年末に提供開始され、ロケーション選択をどう考えるか等、検討すべき内容は増えています。本セッションでは、これからクラウド接続を検討することになった方の『最初に何から始めればいいの？』という疑問はもちろん、既にクラウドに接続したシステムを担当している方の『自社のネットワーク、このままで良いの？』という疑問にも寄りそいます。用するシステム特性を踏まえたサービス選定のヒントと、ネットワーク構成の具体的なチェックポイントをお伝えします。実際にネットワークの検討・設計をしている方だけでなく、AWS のネットワークサービスを学びたい方も、全体像を把握する機会としてご活用いただけます。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-01.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-01_Networking_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-01/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-02",
+      "title": "クラウド環境への移行課題、AWS のハイブリッドクラウドサービスが解決できるかも",
+      "description": "クラウドへのマイグレーションは加速していますが、依然として多くのワークロードはお客様環境で運用されています。お客様は様々なワークロードをお持ちで、データレジデンシー要件や利用するネットワーク環境の要件よっては、単純にクラウドへ移行できない物もあります。AWS ハイブリッドクラウドサービスはクラウドからエッジまでシームレスにクラウドサービスを提供することで、お客様が利用したいサイトへクラウド環境を提供します。これによりどのような課題を解決するか、また具体的にどのように移行するかを解説します。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-02.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-02_Computing_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-02/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-03",
+      "title": "進化する Amazon EC2 ～ AWS Nitro システムと独自プロセッサがもたらす価値とコスト効率",
+      "description": "Amazon Elastic Compute Cloud (EC2) は、インフラストラクチャからプロセッサに至るまで進化を続けています。AWS Nitro システム、AWS Graviton4 や AWS Trainium2 といった独自プロセッサは、お客様に新たな選択肢を提供しています。コストと性能の両立・最適化にお悩みの方、EC2 を支える最新技術の知見をお求めの方に向けて、本セッションでは、基盤技術や独自プロセッサの特長について、詳しく解説します。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-03.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-03_Computing_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-03/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-04",
+      "title": "Amazon S3 によるデータレイク構築と最適化",
+      "description": "データレイクの構築において、Amazon S3 の特性を理解することは欠かせません。Amazon S3 にデータを収集できても、その先の効果的な運用管理に課題を感じている方も多いのではないでしょうか？本セッションでは、架空の E コマース企業を例として、データレイクの構築から効果的な運用に至るまでのロードマップを具体的に示します。データレイクの構築要素の中心となる Amazon S3 の特性を踏まえ、セキュリティとガバナンス、クエリパフォーマンス改善やデータ品質管理を容易にするために有効活用できるサービスと方法について学ぶことができます。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-04.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-04_Storage_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-04/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-05",
+      "title": "クラウドストレージのコスト最適化戦略 - AWS ストレージの賢い活用法",
+      "description": "AWS ストレージは、データ保存の柔軟性と拡張性を提供しますが、適切な設計とモニタリングがなされない場合、意図したコスト構造とならない可能性があります。本セッションでは、AWS のオブジェクトストレージ (Amazon S3) とブロックストレージ (Amazon EBS) に焦点を当て、サービスの紹介と料金モデルから始まり、コスト最適化の実践的なアプローチ、機能、モニタリング方法を紹介します。このセッションを通じて、クラウドストレージのコストの実践的な知見を得ることができ、利用者自身でコスト最適化が実施できるようにしていただけることを目標とします。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-05.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-05_Storage_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-05/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-06",
+      "title": "組織全体で AWS コスト最適化を加速する",
+      "description": "組織における AWS コスト最適化には「リーダー」が必要です。リーダーはコスト最適化活動の推進役であり、活動のためには、コストや最適化余地の可視化と、具体的な実行手段、そして継続的に活動を維持するための KPI 設定と効果測定が不可欠です。本セッションでは、Cloud Intelligence Dashboards によって状況を可視化し、Cost Optimization Hub で最適化余地・実行方法を特定する方法を解説します。さらに、コスト最適化活動を継続するアイディアとして、KPI の設定とダッシュボードを使う方法をご紹介します。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-06.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-06_Cost-Optimization_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-06/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-07",
+      "title": "オラクルデータベースマイグレーションジャーニー",
+      "description": "AWS re:Invent 2024 で発表された Oracle Database@AWS は、今後 Oracle Database の有力な移行先になる一方で、AWS は他にも様々なデータベースサービスを提供しています。本セッションでは、Oracle Database の移行を検討されているお客様のマイグレーションの検討方法やマイグレーション先の選択肢、AWS が提供している移行ツール、および Oracle Database@AWS に関する最新情報をお届けします。オンプレミスの Oracle Database のマイグレーション検討にご活用ください。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-07.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-07_Databases_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-07/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-08",
+      "title": "生成 AI のためのデータ活用実践ガイド",
+      "description": "生成 AI におけるデータの適切な活用は企業の競争力を左右する重要な要素となっています。本セッションでは、Retrieval Augmented Generation (RAG) の実践的な実装方法と、効果的なデータ基盤の構築について掘り下げていきます。システムが適切な回答を提供するために、ユーザーの状況を理解し、関連する情報を正確に取得する手法を解説します。また、データの前処理から分割手法、ベクトルデータベースの選択基準まで、実装に必要な具体的な手順を、実際のユースケースを用いて解説していきます。さらに、データの品質管理とガバナンスの重要性にも触れ、RAG システムを本番環境で運用する際の実践的なアプローチについても共有します。基本的な実装から高度な手法まで解説することで、参加者の皆様は生成 AI システムにおけるデータ戦略の重要性と実践的な実装方法について理解いただくことができます。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-08.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-08_AI_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-08/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-09",
+      "title": "生成 AI を活用したデータベースのスキーマ変換で移行を加速しよう : AWS Database Migration Service Schema Conversion",
+      "description": "AWS Database Migration Service (DMS) は、データベースと分析ワークロードを AWS に迅速、安全に、最小限のダウンタイムとデータ損失なしで移行するマネージドサービス。Amazon Bedrock で生成 AI を使用して、スキーマ変換の自動化を改善しており、これにより手作業や運用負荷が軽減され、Amazon Aurora や Amazon RDS などの完全マネージド型サービスへの移行が加速されます。このセッションでは、AWS がどのように生成 AI でデータベースの移行を変革しているか、生成 AI を使ったスキーマ変換の設計を Deep Dive します。\n*本セッションはタイトルの変更を行いましたが内容に変更はありません（旧：生成 AI を活用した AWS Database Migration Service スキーマ変換により移行を加速しよう）",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-09.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-09_Databases_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-09/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-10",
+      "title": "明日から実践できる AWS でのオブザーバビリティ革新 - Amazon CloudWatch Application Signals と OpenTelemetry で実現する次世代オブザーバビリティ",
+      "description": "「アプリケーションの性能低下の原因がわからない」「マイクロサービス間の問題箇所の特定に時間がかかる」―こうした運用現場での課題に対して、Amazon CloudWatch Application Signals と OpenTelemetry の組み合わせが新たな解決策を提供します。本セッションでは、CloudWatch Application Signals を活用した実践的なオブザーバビリティの実現方法について解説します。具体的には、Application Signals の特長である SLO モニタリングの実装からインシデントの早期発見方法、OpenTelemetry による分散トレースを活用したボトルネックの特定について紹介します。さらに、ゼロコード計装による開発者の負担軽減といった実務で活用できる具体的な実装手法を説明します。これからオブザーバビリティを導入したい方はもちろん、既存のモニタリングを改善したいエンジニアの方にも最適です。AWS 環境での運用効率を向上させる実践的なテクニックと、次世代のオブザーバビリティプラットフォームの活用方法を習得していただけます。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-10.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-10_Cloud-Operations_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-10/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-11",
+      "title": "AWS 環境におけるサイバーレジリエンスの実現 ～ DDoS 攻撃とランサムウェアへの防御戦略 ～",
+      "description": "ミッションクリティカルなワークロードのクラウド移行が進む中、事業継続性を確保するためには、AWS 環境における DDoS 攻撃やランサムウェア攻撃への対策が不可欠となっています。本セッションでは、AWS 環境において DDoS 耐性を強化するベストプラクティスや、ランサムウェア対策として有効な予防策、効果的な検知の仕組み、インシデント発生時の影響を最小限に抑えるための対応・復旧方法について解説します。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-11.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-11_Security_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-11/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-12",
+      "title": "AWS Security Incident Response を活用したインシデント対応",
+      "description": "AWS Security Incident Response は、セキュリティインシデントへの迅速な対応と復旧を支援する新しいサービスです。このサービスを活用いただくことで Amazon GuardDuty やその他の検出サービスから検出された脅威を優先順位付けし、対応を調整および自動化することができます。複雑なインシデントに対しては、24 時間 365 日、いつでも AWS セキュリティ専門家に直接お問い合わせいただくことができます。本セッションではこのサービスを活用してインシデント対応を効率化する方法を解説します。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-12.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-12_Security_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-12/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-13",
+      "title": "データと AI を統合する Amazon SageMaker Unified Studio の世界",
+      "description": "AI に注目が集まる昨今、データの重要性はかつてないほどに高まっています。しかし多くの組織では、複数の環境を使い分けながらデータと AI を連携させる必要があり、開発や運用の効率化、そしてチーム間のコラボレーションが課題となっています。このような課題に応えるべく、データと AI をつなぐサービスとして登場した新しいサービスが Amazon SageMaker Unified Studio です。本セッションでは、SageMaker Unified Studio を用いて、統一的なインターフェースから AWS の幅広い分析・ AI サービスを利用して、データベースやデータウェアハウス、データレイクのデータを処理、分析し、AI アプリケーションに活用する方法を、デモを交えてご紹介します。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-13.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-13_Data_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-13/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-14",
+      "title": "これからのデータ活用を支える、Amazon QuickSight の進化と革新",
+      "description": "膨大なデータからいかに効果的に、実用的なインサイトを得るか...多くのデータ主導型の意思決定を目指す企業が頭を悩ませておられます。生成 AI が組み込まれた Amazon Q in QuickSight を利用することで、より迅速なインサイト取得とより深いデータ理解を実現できます。本セッションでは、Amazon QuickSight の代表的なユースケースであるダッシュボード作成、ピクセルパーフェクトレポート、埋め込みに関連したアップデートと、Amazon Q in QuickSight のアップデートがビジネスアナリストやビジネスユーザーのデータドリブンな意思決定をさらに強化するユースケースをまとめてご紹介し、Amazon QuickSight がこれからのデータ分析にどのように貢献するかをご説明します。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-14.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-14_Data_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-14/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-15",
+      "title": "Amazon Connect で実現するカスタマーセルフサービスの新しいカタチ",
+      "description": "多くの企業が、AI を活用したパーソナライズされたセルフサービス型カスタマーサービスの実現を目指しています。しかし、その構築には専門的な知識やリソースを必要とし、複数のツールの作成・管理・統合が大きな課題となっています。Amazon Connect の最新機能により、音声やデジタルチャネルにおけるボットの作成・管理が、Amazon Connect 内で直接行えるようになりました。さらに、Amazon Q in Connect を活用することで、複雑な開発作業なしで生成 AI 搭載のカスタマーサービスを実現できます。本セッションでは、これらの新機能の活用方法と、サービス品質を最適化するための分析機能について、実際の事例を交えながらご紹介します。わずか数回のクリックで実現できる、次世代のカスタマーサービス構築についてご説明いたします。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-15.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-15_Business-Applications_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-15/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-16",
+      "title": "AWS Amplify で加速する生成 AI アプリケーション開発",
+      "description": "生成 AI はフルスタック開発を大きく変革しています。このセッションでは、新しく一般提供を開始した Amplify AI Kit を中心に、Amazon Q Developer、Amazon Bedrock がどのように連携して生成 AI アプリケーションの構築を効率化するかをご紹介します。クラウドアーキテクチャや機械学習の専門知識がなくても、インテリジェントな検索、要約、コンテンツ生成、インタラクティブなチャットボットなどの AI 機能を簡単に実装できる方法を動画を交えてご覧いただけます。また、Amazon Q Developer と AWS Amplify Gen 2 の組み合わせによる開発プロセスの効率化についても解説します。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-16.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-16_Development_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-16/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-17",
+      "title": "セキュアなソフトウェア開発ライフサイクルのための生成 AI",
+      "description": "近年、開発の現場ではセキュリティに対する意識が高まっています。しかし実際にソフトウェア開発ライフサイクル (SDLC) に、開発者の負担なく、開発サイクルの効率を落とさず、セキュリティを組み込むにはどうすればよいでしょうか。このセッションでは、Amazon Q Developer、Amazon CodeGuru、Amazon Inspector といったサービスをシームレスに SDLC に統合する方法を示します。そして SDLC を通じて脆弱性を開発の中で事前に特定して軽減し、コードから本番環境まで堅牢なセキュリティを確保する方法を学びます。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-17.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-17_Development_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-17/live/",
+      "show_completed_as_vod": false
+    },
+    {
+      "id": "AWS-18",
+      "title": "MLOps (機械学習オペレーション) 入門",
+      "description": "機械学習システムの開発・運用を効率化したいと考えていませんか? このセッションでは、機械学習モデルの構築、トレーニング、デプロイに DevOps のプラクティスを導入し、機械学習システムの開発・導入を効率化する MLOps (機械学習オペレーション) について紹介します。MLOps の基礎から AWS での MLOps の実践方法について解説し、組織に段階的に MLOps を導入するためのプラクティスを紹介します。機械学習システムの新規導入や、既存システムの運用改善を検討されている方に向けた MLOps の入門セッションです。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-18.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-18_AI_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-18/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-19",
+      "title": "AWS で生成 AI アプリケーションを構築する時に役立つサービスと組み立て方を学ぼう",
+      "description": "生成 AI 活用の機運が続く中、なかなか踏み出せないお客様も多いと認識しています。IPA の DX 動向 2024 年では、活用検討中以上の回答が従業員数 1,000 名を境に 2 倍近い差があり、特に中小企業での活用が進んでいないことがうかがえます。本セッションでは、生成 AI の活用に慎重あるいは制約があるお客様に向けて生成 AI アプリケーションのユースケースを 3 つに絞り、個々の AWS サービスとその組み立てにより懸念を解消する方法をお伝えします。慎重な生成 AI 活用を AWS がどのように支援できるか、アセットやプログラム、また国内お客様事例を交え解説します。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-19.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-19_AI_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-19/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-20",
+      "title": "Amazon Nova 入門 ～ Amazon Nova で広がるマルチモーダル生成 AI の可能性～",
+      "description": "Amazon Bedrock から利用できる Amazon Nova は、最先端の知性と業界トップクラスの料金パフォーマンスを実現する新世代の生成 AI 基盤モデルです。Amazon Nova モデル群は、テキスト、画像、動画の解釈や、画像や動画の生成など幅広い機能を備え、ビジネスの様々な場面で活躍できます。このセッションでは、Amazon Nova が広げる生成 AI 活用場面の可能性を、基本的な特徴や長所、実際の活用事例を交えて紹介します。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-20.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-20_AI_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-20/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-21",
+      "title": "AWS による生成 AI のセキュリティアプローチ",
+      "description": "AWS はお客様のワークロードのセキュリティと機密性の保護を最優先事項としており、AI インフラストラクチャとサービスには包括的なセキュリティ機能が組み込まれています。その中でも生成 AI スタックは3つの層、（1）AWS Nitro System や Nitro Enclaves による堅牢な基盤インフラストラクチャ、（2）Amazon Bedrock を中心としたセキュアなツール層、（3）Amazon Q Business に代表されるエンタープライズアプリケーション層で構成されています。本セッションでは、各レイヤーにおいて企業の機密データを保護するためのセキュリティテクノロジーについて解説します。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-21.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-21_AI_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-21/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-22",
+      "title": "Amazon の事例から学ぶ生成 AI の実践的な活用と実装アプローチ",
+      "description": "Amazon において生成 AI は様々な領域で活用されています。本セッションでは、Amazon のデジタル広告プラットフォームである Amazon Ads での実践的な活用事例をご紹介します。Amazon Ads は、あらゆる規模のブランドがお客様と効果的に繋がれるよう、生成 AI を活用した画像生成ツールや動画生成ツールを開発し、広告制作プロセスの革新を進めてきました。これらの生成 AI ソリューションの開発背景や過程、AWS サービスを活用した実装方法、アーキテクチャなどの技術的な詳細をご紹介します。本セッションを通じて、生成 AI による広告制作の革新と AWS プラットフォーム上での実装について実践的な知見を得ることができます。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-22.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-22_AI_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-22/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-23",
+      "title": "Amazon Bedrock によるコスト最適化とスケーラブルなエンタープライズワークロードの実現",
+      "description": "企業の 80% 以上が生成 AI に投資する一方で、本番環境での運用は 24% に留まっています。その原因として、コストが見えない、パフォーマンスが不足しているなどの課題が挙げられています。本セッションでは、Amazon Bedrock を活用することでコスト、パフォーマンス最適化、ガバナンスに配慮した、エンタープライズレベルの生成 AI ワークロード実装方法を紹介します。特に Bedrock で提供している Inference Profile、Cross-Region Inference、各種消費オプションなど、具体的な機能の活用方法についても解説します。生成 AI 導入を検討している技術リーダーやアーキテクトの方々向けのセッションです。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-23.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-23_AI_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-23/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-24",
+      "title": "GPU 以外の選択肢！開発チームが徹底解説、効率的な AI 基盤の作り方",
+      "description": "AWS では低コストで高性能、電力効率の高い AI 基盤を実現するためのインフラ技術として、AI アクセラレータチップ AWS Trainium、Inferentia を自社開発してきました。本セッションでは、昨年末に一般公開開始した最新の Trainium2 搭載 Amazon EC2 Trn2 インスタンスから AWS Trn2 UltraServers、AWS 世界最大規模の学習環境となる Project Rainier まで、AWS のカスタムシリコン戦略の全容をご紹介します。セッション後半では、大規模言語モデル Claude を提供している Anthropic 社や、Alexa、Rufus といった Amazon の各種サービスなど、AWS Trainium/Inferentia を活用頂いているお客様の事例をご紹介するとともに、より実践的な内容として、日本語 OSS モデルを利用した推論サーバーの構築手順と TIPS について解説致します。本セッションは、大規模言語モデルの学習・推論環境の構築を検討されている方々、特にインフラコストの最適化に課題をお持ちの方に役立つ内容となっています。\n*本セッションはタイトルの変更を行いましたが内容に変更はありません（旧：AWS Trainium/Inferentia 実践ガイド：AWS カスタムシリコンで実現する持続可能な AI 基盤）",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-24.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-24_AI_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-24/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-25",
+      "title": "AWS 人材育成支援メニューの変遷とベストプラクティス",
+      "description": "クラスルームトレーニングから始まり、デジタルラーニングプラットフォームである AWS Skill Builder、応用力/実践力を身に着けるための AWS Jam、そして EST（Enterprise Skills Transformation）と呼ばれる伴走支援コンサルティングサービスまで、近年大きくベンダートレーニングの有り様が変わりました。人材育成のベストプラクティスになり得る事例をベースに、各支援メニューの使いどころをお伝えします。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-25.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-25_TC_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-25/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-26",
+      "title": "AWS 認定を活用して AI / ML / データ分析 キャリアを進もう！",
+      "description": "このセッションでは、AWS 認定を取得することが、AI / ML / データ分析分野へのキャリアにどのように役立つかをご紹介します。さまざまな業界で AI / ML / データ分析を理解している、実施できる人材の重要性が高まっています。AI / ML / データ分析分野に詳しくない方でも、AWS 認定を通じてこれらの分野の知識とスキルを習得することで、将来のキャリアをどのように形成できるかをお話しします。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-26.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-26_TC_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-26/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-27",
+      "title": "デモで学ぶ！Amazon Q Developer エージェントで実現する開発効率化",
+      "description": "AI エージェントを活用してソフトウェア開発を効率化しませんか？本セッションでは、デモを通じて Amazon Q Developer エージェントの 4 つの機能 （/dev、/test、/doc、/review） を学びます。これらのエージェントは、開発者の作業を支援し、開発サイクルを大幅に効率化します。機能実装のサポート、ユニットテストの自動生成、ソースコードからのドキュメント作成、そしてコードレビューまで、各エージェントの活用方法をデモを交えて解説します。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-27.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-27_Development_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-27/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-28",
+      "title": "AWS Transform for .NET で加速する Windows から Linux への .NET アプリのモダナイゼーション",
+      "description": ".NET アプリケーションを Windows から Linux に移行する際の複雑さやコストへの懸念を、生成 AI が解決します。 このセッションでは Amazon Q Developer のコード変換機能によって、依存関係の分析やバージョンアップグレードなどの .NET のモダナイゼーションを自動化し、コストを最大 40% 削減する方法をご紹介します。.NET アプリケーションを Windows から Linux に迅速に移行することで、セキュリティ問題、ライセンスコストの上昇、スケーリングに関する課題から解放する方法を探ります。また、チームがビジネス価値をもたらす主要な機能の開発に集中できるようにするための方法をご紹介します。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-28.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-28_Migration_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-28/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-29",
+      "title": "VMware ワークロードを AWS に。既存環境を活かして迅速に移行できる新たな選択肢",
+      "description": "VMware ワークロードを取り巻く市場の変化に伴い、AWS への移行ニーズが高まる一方で、VMware の環境に中長期的に留まる選択をされるお客様も多くいます。そうした中で、データセンターのクローズが迫っているためできるだけ迅速かつダウンタイムを最小化してクラウドに移行したい、古い OS をそのまま移行したい、IP アドレスを変更せずに移行したいー。こうしたお客様の課題を解決する新サービスである Amazon Elastic VMware Service (Amazon EVS) をご紹介します。本セッションでは、実際のデモを交えながら、既存の VMware の知見やツールをそのまま活用しつつクラウドのメリットを享受する方法をご説明いたします。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-29.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-29_Migration_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-29/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-30",
+      "title": "VMware ワークロードをクラウドネイティブへ：生成 AI が実現する次世代のモダナイゼーション",
+      "description": "新しい AWS Transform の変換機能が VMware 環境から AWS への最新化と移行をどのように簡素化し自動化できるかについて学ぶ準備はできていますか？このセッションでは、AWS Transform for VMware が発見、計画、 Amazon EC2 でのデプロイメントまで、変換プロジェクトを加速する方法を紹介します。生成 AI 駆動の機能が、VMware の AWS への移行を数ヶ月で効率化することで、スケーリングとイノベーションをどのように支援するかを学びます。最新化チームが差別化されない重労働を削減し、生産性を向上させ、ビジネス価値をより迅速に提供する方法について洞察を得ることができます。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-30.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-30_Migration_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-30/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-31",
+      "title": "AWS で実現する患者中心の医療サービス変革 ～デジタルトランスフォーメーションによる新たな医療の未来～",
+      "description": "医療・製薬業界における Patient Journey に焦点を当て、患者中心の医療サービスの提供において、AWS がどのように貢献できるかをご紹介します。認知・情報収集から診断・治療、そして継続的な支援に至るまでの各フェーズで、AWS の提供する様々なサービスやソリューションの活用事例をお話しします。さらに、医療・製薬分野におけるデジタルトランスフォーメーションの将来像についても展望を示します。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-31.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-31_HCLS_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-31/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-32",
+      "title": "データによる製造業デジタル変革の実践",
+      "description": "製造業におけるデータ活用の壁は、「作成」「取得」「利用」の 3 つの段階で生じています。具体的には、設計時の CAD データや手順書などの作成段階、製造ラインのセンサー情報や市場の製品からの取得段階、そして分析・予測への利用段階です。これら各段階で発生する課題が、スピードや活用の範囲、生み出される価値を損なっています。本セッションでは、設計から保守までの製品ライフサイクル全体を通じて、断片化したデータを有機的につなぎ、実践的な価値を引き出すアプローチをご紹介します。HPC を活用した設計データ開発の加速、IoT を活用したデータの取得、AI アシスタント実装による改善など、業務改革に実践可能な方法論をお伝えします。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-32.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-32_MFG_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-32/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-33",
+      "title": "顧客データに関わるエンジニアの方、全員必見！“明日から使える” Customer 360 x AI の実践アーキテクチャー",
+      "description": "多くの企業の重要課題である顧客データの統合、どこからどう手をつけるべきなのか。内製するのか SaaS を使うのか？サイロ化され散在するデータ、鮮度の低いレコメンデーション、検証止まりの AI プロジェクト...。本セッションでは、顧客データの統合の課題を解決するための Customer 360 の実践的アプローチをご紹介します。Clickstream によるリアルタイム顧客分析から、重複顧客プロファイルの統合、AI ・機械学習によるリアルタイムの顧客エンゲージメントまで。セキュリティとコスト最適化に配慮した実装パターンをデモを交えながら具体的に説明します。明日からのデータ戦略転換に直接活かせる設計手法と実装のノウハウをお持ち帰りください！",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-33.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-33_Retail-CPG_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-33/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-34",
+      "title": "コールセンターだけじゃない！エネルギー業界に学ぶ、Amazon Connect の活用パターン",
+      "description": "Amazon Connect は手軽にスケーラブルなクラウドコンタクトセンターを構築できるサービスですが、実はエネルギー業界の様々な業務局面での活用が可能です。本セッションでは、AI 活用によりエージェントの生産性を最大限に引き出す仕掛けや、突発的な災害時の迅速な受付、遠隔地の設備拠点で生じたトラブルをトリガーにしたオンコール対応、電力容量市場でのデマンドレスポンスへの迅速な応動手段としての利用など、通常の「コールセンター」とはちょっと違った使いこなしパターンをご紹介します。他の製造業やインフラ事業者様にも応用可能な、運用現場の DX 推進に向けた知見にご期待ください。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-34.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-34_Energy_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-34/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-35",
+      "title": "法務が語る！AWS の生成 AI サービスの利用",
+      "description": "生成 AI の利用にあたってのリスクが一般的に知られるようになってきました。生成 AI を最大限活かしつつリスクへの対応をしていくためには、「責任ある AI」 の理解や実践が大変重要です。本セッションでは、法務の担当者が、AWS の生成 AI サービスのご利用にあたってのポイントについてお話します。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-35.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-35_AI_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-35/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-36",
+      "title": "データと AI が変える公共サービス ～行政・教育・医療での最新活用事例～",
+      "description": "データと AI の活用が、行政サービスや教育、医療など、私たちの暮らしを支える公共サービスに革新をもたらしています。本セッションでは、AWS パブリックセクターの技術リーダーが、公共機関における最新の事例を紹介しながら、クラウドがもたらすデータ活用と AI の可能性を解説します。より効率的で市民本位な公共サービスの実現に向けて、データと AI がどのように公共サービスを進化させていくのか、具体的なヒントが得られるセッションです。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-36.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-36_Public-Sector_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-36/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-37",
+      "title": "公共機関におけるクラウドレジリエンス ～障害からより早く回復するシステムの作り方～",
+      "description": "デジタル社会の実現に向け、政府・地方自治体・医療・教育など様々な公共機関の重要システムがクラウド上で稼働し、国民の生活を支える基盤として日々重要度が高まっています。システム障害は国民生活に大きな影響を及ぼすため高い可用性が必要であり、障害から可能な限り早く回復するレジリエンス(回復力)を持ったシステムを構築することが重要です。本セッションでは、公共機関におけるレジリエンスライフサイクルフレームワークを始めとするレジリエンス強化の具体的な考え方について解説します。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-37.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-37_Public-Sector_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-37/live/",
+      "show_completed_as_vod": false
+    },
+    {
+      "id": "AWS-38",
+      "title": "サービス停止を防ぐ AWS 活用術: コンテナワークロードにおける高可用性設計の実践",
+      "description": "クラウドネイティブ時代において、マイクロサービスアーキテクチャやコンテナ技術の採用により、システムの可用性要件はより複雑化・高度化しています。本セッションでは、マイクロサービスのような分散システムで起こる障害を前提に、可用性を確保するための実践的なアーキテクチャ設計を解説します。耐障害性や障害分離の考え方に沿いながら、基礎からゾーン独立性のような発展的なパターンまで考慮事項を踏まえながら取り扱います。具体的な障害シナリオに対してアーキテクチャがどのように機能するのかを確認します。\n分散システムの信頼性を支える技術リーダーの方々に、実践的な知見をお届けします。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-38.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-38_Container_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-38/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-39",
+      "title": "AWS Step Functions で実現するワークフロー自動化 ～大規模処理・エラー制御の実装パターン～",
+      "description": "DX を加速する上で、複雑化するビジネスロジックの整合性の確保やエラーハンドリング、さらには増え続けるマイクロサービス間での連携に課題があり、想定していたスピードで変化を生み出せていないと感じている方も多いのではないでしょうか。ワークフローの途中でエラーが起こり、これまでの処理をロールバックしないといけないとしたら？連携しているサービスがダウンしたとしたら？そんな悩みは AWS Step Functions の多くの機能の真価を理解し、高度なアーキテクチャパターンを習得すれば解決します。本セッションでは、AWS Step Functions で実現可能なアーキテクチャパターンを解説します。大規模処理の効率的な並列化やコスト最適化、堅牢なエラーハンドリングによる業務継続性の向上、そして新たなデータ変換機能の紹介まで、具体的な実装アプローチとその効果を詳細に共有します。実際のシナリオをもとに、AWS Step Functions を深掘りし、サーバーレスの真価を習得しましょう。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-39.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-39_Migration_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-39/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-40",
+      "title": "AWS サーバーレスにおける Simplexity 戦略",
+      "description": "現代のクラウドシステムにおいて、サーバーレスアーキテクチャは究極のシンプル化を約束する重要な選択肢として位置づけられている。しかし、皮肉にもシステムをシンプルにしようとすればするほど、予期せぬ複雑性を招き寄せるというパラドックスが存在する。ビジネスでは様々な複雑性を生み出す要素に直面するためである。これらの複雑性に対して、本戦略では AWS re:Invent 2024 で Dr. Werner Vogels （VP and CTO, Amazon.com） が提唱した Simplexity （Simplicity + Complexity） の概念に基づく実践的なアプローチをご紹介します。開発者はこれらのアプローチを活用することで、サーバーレスの利点を最大限に活かしながら、複雑性を適切に制御することが可能になります。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-40.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-40_Development_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-40/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-41",
+      "title": "AWS 規範ガイダンス ～クラウドデザインパターン、アーキテクチャ、および実装の解説～",
+      "description": "AWS を有効活用するためにはクラウドにおけるデザインパターンやアーキテクチャとその実装を知ることが大切です。AWS では規範的なガイダンスとして AWS Prescriptive Guidance を公開しています。このセッションでは、このガイダンスに書かれているクラウドデザインパターンとそのアーキテクチャ、実装について分かりやすく解説します。クラウドデザインパターンを改めて見直す良い機会になれば幸いです。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-41.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-41_Development_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-41/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-42",
+      "title": "アーキテクチャ道場 2025 - 実践編！",
+      "description": "今年のアーキテクチャ道場は実践編です！クラウドを活用して実際に問題解決をされているお客様の事例から、優れたアーキテクチャを設計するためのプラクティスを AWS のソリューションアーキテクトと一緒に学びましょう。このセッションでは、実際の状況から解くべき問題を定義し、その問題を解決するために設計したアーキテクチャをソリューションアーキテクトが解説しながら、問題を定義する際の着眼点、良いアーキテクチャが備えている性質、トレードオフを伴う選択などを深堀り解説します。現実世界の問題解決から、幅広い問題に応用できる学びを導き出しましょう。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-42.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-42_Architecture_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-42/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-43",
+      "title": "Amazon Aurora DSQL アーキテクチャー詳細",
+      "description": "Amazon Aurora DSQL は、何十年にもわたる Amazon の革新と優れた運用性を生かした、新しいサーバーレスの分散型 SQL データベースです。新しいアプリケーションや高い耐障害性を必要とするアプリケーションにとって Aurora DSQL が理想的な選択肢となっている設計と主要な革新的テクノロジーについて詳しく説明します。Aurora DSQL のアクティブ - アクティブアーキテクチャーが、シングルリージョンとマルチリージョンのレジリエンシーと事実上無制限のスケーリングを実現する方法を学んでいただけます。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-43.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-43_Databases_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-43/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-44",
+      "title": "グラフデータ実践活用 - Amazon Neptune による OneGraph と GraphRAG の実装",
+      "description": "Amazon Neptune は OneGraph というグラフデータの新しい統合アプローチを実現しました。これまでグラフアプリケーションの開発者は、基盤となるグラフモデルの決定において「プロパティグラフと RDF グラフのどちらを採用するか？」という重要な決断に迫られてきました。そこで、Amazon Neptune はこれらのグラフモデルのギャップを埋め、統合されたグラフデータセットを提供できるようにしたのです。さらに Parquet/CSV データとの連携を容易にするといった重要なイノベーションにより、グラフデータ活用の可能性がより一層広がっています。本セッションでは、Amazon Neptune のグラフクエリや分析の進化について具体例とともに学ぶことができます。また、昨今グラフデータが注目されている理由の 1 つである GraphRAG についても AWS が提供するソリューションを解説します。\n*本セッションはタイトルの変更を行いましたが内容に変更はありません（旧：Amazon Neptune とそのイノベーション）",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-44.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-44_Databases_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-44/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-45",
+      "title": "生成 AI アプリケーションを最適化するインメモリセマンティックキャッシュ",
+      "description": "生成 AI により顧客体験は大きく進化しました。一方、生成 AI を用いるシステムでは、パフォーマンスとコスト最適化について考慮すべき新しいベストプラクティスが生まれています。このセッションでは、Amazon MemoryDB を使用した耐久性セマンティックキャッシュにより、生成 AI ワークロードのレイテンシーを数秒から数十ミリ秒に削減し、同時に基盤モデルのコストを大幅に削減する方法を解説します。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-45.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-45_AI_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-45/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-46",
+      "title": "AI アプリケーションのためのデータエンジニアリング戦略 - Amazon Bedrock で実現する構造化データ活用",
+      "description": "生成 AI や機械学習を用いたアプリケーションがもたらすビジネス価値は、取り扱うデータの多様性や品質、整合性に大きく依存します。ゆえに取り組みを成功させるには、高品質なデータの可用性や利用可能性を実現するためのデータ戦略が重要です。加えて、生成 AI の急速な進化によってデータ活用の幅は広がり、企業が有する非構造化データや構造化データなど様々なデータを、自然言語での直感的な問い合わせで活用することが可能になり始めました。このセッションでは、生成 AI 時代において重要となるデータエンジニアリングやデータ活用の考え方をお話し、セッション後半では生成 AI のユースケースとして自然言語での構造化データ活用を取り上げます。自然言語から SQL への変換における課題と Amazon Bedrock Knowledge Bases の構造化データ取得機能に焦点を当て、デモを交えてご紹介します。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-46.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-46_AI_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-46/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-47",
+      "title": "オープンテーブルフォーマットで実現する、大規模データ分析基盤の構築と運用",
+      "description": "機械学習や生成 AI の急速な発展により、企業のデータ基盤には、より高い拡張性と堅牢性が求められています。本セッションでは、AWS の分析サービスとオープンテーブルフォーマット （OTF） を活用し、この要件に応える大規模トランザクショナルデータレイクの構築方法をご紹介します。高いパフォーマンス、コスト最適化、運用の優秀性を実現するための具体的な実装方法と、大規模テーブル運用のベストプラクティスを解説します。さらに、ストリーミングデータにおけるスキーマ進化の課題に対し、OTF を活用することで高い信頼性とシームレスな運用を実現する手法もご紹介します。データ基盤の近代化に取り組むデータエンジニアの方々に、実践的な知見をお届けします。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-47.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-47_Data_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-47/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-48",
+      "title": "AWS 上で Apache Iceberg レイクハウスを構築・運用するためのベストプラクティス",
+      "description": "近年、クラウドにレイクハウスを構築して多様なツールが利用可能な分析環境を構築したいというニーズが増えており、そのデータ保存方法として Apache Iceberg が注目されています。一方で、多くの企業ではオンプレミスのデータベースや、AWS 上の Amazon RDS や Amazon Aurora などのさまざまなデータストアにデータが蓄積されており、Iceberg やレイクハウスの導入に障壁を感じている方も多くいらっしゃいます。本セッションでは、データのサイロ化を解消しデータからのビジネス価値を最大限に引き出すコンセプトとして、レイクハウスをご紹介します。主にデータ基盤を構築・運用する技術者向けに、様々なデータストアからデータを収集し Iceberg と Amazon SageMaker Lakehouse を用いたレイクハウスを AWS 上に構築・運用するための方法をご紹介します。また、AWS で Iceberg を利用する際の検討ポイントを整理し、円滑な移行を実現するための体系的なアプローチをご説明します。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-48.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-48_Data_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-48/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-49",
+      "title": "生成 AI オブザーバビリティのベストプラクティス",
+      "description": "生成 AI の採用が進む中、信頼性、透明性、最適化を確保するための包括的な可観測性が重要になっています。このセッションでは、大規模言語モデル、Retrieval Augmented Generation （RAG） アーキテクチャ、その他の新しいアプローチを含む、さまざまな生成 AI パターンの可観測性の課題について学びます。Amazon CloudWatch を幅広いメトリクス、ログ、分散トレーシングと共に使用して、生成 AI ワークロードのライフサイクルの可視性を獲得する方法を発見します。さらに、生成 AI アプリケーションを構築するための強力なフレームワークである LangChain の役割と、Amazon Bedrock や Amazon SageMaker と組み合わせて開発およびデプロイメントパイプライン全体の可観測性を向上させる方法についても探ります。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-49.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-49_Cloud-Operations_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-49/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-50",
+      "title": "AWS におけるグレー障害の検出と対策",
+      "description": "グレー障害は、クラウド環境でアプリケーションのパフォーマンスに微妙な影響を与えることが多い、検出が困難な障害です。これらの障害は、システムの全体的なダウンタイムにはつながらないかもしれませんが、ユーザーエクスペリエンスの低下や潜在的なデータ損失につながる可能性があります。このセッションでは、グレー障害の特性と AWS 環境での一般的な発生シナリオを紹介します。さらに、グレー障害を効果的に検出するための技術と戦略を紹介し、Amazon CloudWatch の Contributor Insights、および複合アラームの使用方法について掘り下げます。また、グレー障害に対処するためのアプローチ、特に Application Recovery Controller を使用した Availability Zone の退避について解説します。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-50.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-50_DR_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-50/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-51",
+      "title": "~設計から運用まで~ AWS サポートを徹底活用して重要システムを安定稼働させよう",
+      "description": "ビジネスに直結する重要システムを AWS でローンチし、安定運用することについて懸念をお持ちのお客様もいらっしゃるのではないでしょうか。AWS には、システムの設計、リリースから安定運用につなげるための踏み込んだサポートを提供する AWS Countdown Premium や、障害復旧をプロアクティブに支援する AWS Incident Detection and Response などのサービスやツールがございます。本セッションでは、AWS サポートが提供するサービスやツールを活用して、重要システムの安定運用やレジリエンス向上を実現する方法をサポート現場のエンジニアの視点から解説します",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-51.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-51_DR_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-51/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-52",
+      "title": "責任ある AI に向けて: 生成 AI アプリケーション評価のアプローチ",
+      "description": "基盤モデルの技術進歩に伴い、RAG や AI エージェントに代表されるような生成 AI をアプリケーションに組み込んで活用するユースケースが広がりを見せています。基盤モデルの力で強力な機能をアプリケーションに簡単に実現できる反面、本番化に際してアプリケーション全体としての精度やリスクをどのように評価するか、悩みを持つ方は多いのではないでしょうか？本セッションでは、生成 AI アプリケーションの評価について、生成 AI ならではの要素を踏まえたベストプラクティスや AWS 上での実現方法について解説します。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-52.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-52_AI_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-52/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-53",
+      "title": "Amazon Bedrock による生成 AI ワークロードの最適化と拡張 - コスト、速度、精度の最適バランスを目指して -",
+      "description": "生成 AI 技術の導入において、企業が直面する重要な課題の一つは、応答品質・コスト・処理速度の最適なバランスの実現です。大規模モデルは高精度を実現できるものの、高コストで処理速度が遅く、一方で小規模モデルは低コストで高速なものの精度面に課題があります。このトレードオフを解決することが、現在の AI 開発において求められています。本セッションでは、当該課題解決のための、Amazon Bedrock が提供する 3 つの革新的な機能をご紹介します。タスクに応じて最適なモデルを自動選択する「インテリジェント・プロンプトルーティング」、大規模モデルの知識を転移し処理速度を向上させる「モデルディスティレーション」、そして 100 以上の専門モデルをワンストップで提供する 「Amazon Bedrock Marketplace」 について、実装方法と具体的なユースケースを交えて解説します。スケーラブルな生成 AI システムの構築に携わる技術者必見のセッションです。実践的な実装手法と最適化戦略を通じて、本番環境での効率的な運用方法を習得していただけます。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-53.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-53_AI_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-53/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-54",
+      "title": "生成 AI による 検索アプリケーションの 拡張",
+      "description": "これからアプリ開発を始められる方、もしくは既にアプリを開発された方も多くのケースで検索機能の改善に悩まれているのではないでしょうか。このセッションでは、ベクトル検索が従来のキーワード検索と比較して、ビジネスの検索機能をいかに改善できるかについて解説します。ベクトル検索は、より正確で文脈を理解した検索を可能にすることで、生成 AI アプリケーションの強化に重要な役割を果たしています。ここでは、Amazon OpenSearch Service を使用したベクトル検索の実装を探求し、検索の関連性向上、非構造化データの処理、パーソナライズされたユーザー体験の向上について一緒に理解していきたいと思います。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-54.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-54_AI_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-54/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-55",
+      "title": "AI を使う？AI に使っていただこう。AI が考えた次の行動と実アクションの実践的 Agent アプローチ",
+      "description": "2025 年は皆さん口を揃えて 「Agent の年」と言っていました。この新しいテクノロジーの波は、すでにアーリーアダプターたちによって実装され、ビジネス環境に変革をもたらし始めています。年の折り返し点を迎えた今、Agent の誕生背景から現在の発展状況、そして今後の可能性について改めて考察しましょう。本セッションでは、Agent が登場した背景とその進化の過程を紐解きながら、現在どこまで業務自動化が進展しているのかを探ります。基本的な Tool Use の概念から、複雑なタスクを自律的に遂行できる高度な Agent の技術まで、LLM （大規模言語モデル）を活用した最新の自動化手法を包括的に解説します。さらに、理論だけでなく実践にも焦点を当て、Amazon Bedrock Agents を活用した Agent の実装デモンストレーションや成功事例を紹介します。セッションの最後には、参加者の皆様がすぐに取り組めるソリューションをご紹介し、Agent 導入への第一歩を踏み出すためのヒントをお伝えします。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-55.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-55_AI_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-55/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-56",
+      "title": "コスト 40% 減の秘密を公開！Amazon Nova 開発で実証済みの大規模モデル学習ベストプラクティス",
+      "description": "Amazon SageMaker HyperPod チームは Amazon Nova 基盤モデルの学習において Nova 開発チームが遭遇した様々な技術的課題を解決する機能をサービスに組み込んできました。本セッションでは、それらの技術的課題を概説しつつ、基盤モデルの開発者向けに、HyperPod の核となる分散コンピューティング基盤である UltraCluster と最適化された分散トレーニングフレームワーク、ハードウェア故障に対する自動復旧機能を活用することで、トレーニング時間とコストを削減する方法をご紹介します。\n*本セッションはタイトルの変更を行いましたが内容に変更はありません（旧：Amazon Nova モデル学習事例を通して学ぶ Amazon Sagemaker HyperPod を用いた基盤モデル学習ベストプラクティス）",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-56.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-56_AI_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-56/live/",
+      "show_completed_as_vod": false
+    },
+    {
+      "id": "AWS-57",
+      "title": "AI Agent 時代のソフトウェア開発の型 ～ Everything as Code で叡智を伝える ～",
+      "description": "ソフトウェア開発に AI を活用するのは当たり前になりました。しかし AI に開発のコンテキストやエンジニアの意図を十分に伝えるにはどうすればよいでしょうか？ Everything as Code のプラクティスは、アプリやインフラだけでなく運用やドキュメントなどあらゆるものをコードとして扱うことで、メンテナンス性を高め、人と AI 双方のために整理されたコードベースを構築します。このセッションでは、Everything as Code をソフトウェア開発における基本の型として踏まえ、AWS Cloud Development Kit (CDK) を使ったアプリ構築を例に AI エージェント時代の実践的な開発テクニックを学びます。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-57.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-57_Development_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-57/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-58",
+      "title": "モダンな CI/CD ツールボックス：一貫性と信頼性を確保するための戦略",
+      "description": "ソフトウェアデリバリーの規模と環境が多様化するにつれて、継続的インテグレーションと継続的デリバリー (CI/CD) における一貫性、セキュリティ、信頼性の維持はますます困難になっています。本セッションでは、ベストプラクティスと最新の手法を採用することで、増大する複雑さに対処する方法を示します。複数環境に対する一貫したデプロイメント、堅牢な構成管理、プログレッシなブデリバリー戦略の実現、インフラストラクチャのドリフト検出、生成 AI による自動監査を実現する方法を解説します。統一された CI/CD パイプラインによる変更の一元管理と、デリバリープロセスの標準化を通じて、信頼性、安全性、効率を向上させる実践的なアプローチを提示します。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-58.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-58_Development_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-58/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-59",
+      "title": "いま、あらためて考える Java アプリケーションのモダナイズアプローチ",
+      "description": "様々な領域で活用されている Java アプリケーションですが、レガシーな Java が動いていたり、クラウド移行ができてないケース、あるいはクラウドに移行したものの、その特性を活かしたアーキテクチャになっていないケースがあると思います。「モダンなアプリケーションへ変革したいが具体的な手立てや進め方が分からない」「バージョンアップの作業負担を考えると一歩を踏み出せない」といった課題を抱える Java 開発者やアーキテクトの方々に向けて、 アプリケーションをどのようにモダナイズしていくのか、クラウドへの移行や活用を進めるのか、というアプローチやアーキテクチャの考え方に加えて、レガシーな Java コードのモダン化を効率的に進めるための具体的な手法、そして AWS のサービスを活用例を、実際のコードやアーキテクチャ設計を交えて解説します。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-59.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-59_Development_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-59/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-60",
+      "title": "メインフレームモダナイゼーションの実践的アプローチ： AWS Mainframe Modernization による変革と成功への道筋",
+      "description": "メインフレーム技術者の高齢化および保守コスト増大に直面している IT 戦略立案者とシステム企画担当者向けのセッションです。熟練した技術者の減少と保守コストの上昇により、メインフレームシステムの維持が困難になっているお客様に向けて、AWS Mainframe Modernization による具体的な解決策をご紹介します。コスト削減と運用効率化を実現した導入事例や、段階的な移行アプローチなど、実践的な方法論を解説します。デジタル時代に即した俊敏なビジネス展開を実現するため、明日から活用できる具体的な知見を得ることができます。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-60.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-60_Migration_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-60/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-61",
+      "title": "実社会のセキュリティを支える生成 AI 活用ユースケース",
+      "description": "実社会における生成 AI のユースケースはたくさんありますが、セキュリティの改善ではどうでしょうか。このセッションでは、インシデント対応、コンプライアンス要件への対応、脅威分析などの具体的なユースケースに関するアーキテクチャやデモを通じて、セキュリティ業務を自動化・効率化するために生成 AI を活用する方法を学んでいただけます。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-61.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-61_Security_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-61/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-62",
+      "title": "通信業界における AWS 活用事例とアーキテクチャ",
+      "description": "通信業界における AWS 活用は、従来主流であったサービス基盤におけるアジリティやスケーラビリティの向上やデータ分析基盤にとどまらず、BSS/OSS といった基幹システムやモバイルネットワークの根幹を支えるコアや無線の基盤にまで広がっています。また生成 AI や機械学習を活用してネットワーク運用やお客様対応を高度化、自動化する取り組みも数多く生まれています。このセッションでは、グローバルにおける通信業界のお客様と取り組んできた事例に基づき、AWS の活用事例とそのアーキテクチャを解説します。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-62.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-62_Telecom_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-62/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-63",
+      "title": "オンラインゲーム開発におけるプラットフォームエンジニアリングと Amazon EKS による実装例",
+      "description": "クラウドの進化によってインフラとアプリケーションの境界が曖昧になる中で、プラットフォームエンジニアリングを取り入れることでゲーム制作チームが自律してゲームバックエンドを開発・運用できるようにする、そのための新しいインフラチームのあり方を提案します。また、それを実現するための手段として Amazon EKS を中心とした実装例を紹介します。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-63.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-63_GAME_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-63/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-64",
+      "title": "制作現場が変わる！アニメ・ゲーム・ CG/VFX なお客様に贈るクラウドコンテンツ制作入門",
+      "description": "コンテンツの制作環境には、コスト効率を重視しながらも、必要に応じてリソースを柔軟にスケールイン・スケールアウトできる環境が求められています。また、地理的に分散したクリエイターがセキュアに作業できる環境も不可欠です。このセッションでは、主にワークステーション、ストレージ、レンダーファームの観点で、AWS 上にコンテンツの制作環境を構築する際に活用できるサービスを事例とともに解説します。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-64.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-64_MEDIA_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-64/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-65",
+      "title": "ガバメントクラウド移行からはじめる行政 DX ～実践的なモダナイゼーションを考える～",
+      "description": "デジタル庁が推進するガバメントクラウドでは、モダン化されたアプリケーションを実装し、AI 活用の基盤としても活用できるよう進化を続けています。本セッションでは、リファレンスアーキテクチャに基づく効率的な移行戦略とモダナイゼーション、AI を活用したコード移行・最適化について説明します。さらに、AI と協働する行政ナレッジの活用、運用自動化における AI の実践例を、具体例を交えて解説します。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-65.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-65_Public-Sector_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-65/live/",
+      "show_completed_as_vod": false
+    },
+    {
+      "id": "AWS-66",
+      "title": "データメッシュで実現する 自動運転・ SDV におけるデータ駆動型開発",
+      "description": "このセッションでは、複数の自動車メーカー （OEM） 様で実証実験中である、データメッシュコンセプトに基づく自動車 IoT データ利活用サービスについて解説します。従来の Connected Vehicle ソリューションでは、各部門が個別かつ独自にデータを収集・活用することが多く、複数部門のデータを組み合わせた新サービスの創出が課題がありました。この課題に対応するため、複数のデータ取得・提供部門とデータ群の活用部門をメッシュ状に連携させ、データカタログを通じて、データ活用部門は複数のデータ提供部門から必要なデータのみを選択しサービスを構築できるプラットフォームを AWS は実現しました。このセッションを通じて、部門の壁を超えたデータ連携の実現方法、データカタログの効果的な運用手法、そして組織横断的なデータ活用がもたらす新たなビジネスチャンスについて学ぶことができます。自動車業界のデジタルトランスフォーメーションに関わる方々にとって、実践的な知見を得られる貴重な機会です。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-66.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-66_AUTO_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-66/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "AWS-67",
+      "title": "金融 × クラウド革命：業界の常識を覆す変革の軌跡",
+      "description": "金融業界は今、歴史的な転換点を迎えています。従来の「堅実」「保守的」というイメージを一新し、AWS を活用した大胆なイノベーションへと舵を切っています。本セッションでは、金融機関がクラウドを活用して実現した革新的な取り組みを、国内外の具体的な事例とともにご紹介します。クラウドネイティブアーキテクチャーの可能性、市場変化に即応できる新しい開発・運用モデル、そして、これらの変革を成功に導くために不可欠な組織文化の転換まで、包括的な視点でお伝えします。デジタル時代における金融ビジネスの展望、そして金融とテクノロジーの融合がもたらす新たな可能性について、皆様と共に考える機会としたいと思います。",
+      "presenter": "アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "aws_p/AWS-67.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AWS-67_FSI_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/aws-67/live/",
+      "show_completed_as_vod": true
+    }
+  ],
+  "partner_sessions": [
+    {
+      "id": "AP-01",
+      "title": "生成 AI with GitLab で切り開く次世代ソフトウェア開発の醍醐味～ 1st トライアルお客様フィードバック～",
+      "presenter": "GitLab合同会社ソニービズネットワークス株式会社",
+      "pdf_file": "partner_p/AP-01.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AP-01_Gitlab_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/ap-01/live/",
+      "show_completed_as_vod": false
+    },
+    {
+      "id": "AP-02",
+      "title": "かんぽ生命のコンタクトセンターを AWS 技術で刷新。安定した WebRTC を追求し、フルクラウド化に挑戦",
+      "presenter": "日本アイ・ビー・エム株式会社かんぽシステムソリューションズ株式会社",
+      "pdf_file": "partner_p/AP-02.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AP-02_IBM_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/ap-02/live/",
+      "show_completed_as_vod": false
+    },
+    {
+      "id": "AP-03",
+      "title": "コーエーテクモの \"覇道\" を支える AWS 活用術",
+      "presenter": "NHN テコラス株式会社株式会社コーエーテクモゲームス",
+      "pdf_file": "partner_p/AP-03.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AP-03_NHNTechorus_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/ap-03/live/",
+      "show_completed_as_vod": false
+    },
+    {
+      "id": "AP-04",
+      "title": "PayPay の AI Data Cloud が目指す最先端のアーキテクチャ",
+      "presenter": "Snowflake合同会社PayPay 株式会社",
+      "pdf_file": "partner_p/AP-04.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AP-04_Snowflake_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/ap-04/live/",
+      "show_completed_as_vod": false
+    },
+    {
+      "id": "AP-05",
+      "title": "AI を活用し、よりスマートなビジネス意思決定を支援する Qlik と AWS によるデータ基盤とは",
+      "presenter": "クリックテック・ジャパン株式会社",
+      "pdf_file": "partner_p/AP-05.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AP-05_QlikTech_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/ap-05/live/",
+      "show_completed_as_vod": false
+    },
+    {
+      "id": "AP-06",
+      "title": "クラウド安定運用の鍵、継続的アップデートに挑む：トヨタシステムズの基盤運用現場の激闘録と展望",
+      "presenter": "レッドハット株式会社株式会社トヨタシステムズ",
+      "pdf_file": "partner_p/AP-06.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AP-06_RedHat_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/ap-06/live/",
+      "show_completed_as_vod": false
+    },
+    {
+      "id": "AP-07",
+      "title": "AWS 環境におけるソフトウェアサプライチェーンリスクに立ち向かう脆弱性管理",
+      "presenter": "株式会社アシュアード",
+      "pdf_file": "partner_p/AP-07.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AP-07_Visional_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/ap-07/live/",
+      "show_completed_as_vod": false
+    },
+    {
+      "id": "AP-08",
+      "title": "パナソニック エオリア アプリにおける、ユーザージャーニーを起点としたサービスレベルマネジメントの導入と実践",
+      "presenter": "New Relic株式会社パナソニック株式会社　空質空調社",
+      "pdf_file": "partner_p/AP-08.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AP-08_NewRelic_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/ap-08/live/",
+      "show_completed_as_vod": false
+    },
+    {
+      "id": "AP-09",
+      "title": "【デモで実演】侵入経路予測でプロアクティブなセキュリティを！",
+      "presenter": "トレンドマイクロ株式会社",
+      "pdf_file": "partner_p/AP-09.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AP-09_TrendMicro_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/ap-09/live/",
+      "show_completed_as_vod": false
+    },
+    {
+      "id": "AP-10",
+      "title": "クラウド環境を取り巻く最新のサイバー攻撃の動向と必要なセキュリティ対策を解説！",
+      "presenter": "クラウドストライク合同会社",
+      "pdf_file": "partner_p/AP-10.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AP-10_CrowdStrike_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/ap-10/live/",
+      "show_completed_as_vod": false
+    },
+    {
+      "id": "AP-11",
+      "title": "Splunk × AI で変革するクラウド時代のセキュリティ ＆ オブザーバビリティ",
+      "presenter": "スプランクサービスジャパン合同会社",
+      "pdf_file": "partner_p/AP-11.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AP-11_Splunk_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/ap-11/live/",
+      "show_completed_as_vod": false
+    },
+    {
+      "id": "AP-12",
+      "title": "AI によってシステム障害が増える!?  ～AI エージェント時代だからこそ必要な、インシデントとの向き合い方～",
+      "presenter": "PagerDuty株式会社",
+      "pdf_file": "partner_p/AP-12.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AP-12_PagerDuty_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/ap-12/live/",
+      "show_completed_as_vod": false
+    },
+    {
+      "id": "AP-13",
+      "title": "業務改革の新機軸 ─ LIXIL が進める EX 重視の新基盤と AI エージェント活用について",
+      "presenter": "Workato株式会社株式会社 LIXIL",
+      "pdf_file": "partner_p/AP-13.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AP-13_Workato_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/ap-13/live/",
+      "show_completed_as_vod": false
+    },
+    {
+      "id": "AP-14",
+      "title": "【富士ソフト × AWS 共同セッション】  Amazon EVS で VM 環境をまるっと安全にリフト & シフトしませんか？",
+      "presenter": "富士ソフト株式会社アマゾン ウェブ サービス ジャパン合同会社",
+      "pdf_file": "partner_p/AP-14.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AP-14_FUJISOFT_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/ap-14/live/",
+      "show_completed_as_vod": false
+    },
+    {
+      "id": "AP-15",
+      "title": "AI ファースト時代に求められるクラウドセキュリティのあり方とは",
+      "presenter": "パロアルトネットワークス株式会社",
+      "pdf_file": "partner_p/AP-15.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AP-15_PaloAltoNetworks_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/ap-15/live/",
+      "show_completed_as_vod": true,
+      "description": "アプリケーション開発やセキュリティ運用効率を高める目的で AI を導入検討するケースが増えています。一方、クラウド上でサービス展開をするにあたり AI を含めたリスク管理をどのように実施すべきか。今求められるクラウドセキュリティのあり方をご紹介します。"
+    },
+    {
+      "id": "AP-16",
+      "title": "AWS 製造業アワード受賞！AI と IoT で進化する製造の現場改革",
+      "presenter": "アイレット株式会社",
+      "pdf_file": "partner_p/AP-16.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AP-16_iret_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/ap-16/live/",
+      "show_completed_as_vod": true,
+      "description": "製造業において、IoT によるデータ収集と画像AI解析が急速に進んでいますが、特に画像AI解析による業務の自動化や、生成 AI による設計・開発の効率化は、多くの企業で注目を集めています。本セッションでは、AI と IoT を組み合わせた最新の活用事例を紹介し、AI 導入を成功させるためのポイントについて解説します。※アイレットは、自動車・製造業界における 先進的な取り組みにおいて、AWS の製造業アワード 2024 を受賞"
+    },
+    {
+      "id": "AP-17",
+      "title": "マルチクラウドにおける IT コストの最適化",
+      "presenter": "Datadog Japan合同会社",
+      "pdf_file": "partner_p/AP-17.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AP-17_Datadog_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/ap-17/live/",
+      "show_completed_as_vod": false
+    },
+    {
+      "id": "AP-18",
+      "title": "自律的 AI エージェントアプリの未来！人と AI が共創する社会へのロードマップ",
+      "presenter": "TIS株式会社",
+      "pdf_file": "partner_p/AP-18.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AP-18_TIS_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/ap-18/live/",
+      "show_completed_as_vod": true,
+      "description": "本講演では、2024 年にトレンドとなった RAG の応用方法を振り返り、マルチ AI エージェントシステムの導入による生産性向上、顧客体験向上、そして経営判断の高度化にどのように寄与するかを探ります。さらに、投資効果を説明可能な ROI の算定について触れ、AI エージェントの設計と実用化におけるハードルとポイントを具体的に提示します。また、これらの業務アプリを高速に構築する仕組みとして、Amazon Bedrock を始めとするサーバレス・サービスをフル活用した弊社の生成 AI プラットフォームを紹介し、これらの業務アプリがノーコードで高速に構築される世界をお見せします。未来を見据えた自律的 AI エージェント戦略を共に考えましょう！"
+    },
+    {
+      "id": "AP-19",
+      "title": "NEC & AWS で実現する\"攻めの DX \"：デジタル変革を阻む壁を打ち破り、価値創造を加速する",
+      "presenter": "日本電気株式会社",
+      "pdf_file": "partner_p/AP-19.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AP-19_NEC_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/ap-19/live/",
+      "show_completed_as_vod": true,
+      "description": "喫緊の課題である日本のデジタル競争力の強化。多くの国内企業が直面する IT システム関連の壁（デジタル人材不足、レガシーシステムの複雑さ、セキュリティ脅威、DX 基盤整備など）に対し、NEC 自身の取り組みやお客様との取り組み事例を元に、お客さまの変革を成功へ導く価値創造モデル（Blustellar）が課題解決の道筋を示します。中でも今回戦略的パートナーである AWS との共創によって実現した内容を体系的にご紹介します。皆様のデジタル変革の実現に向け、そのヒントをお届けします。"
+    },
+    {
+      "id": "AP-20",
+      "title": "損保ジャパン × デロイト トーマツ：クラウドで変える損保業界のサプライチェーン -業界共通基盤の第一歩、レンタカー手配 DX-",
+      "presenter": "デロイト トーマツ コンサルティング合同会社損害保険ジャパン株式会社",
+      "pdf_file": "partner_p/AP-20.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AP-20_Deloitte_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/ap-20/live/",
+      "show_completed_as_vod": true,
+      "description": "損保業界では、事故対応の迅速化が求められています。本セッションでは、損保ジャパンとデロイト トーマツが共同開発した、業界初のレンタカー手配共通プラットフォームを紹介。従来、事故担当者はレンタカー会社へ個別に手配確認を行い、提供までに時間を要していました。本システムにより、複数のレンタカー会社へ同時に依頼でき、保険契約者へ迅速な提供が可能に。電話・FAX 対応をデジタル化し、ペーパーレス化も推進。業界共通基盤の第一歩であり、非競争領域での協業の可能性を示す事例です。損保業界 DX の加速について議論している内容を共有します。"
+    },
+    {
+      "id": "AP-21",
+      "title": "re:Grow：生成 AI 時代のハイブリッドクラウド設計とレガシー課題解決のベストプラクティス",
+      "presenter": "キンドリルジャパン株式会社",
+      "pdf_file": "partner_p/AP-21.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AP-21_Kyndryl_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/ap-21/live/",
+      "show_completed_as_vod": false
+    },
+    {
+      "id": "AP-22",
+      "title": "AWS セキュリティサービスを使いこなす！セキュリティ対策の優先順位付けと活用ポイント",
+      "presenter": "株式会社サイバーセキュリティクラウド",
+      "pdf_file": "partner_p/AP-22.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AP-22_CSC_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/ap-22/live/",
+      "show_completed_as_vod": false
+    },
+    {
+      "id": "AP-23",
+      "title": "爆速！最新 AMD インスタンス性能紹介 ～株式会社グリー様の導入事例を添えて～",
+      "presenter": "日本AMD株式会社株式会社グリー",
+      "pdf_file": "partner_p/AP-23.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AP-23_AMD_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/ap-23/live/",
+      "show_completed_as_vod": false
+    },
+    {
+      "id": "AP-24",
+      "title": "かんぽシステムソリューションズにおけるクラウド運用の新基準～クラウド CoE による標準化とコスト最適化の挑戦～",
+      "presenter": "株式会社BeeXかんぽシステムソリューションズ株式会社",
+      "pdf_file": "partner_p/AP-24.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AP-24_BeeX_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/ap-24/live/",
+      "show_completed_as_vod": false
+    },
+    {
+      "id": "AP-25",
+      "title": "IoT/CloudOps の AI 活用最前線 ～エッジ AI & マルチモーダル AI の最新ユースケース～",
+      "presenter": "伊藤忠テクノソリューションズ株式会社",
+      "pdf_file": "partner_p/AP-25.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AP-25_CTC_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/ap-25/live/",
+      "show_completed_as_vod": false
+    },
+    {
+      "id": "AP-26",
+      "title": "AI で振り込め詐欺を防止しろ！ 四国銀行の 9 ヶ月間の挑戦",
+      "presenter": "SCSK株式会社株式会社四国銀行",
+      "pdf_file": "partner_p/AP-26.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AP-26_SCSK_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/ap-26/live/",
+      "show_completed_as_vod": false
+    },
+    {
+      "id": "AP-27",
+      "title": "Work AI をビジネスインパクトの原動力へ",
+      "presenter": "Glean",
+      "pdf_file": "partner_p/AP-27.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AP-27_Glean_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/ap-27/live/",
+      "show_completed_as_vod": false
+    },
+    {
+      "id": "AP-28",
+      "title": "AI アプリケーションや B2B SaaS の実装に不可欠な認証認可",
+      "presenter": "Okta Japan株式会社",
+      "pdf_file": "partner_p/AP-28.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AP-28_Okta_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/ap-28/live/",
+      "show_completed_as_vod": false
+    },
+    {
+      "id": "AP-29",
+      "title": "AWS における Anthropic のフロンティアモデル：AI 最先端エージェントの構築",
+      "presenter": "Anthropic",
+      "pdf_file": "partner_p/AP-29.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AP-29_Anthropic_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/ap-29/live/",
+      "show_completed_as_vod": false
+    },
+    {
+      "id": "AP-30",
+      "title": "「業界・タスク特化型 LLM」独自カスタムモデルの強みとビジネス活用への取組み",
+      "presenter": "株式会社野村総合研究所",
+      "pdf_file": "partner_p/AP-30.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AP-30_NRI_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/ap-30/live/",
+      "show_completed_as_vod": false
+    },
+    {
+      "id": "AP-31",
+      "title": "FinOps の実践でクラウドを最大活用 ～ AI 時代の競争優位を支える“攻め”のクラウドコスト最適化戦略～",
+      "presenter": "Apptio, an IBM Company",
+      "pdf_file": "partner_p/AP-31.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AP-31_Apptio_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/ap-31/live/",
+      "show_completed_as_vod": false
+    },
+    {
+      "id": "AP-32",
+      "title": "AI 活用を支えるクラウド基盤と組織体制の重要性　～東京海上日動の実践事例～",
+      "presenter": "日本タタ・コンサルタンシー・サービシズ株式会社東京海上日動システムズ株式会社",
+      "pdf_file": "partner_p/AP-32.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AP-32_TCS_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/ap-32/live/",
+      "show_completed_as_vod": false
+    },
+    {
+      "id": "AP-33",
+      "title": "ゼロトラスト × AI で進化する：Zscaler と AWS で実現する 5 つのセキュアイノベーション",
+      "presenter": "ゼットスケーラー株式会社",
+      "pdf_file": "partner_p/AP-33.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AP-33_Zscaler_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/ap-33/live/",
+      "show_completed_as_vod": false
+    },
+    {
+      "id": "AP-34",
+      "title": "四国電力の AWS マイグレーション成功事例：DevOps、ハイブリッド運用の実践と課題",
+      "presenter": "株式会社TOKAIコミュニケーションズ四国電力株式会社",
+      "pdf_file": "partner_p/AP-34.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AP-34_TOKAICommunications_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/ap-34/live/",
+      "show_completed_as_vod": false
+    },
+    {
+      "id": "AP-35",
+      "title": "先進的な製造業における AI のリアルと未来",
+      "presenter": "株式会社エイチシーエル・ジャパンAstemo Cypremos株式会社",
+      "pdf_file": "partner_p/AP-35.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AP-35_HCLTech_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/ap-35/live/",
+      "show_completed_as_vod": false
+    },
+    {
+      "id": "AP-36",
+      "title": "生成 AI 活用で見えてきた 3 つの課題 ～精度・セキュリティ・推進体制～",
+      "presenter": "株式会社サーバーワークス",
+      "pdf_file": "partner_p/AP-36.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AP-36_Serverworks_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/ap-36/live/",
+      "show_completed_as_vod": true,
+      "description": "生成 AI 活用による業務の効率化、生産性向上が叫ばれていますが「ノウハウがなく、どのように活用を進めれば良いかわからない」「具体的な活用のアイデアやユースケースを知りたい」という課題を持っている企業は少なくありません。本セッションでは、具体的な活用のイメージを持っていただけるように Amazon Bedrock の活用例を紹介し、RAG の精度向上のコツやセキュリティにおいて気をつけたいポイントについて具体的に解説します。"
+    },
+    {
+      "id": "AP-37",
+      "title": "AI エージェントによる業務変革とそれを支える GenAI プラットフォーム",
+      "presenter": "株式会社NTTデータ",
+      "pdf_file": "partner_p/AP-37.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AP-37_NTTDATA_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/ap-37/live/",
+      "show_completed_as_vod": true,
+      "description": "生成 AI から AI エージェントへ技術も急速に進化し、PoC フェーズから本格的な業務活用への適用が求められる段階にきています。本講演では、NTTデータがどのように AI エージェントを業務に適用し、成果を生み出しているのか？ 実際のデモや具体的な事例・ユースケースを交えながら、成功のポイントや導入時の課題についても詳しく解説します。また、その仕組みを支える AWS ネイティブサービスを活用した GenAI プラットフォームの構成や、今後の展望についてもご紹介します。"
+    },
+    {
+      "id": "AP-38",
+      "title": "AWS 環境のセキュリティを最小限の労力で最大化！AI × CNAPP で脅威から守る方法",
+      "presenter": "フォーティネットジャパン合同会社",
+      "pdf_file": "partner_p/AP-38.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AP-38_Fortinet_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/ap-38/live/",
+      "show_completed_as_vod": false,
+      "description": "クラウドネイティブなサービスの普及に伴い、保護対象の拡大や複雑化によりセキュリティリスクも高まっています。その対策として「CNAPP」の導入が進みつつありますが、成功には重要なポイントがあります。本セッションでは、フォーティネットが提供する、AI を活用した「CNAPP」を実装・導入事例を交えながら解説します。AWS 上でクラウドサービスを最大限活用しながら、同時にセキュリティ対策の手間や複雑性を抑えて堅牢化を図りたい方にとって、実現に必要な考え方と手法を学ぶことができます。"
+    },
+    {
+      "id": "AP-39",
+      "title": "生成 AI 時代の業務変革実現と AI/ML チームの進化 ～ 三菱UFJ銀行市場部門の内製開発ジャーニー",
+      "presenter": "クラスメソッド株式会社株式会社三菱UFJ銀行",
+      "pdf_file": "partner_p/AP-39.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AP-39_Classmethod_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/ap-39/live/",
+      "show_completed_as_vod": false,
+      "description": "三菱UFJ銀行市場部門では、AI/ML を通じた業務変革を実現するため、内製開発領域を MLOps、フロント・バックエンドへと拡大しています。本講演では、AI/ML チームの内製開発ジャーニー全体についてお話しします。フロントエンドにおいては、Next.js/Tailwind CSS といった技術スタック選定から、Amazon ECS を活用した MLApps アーキテクチャなど具体的な取り組みをお話しします。また、実現できたユーザー体験の変革やビジネス効果、今後のスケール拡大に向けた取り組みをご共有します。"
+    },
+    {
+      "id": "AP-40",
+      "title": "データをビジネス価値に変えるための勘所 ～AI と DX を支えるデータファブリックとは～",
+      "presenter": "株式会社日立システムズ株式会社日立製作所",
+      "pdf_file": "partner_p/AP-40.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AP-40_HitachiSystems_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/ap-40/live/",
+      "show_completed_as_vod": false,
+      "description": "AI 活用が本格化する中、データをビジネス価値に変えるプロセスが必要不可欠です。データを収集し、つなげ、分析・加工する、データファブリックが AI と DX を支える重要なキーワードになります。日立グループでは、必要となるインフラや、構築、運用まで、トータルにご支援します。また、インフラレイヤーでは SRE ベースの運用モデルの導入・活用が重要であり、合わせてサービスをご説明します。本セッションでは、AWS との連携により、より容易にデータ活用ができるようになってきた現在地についても事例も交えてご紹介します。"
+    },
+    {
+      "id": "AP-41",
+      "title": "ファイアウォール内部で閉域駆動、国産オンプレミスエージェントとは？",
+      "presenter": "株式会社primeNumber",
+      "pdf_file": "partner_p/AP-41.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AP-41_primeNumber_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/ap-41/live/",
+      "show_completed_as_vod": false
+    },
+    {
+      "id": "AP-42",
+      "title": "事業が増えるほどセキュリティが大変？AWS Fargate と Sysdig で爆速テンプレ展開を実現した裏側",
+      "presenter": "Sysdig Japan合同会社株式会社ログラス",
+      "pdf_file": "partner_p/AP-42.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AP-42_Sysdig_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/ap-42/live/",
+      "show_completed_as_vod": false
+    },
+    {
+      "id": "AP-43",
+      "title": "日本企業の DX 成功への道 - デジタルの前線化とそれを支えるデジタルプラットフォームの構築",
+      "presenter": "PwCコンサルティング合同会社",
+      "pdf_file": "partner_p/AP-43.pdf",
+      "download_url": "https://pages.awscloud.com/rs/112-TZM-766/images/AP-43_PwC_AWS-Summit-JP-2025.pdf",
+      "session_url": "https://summitjapan.awslivestream.com/ap-43/live/",
+      "show_completed_as_vod": true,
+      "description": "PwC が昨年実施した「DX 意識調査‐IT モダナイゼーション編」によると、日本で DX に成功している企業は約 4 割にとどまっています。成功している企業は、デジタル技術を活用し、顧客への価値提供と変化への迅速な対応を実現しています。これを達成するためには、従来の組織構造を見直し、デジタル機能を最前線に配置し、事業の中核にデジタル技術を据えることが重要です。そのためには、リスクを抑えつつ利用者の利便性を高めるデジタルプラットフォームの整備が不可欠です。本セッションでは、DX 成功のための組織のあり方とプラットフォーム構築のポイントを解説します。"
+    }
+  ],
+  "customer_sessions": [
+    {
+      "id": "CUS-01",
+      "title": "製造業での Agentic AI による改革推進: 三菱電機のエンタープライズアジャイルと Amazon Bedrock 事例",
+      "description": "三菱電機は 2025 年 1 月に AWS と対グローバルで戦略的協業に向けた覚書を締結し、全社規模での生成 AI 活用を推進中です。\n業務・設計製造・事業などの領域で生成 AI ユースケースを展開し、業務においては 28 領域の推進により業務効率 30 %以上の向上を目指す製造業における事例です。本セッションでは、全社生成 AI 基盤構築を含めた全社的な推進アプローチや、Amazon Bedrock をはじめとした生成 AI コンポーネントを活用した具体ユースケースと成果を紹介します。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-01/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-02",
+      "title": "Amazon SageMaker HyperPod を利用した日本語 LLM (Swallow) の構築",
+      "description": "東京科学大学と産業技術総合研究所の研究チームが開発する LLM シリーズ Swallow は、2023 年以降、多数の日本語特化モデルをリリースしてきました。2025 年 3 月に公開した最新版モデルでは、日本語能力のいっそうの強化に加え、コード生成や数学的推論能力を高めることに成功し、高い性能を示しています。本講演では、本モデルを Amazon SageMaker HyperPod を用いて構築・学習した際に得られた知見を中心に、活用した AWS のサービス構成・分散学習環境のセットアップや、実際に行った大規模学習のベストプラクティスを紹介します。また、Swallow Project が現在取り組んでいる試みについても一部紹介します。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-02/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-03",
+      "title": "ソニーグループにおける Agentic AI の大規模展開開始",
+      "description": "ソニーグループでは一昨年から生成 AI の活用を進めてきました。昨年からは既にビジネスユーザが Agent を構築できる環境を整備し、社内でのビジネス適応を推進してきました。今期より 「Agentic AI Platform」 として再構築し、人と AI が協業する新しい業務の在り方を目指しており、その展望について共有します。Amazon Bedrock, Bedrock IDE をフルに活用したグローバルな Agentic AI について、アーキテクチャや実際のユースケースを交えてご紹介します。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-03/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-04",
+      "title": "Amazon Bedrock で作る未来の開発サイクルとオペレーション戦略",
+      "description": "株式会社LayerXは、バックオフィス業務の AI-SaaS 『バクラク』シリーズにおいて、開発サイクルの高速化とオペレーション改善のため、生成 AI を活用した内部支援の構築に取り組んでいます。基盤として Amazon Bedrock を選定することで、従来作業の自動化に留まらない新たな可能性を見出すことができました。本セッションでは、帳票の読み取りを行うパーソナライズド AI-OCR 機能における実践的な活用方法をはじめ、組織やプロダクトをよりスケーラブルにするための取り組みを紹介します。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-04/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-05",
+      "title": "AI エージェントのための独自モデル開発秘話",
+      "description": "AI エージェントは急速に普及し、企業内での活用や、それ自体をサービスとするような状況が加速しています。当社は経済産業省の GENIAC に採択され、日本のカスタマーサポートに特化した AI エージェントモデルの開発を行ってきました。なぜ独自モデル開発が必要だったのか？どう実現したのか？本講演では、開発の背景や AWS Trainium を使ったモデル開発のリアル、具体的な手法を説明したうえで、最先端のモデル開発におけるトレンドが、企業や業務の AI エージェントに特化したモデルの開発に向かいつつある話をします。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-05/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-06",
+      "title": "“後発優位”で挑んだ 「いい部屋ネット」再構築： 4 年間の AWS 移行で実現した成果とその舞台裏",
+      "description": "AWS 移行が一般化する中、いい部屋ネットは後発ならではの視点を活かし、先行事例や知見を巧みに取り入れ、4 年間で AWS への全面刷新を実現しました。移行前と比べて、トラフィックは 5 倍に増加し、インフラコストは約 3 分の 1 に削減しました。アプリケーションの刷新 (Next.js/GraphQL) 、無停止デプロイ、継続的な運用改善により、ユーザーエンゲージメントは最大で 1400% 向上しています。移行の過程で、CDN 移行や Oracle 移行といった技術的課題にも取り組みました。本セッションでは、後発の強みを活かした戦略と具体的なプロセスを解説します。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-06/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-07",
+      "title": "エンタープライズ AI の未来：プライベート LLM × Amazon Bedrock で実現する AI エージェント開発",
+      "description": "オープンソース LLM の性能向上に伴い、企業独自のドキュメントやデータを使ったプライベート LLM の開発と、AI エージェントの導入が加速しています。本講演では、Amazon SageMaker や Amazon Bedrock を活用したプライベート LLM 開発から、RAG との組み合わせによるドキュメント活用、Dify による AI エージェント市民開発等、リコーの開発事例をベースに、エンタープライズクラスでの生成 AI 導入を加速させるポイントをご紹介します。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-07/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-08",
+      "title": "ソニーセミコンダクタソリューションズグループにおける半導体製造 DX の取り組みと今後の展望",
+      "description": "ソニーセミコンダクタソリューションズグループでは、高品質かつ高歩留りにイメージセンサーを製造するため、半導体製造中に発生するデータの利活用を加速するデジタルトランスフォーメーション（DX）に取り組んでいます。製造中に生成されるデータは、数兆レコード・百万パラメータに及びます。このデータを意思決定に繋げるため、Sagemaker や Redshift などを活用し、社員全員が迅速にデータ活用できる基盤を構築しました。本講演では、AWSと共に歩んだ活動の振り返りと、今後の展望についてご紹介します。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-08/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-09",
+      "title": "SHIONOGI における生成 AI 活用～全社的な道筋と医薬開発領域での事例紹介～",
+      "description": "生成 AI はライフサイエンス領域の業務に大きな革新をもたらす技術として期待されており、2025 年度は具体的な業務への適用が進む段階にあると考えられます。SHIONOGI データサイエンス部 Generative AI グループでは、全社共通の AI インフラを構築するとともに、事業部門と密に連携しながら研究開発の効率化や経営意思決定の高度化など幅広い応用に取り組んでいます。本講演では、これらのうち医薬開発領域にフォーカスし、メディカルライティングの効率化やガイドライン・臨床試験検索アプリケーションなど、具体的な事例をご紹介いたします。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-09/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-10",
+      "title": "大塚製薬の DX による診断イノベーションへの挑戦",
+      "description": "大塚製薬には、医療現場での病気の診断や予防のための健康診断など支援するための臨床検査を提供する診断事業部があります。診断事業部では、がんや中枢疾患などに対してデジタルトランスフォーメーションによって診断イノベーションへの挑戦を続けています。本講演では、AWS 上のデータ基盤を用いた医療機器プログラム（Software as a Medical Device; SaMD ）開発や臨床試験結果の利活用などの診断イノベーションへの取り組みを紹介いたします。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-10/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-11",
+      "title": "楽天の動画配信プラットフォーム戦略 - 技術選定と移行の舞台裏",
+      "description": "楽天が動画配信プラットフォーム刷新において、いかに技術を選定し、移行を進めたのか？要件定義、POC 、アーキテクチャ、スケジュール、開発、ビジネス連携します。楽天の取り組みを詳細に解説し、技術選定の考え方、移行時の課題と解決策をご紹介いたします。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-11/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-12",
+      "title": "日産自動車 CCoE が大規模インフラをクラウドファーストにするまでの道のり",
+      "description": "日産自動車のクラウド変革を実現した CCoE の取り組みをご紹介。Nissan Private AWS の標準化、新たな AWS 環境（ModeX）の展開、システム開発サポート体制の確立など、クラウドファーストへの移行プロセスと成果を解説します。今後の AWS 活用戦略についても言及いたします。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-12/live/",
+      "show_completed_as_vod": false
+    },
+    {
+      "id": "CUS-13",
+      "title": "クライアントファーストな Honda データ戦略立案と爆速パイロット開発近日公開",
+      "description": "Honda では現在 SDV の実現に向けての取り組みが進んでいます。一方、開発に必要なデータへの迅速なアクセスが困難な状況が続いていました。この課題を解決するため、実際のデータ活用者を巻き込みながら Amazon の手法を活用しユースケース分析を実施。 AWS と協力してデータの鮮度要件やコスト目標を明確に定義し、これまで課題のあったストリーミング配信に特化しつつ、ユーザーフレンドリーなデータプラットフォームの構築に着手しました。綿密な要件定義と迅速な開発アプローチにより、わずか 3 ヶ月でパイロット環境を構築。エンドユーザーからは高い評価を獲得し、ビジネス展開への道筋をつけることができました。本セッションでは、クライアントファーストな視点でのデータ戦略立案から、スピーディーな実装までの取り組みをご紹介します。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-13/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-14",
+      "title": "トヨタ自動車が保有する膨大なデータを活用した業務ドメイン特化型の RAG SaaS",
+      "description": "トヨタ自動車では長年の車両開発や販売活動の結果、膨大なデータが蓄積されており、これらのデータを迅速かつ正確に検索する仕組みとして RAG を活用してきました。しかし、ハルシネーション（誤情報生成）が業務上のリスクとなっており、回答の根拠となる情報に容易にアクセスできる仕組みや業務ドメインに特化した検索精度向上のニーズが高まっています。本ニーズを満たすために昨年リリースされた AWS サービスを中心に活用し、2 か月で社内 RAG SaaS を構築した事例をご紹介します。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-14/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-15",
+      "title": "市場変化に対応するサントリーグループの基幹システム改革",
+      "description": "サントリーグループでは、急速な市場の変化に対応するため、これまでのスクラッチ開発による基幹システムの開発標準の方針を大幅に見直しました。今後は、SaaS サービスの導入やクラウドネイティブサービスの活用を促進し、AWS のマネージドサービスを活用した柔軟性と拡張性に優れたシステムアーキテクチャ構成を目指しています。この講演では、これらの取り組みについて、具体的な事例を交えて紹介します。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-15/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-16",
+      "title": "アイウエア接客の未来を拓く<br>〜生成 AI で進化するあたらしい店舗体験への挑戦～",
+      "description": "2025 年、JINS は 「AI 元年」の幕を開け、テクノロジーとアイウエアの融合を加速させます。「いつ買えばいいの？」「どう選べばいいの？」「自分に合うのはどれ？」—メガネ選びの永遠の3つの悩みに、AI の力で革新的な解決策を提案します。この講演では、AWS 生成 AI サービスを駆使し、お客様一人ひとりに寄り添った、直感的でパーソナライズされた次世代のアイウエア購買体験「選ぶ喜び」と「見つける感動」が日常になる、「あたらしい、あたりまえ」の舞台裏をご紹介。JINS が描く、まだ見ぬメガネ選びの未来を体験してください！",
+      "session_url": "https://summitjapan.awslivestream.com/cus-16/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-17",
+      "title": "オフィス機器から産業機器まで多様な製品群に対応する IoT プラットフォームの構築: 長期運用を目指し、アジャイルで小さく始める設計",
+      "description": "ブラザー工業は、つながるサービスでお客様への価値を最大化するため、グローバルに展開する複数事業で活用でき数千万台規模の IoT 機器にも対応する新たな IoT プラットフォームを構築しました。フルサーバーレス構成を採用することで、コスト効率の高い運用と高いスケーラビリティを実現しています。IoT 製品のライフサイクルが 10 年以上に及ぶことを見据え、長期運用を支える仕組みを取り入れています。IaC (Infrastructure as Code) によるインフラの標準化、自動化を進めることで、保守業務を効率化しています。本セッションでは、製造業 DX 推進・価値創出のための IoT プラットフォーム構築・運用のノウハウとして、大胆に進化し続けるための設計思想、アーキテクチャ、DevOps チームの事例をご紹介します。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-17/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-18",
+      "title": "事業部と情シスの共創による、エンタープライズ企業が挑むクラウドネイティブ HPC",
+      "description": "三菱重工エナジードメイン蒸気タービン技術部がクラウド知識ゼロから HPC on AWS にチャレンジし本番導入まで実現しました。カーボンニュートラル社会実現に向けた「蒸気タービン翼列」を設計開発するなかで、設計には CAE ソフトを利用していましたが、オンプレ HPC 環境のためサーバ保守作業が負担となっており、且つ旧世代マシンのスペック不足によってタービン開発の遅れが発生するケースもありました。この課題を解決すべく HPC 環境の AWS 移行検討を開始し、PoC 検証の結果、現行機の 2 倍以上のパフォーマンスを発揮できることが判明し本番環境を実装しました。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-18/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-19",
+      "title": "ANA の挑戦！ AI とデータ活用を牽引するデータ基盤の拡大戦略",
+      "description": "ANA はモダンなテクノロジーを駆使し、次世代データマネジメント基盤 「BlueLake」 の機能拡張を 2022 年度から継続的に推進しています。本講演では、4 万人規模の組織におけるデータ民主化を通じ、AI やデータをどのように活用しているのか、客室部門の事例を交えてご紹介します。そして、システムと人材の観点を中心に、「BlueLake」 の拡大戦略についてお話します。AWS と共に築く ANA の挑戦に、ぜひご期待ください。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-19/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-20",
+      "title": "電力システムなのに毎週リリース!? ENEOS が考える内製開発の価値とポイント",
+      "description": "ENEOS 中央技術研究所では、大型蓄電池の運用計画策定システムである  hammock を内製開発し、50MW 級の蓄電池運用に活用しています。このシステムは、高いセキュリティを求められる電力制御システムながら、週 1 回以上のリリースによる迅速な改善を実現しています。本セッションでは、内製開発を行った理由、セキュリティとリリース速度の両立のポイントとその効果について、事業、体制、技術の各側面からお話しします。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-20/live/",
+      "show_completed_as_vod": false
+    },
+    {
+      "id": "CUS-21",
+      "title": "AWS と共につむぐマイクロサービスプラットフォーム ～エネルギー企業の内製開発チームが大切にしていること～",
+      "description": "東京ガスは脱炭素社会への移行をリードし、エネルギー企業としての責務を果たしながら、「お客さまファースト」を実現するためのデジタル接点強化に取り組んでいます。より柔軟かつ迅速に価値を提供するため、事業組織内の内製開発チームが AWS 上にマイクロサービス基盤を構築しました。Amazon EKS 上で AWS Graviton、Karpenter、Bottlerocket を採用し、環境負荷軽減とビジネスコスト削減を実現しています。本セッションでは、マイクロサービス基盤の運用を通じて直面した課題と、その中で得た学びを具体的な事例も交えて紹介します。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-21/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-22",
+      "title": "〈みずほ〉のビジネスを変革する生成 AI の活用について",
+      "description": "〈みずほ〉では AI をグループ全体で活用するため、AI に関する取組方針を策定し、顧客利便性・生産性の向上、新たな価値の創出を追求しています。その中で標準の開発基盤に AWS を選定し、Amazon Bedrock を利用した生成 AI アプリケーションや独自 LLM の開発を実施しています。日々の議事録作成業務に向けて内製で開発した面談記録作成 AI は、議事録作成時間の削減率 50 %以上、継続利用意向率 93 %以上という効果を実現。この登壇では、〈みずほ〉が考える生成 AI 活用と、面談記録作成 AI  を AWS 上でどう開発・改善したのかを具体的にご紹介頂きます。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-22/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-23",
+      "title": "ソニー銀行におけるビジネスアジリティ向上のためのクラウドシフト戦略～勘定系移行までの道のり～",
+      "description": "ソニー銀行では、ビジネスアジリティの飛躍的な向上を目指し、長期的な視点でクラウドシフト戦略を推進しています。本邦金融機関の先陣を切り、2013 年から AWS の本格利用を開始し、周辺系システムから移行に着手しました。2019 年には、東京・大阪両リージョンを活用し、重要機能の 1 つである財務会計システム（総勘定元帳）を AWS 上で稼働させています。その上で、銀行の本丸である勘定系システムのクラウドネイティブな全面再構築に挑みました。本セッションでは、こうした当社のクラウドシフト戦略について、事例を交えてご紹介します。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-23/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-24",
+      "title": "年間 20 兆円の決済システムを支える GMO ペイメントゲートウェイが内製開発で蓄積したクラウド活用の極意",
+      "description": "GMO ペイメントゲートウェイは 2017 年から AWS の活用を開始し、BtoB の組み込み型オンライン決済サービスである fincode by GMO をはじめ、現在 50 以上の決済に関わるサービスを AWS 上で提供しています。年間トランザクション 20 兆円を支える決済システムにおいて如何に AWS を活用しているかクラウド活用の変遷をご紹介し、特に内製開発の推進、エンジニアの育成、セキュリティやスパイク対策、クラウドならではのコスト管理など皆様共通のお悩みに対して、当社のクラウド活用経験から得られた Tips を中心にお伝えします。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-24/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-25",
+      "title": "国内金融業界初： AWS 上での勘定系システム移行の成功と次世代バンキングの展望",
+      "description": "2024 年 7 月に SBI は福島銀行に日本で初めて AWS 上で稼働する銀行勘定系システムのサービスを開始しました。このサービスは地方銀行向けに今後もサービス展開が予定されており、現在は 2025 年に本番サービス開始が予定されている島根銀行の本番稼働に向けて準備が進められています。福島銀行の本番稼働から学んだ経験を島根銀行にどう反映しているのか等、勘定系をクラウドで稼働させるに至った背景や、高いレジリエンシーを実現するための AWS IDR を含めた AWS のレジリエンスを向上させるサービス選定等、AWS で実現してきたプロジェクトの軌跡をお話しいたします。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-25/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-26",
+      "title": "日本生命の次世代型お客様サービスの構築　～生成 AI 活用で生保基幹業務を革新～",
+      "description": "日本生命では、生成 AI を生命保険の契約事務等に活用する取組を進めています。昨年 12 月に 100％ 子会社化を発表したレゾリューション・ライフ社の知見とソリューションを有効活用し、生成 AI を活用した高効率かつ最適化された汎用的な業務支援機能構築を開始しました。本セッションではクラウドもフル活用した次世代 IT 活用に関するビジョン、そしてその重要な新要素の一つとなる生成 AI を活用した新システムについて、1 月に実施したレゾリューションライフとのハッカソンの内容も含め、具体的にご紹介します。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-26/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-27",
+      "title": "大和証券 CRM システム刷新の勘所<br>～大規模データベース移行と生成 AI 活用～",
+      "description": "大和総研は、大和証券の営業員やコンタクトセンターなど 5,000 名の職員が利用する CRM システムの更改に取り組みました。プライベートクラウドに構築していた商用データベースから、AWS Aurora PostgreSQL に移行することで、最適なリソース管理と運用負荷軽減に成功しました。直近では、お客様一人ひとりに対して、より高付加価値なコンサルティングサービスが提供できるよう、クラウドネイティブサービスや Amazon Bedrock を活用した取り組みを進めています。CRM 更改で見えたデータベース移行の勘所、生成 AI 活用の今後を交えてご紹介します。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-27/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-28",
+      "title": "電車線モニタリング画像解析アプリの開発事例",
+      "description": "JR 東日本では首都圏在来線のトロリ線摩耗管理において、検測車による測定データのチェックに加え、社員による膨大な画像の目視確認を実施して張替計画を策定しています。少子高齢化による将来の労働力不足に対応するため、AWS 上に画像解析アプリケーションを内製開発しました。本講演では、鉄道電気設備のメンテナンスにおける課題、事業会社における AWS サービスを活用した画像解析アプリの開発プロセス、導入による改善効果の見込み等について、実際の開発担当が具体例を交えて紹介します。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-28/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-29",
+      "title": "非エンジニアが実現！ 3000 人規模の介護×生成 AI 革命",
+      "description": "IT 知識ゼロの 6 名のチームが、たった 2 週間で生成 AI アプリを開発し、3 ヶ月で 3000 人の介護現場に展開。「全員プロンプトエンジニア」という独自文化。現場スタッフのプロンプトが共有・改良され、業務に還元される仕組みを構築。介護記録や会議議事録の効率化だけでなく、要介護者様の微細な変化まで捉えた高度なパーソナライズケアを実現しました。限られた人材と予算の中で、生成 AI をどう活用し「最期まで自宅で」という願いを支える体制を作り上げたのか。その戦略と実践方法をお伝えいたします。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-29/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-30",
+      "title": "生成 AI が実現する防災・減災 DX ～カメラ映像を用いた道路状況の無人監視～",
+      "description": "昨今異常気象や震災による自然災害が頻発しており、防災・減災への危機意識が高まっています。岩崎電気では、自社の道路用照明とカメラを組み合わせたシステムに Amazon Bedrock を適用した道路状況の自動監視ソリューションを開発しました。従来はセンサーで冠水検知をする必要がありましたが、カメラ映像を生成 AI で解析することで、大幅なコスト削減と運用負荷の低減を実現しました。本セッションでは照明器具メーカーである岩崎電気が DX の実現や新たな事業領域へ進出した背景を、開発秘話を交えご紹介します。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-30/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-31",
+      "title": "Amazon Bedrock で実現する新たな学習体験：2 か月で実装した教育スタートアップの挑戦",
+      "description": "社内有志の取り組みから始まり、わずか 2 か月で β 版をリリースしました。以降のサービス展開拡大に向け、AWS Generative AI Innovation Center と協働し、コスト効率化と回答品質向上を実施しました。本セッションでは、ユーザー価値設計のアプローチ、ハルシネーションを防止する工夫、価値検証サイクルの実行など、Amazon Bedrock を用いた生成 AI の本番サービス活用における実践知見をお伝えします。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-31/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-32",
+      "title": "電子カルテシステムにおける生成 AI 活用 ～病院業務効率化への取り組みと展望～",
+      "description": "深刻化する医療現場の人手不足や、デジタル化推進という社会的要請の中、当社の電子カルテシステムにおける生成 AI 活用事例を紹介します。Amazon Bedrock 等のサービスを用いた退院・看護サマリー作成支援機能は、病院業務のワークフローに沿って設計され、データの効率的活用を実現しています。医療現場での検証を通じて、一定の有用性を確認できました。今後は医師、看護師など様々な職種の業務プロセスにおける AI へのタスクシフトを進め、医療現場での実用的な AI 活用を提案していきます。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-32/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-33",
+      "title": "SmartNews における 1000+ ノード規模 K8s 基盤 でのコスト最適化 – Spot・Graviton の大規模導入への挑戦",
+      "description": "SmartNews では「世界中の良質な情報を必要な人に送り届ける」をミッションに掲げ、日本と米国でニュースアプリ 「SmartNews」 を提供しています。SmartNews は 1000+ ノード規模の Amazon EKS 基盤を共通プラットフォームとして利用しており、2023 年から 2024 年にかけて、スポットインスタンスや AWS Graviton プロセッサ、Karpenter を戦略的に導入してきました。これにより、インフラコストを最大 50% 削減し、パフォーマンスが向上する効果も現れています。本セッションでは、大規模 Amazon EKS 基盤上でのコスト削減について、Platform 側の横断施策と Product チーム側での取り組みの 2 つの観点から技術的な工夫を含めお話しします。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-33/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-34",
+      "title": "競輪選手の体力をリアルタイムに可視化する WINLIVE がクラウド上で動くまで",
+      "description": "昨年にリリースした WINTICKET のオリジナルライブ映像 「WINLIVE」 は、選手の体力消費を可視化する映像体験を通じて競輪の面白さや興奮を万人に届けることを目指した取り組みです。本セッションでは、選手にセンサーを装着することなく体力をリアルタイムに推定し描画するシステム 「WINLIVE」 についてと、当該システムをオンプレミス環境からクラウド環境へと移行する過程で生じた各種データ間の同期をはじめとする技術的課題を、計測精度を維持したままどのように解決したかについてご紹介します。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-34/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-35",
+      "title": "tenki.jp に学ぶセキュリティインシデント発生時の即応に必要な事業判断とエッジサービス活用",
+      "description": "インターネットサービスの運営においてセキュリティインシデント発生時に迅速な対応策を導入するためには、技術的知見や検証に基づいて事業判断を行うことが重要なポイントとなります。本講演では、我々 ALiNK インターネットが運営する天気予報専門メディア  「tenki.jp」 に行われた DDoS 攻撃時に取った対応とその経験に基づき、事例を紹介いたします。技術的知見とビジネスサイドを組み合わせ、最適な判断を行うための教訓を皆様へ御伝えするとともに、迅速な対応にあたり AWS のエッジソリューションが果たした役割もお伝えいたします",
+      "session_url": "https://summitjapan.awslivestream.com/cus-35/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-36",
+      "title": "Amazon Security Lake を活用したセキュリティログの集約と AI による可視化の最前線",
+      "description": "AWS セキュリティログやイベントデータの管理は、現代の組織における重要な課題です。本セッションでは、Amazon Security Lake を活用したセキュリティログの集約、ストレージ最適化、分析方法を解説します。また、ファインディ SRE チームの事例 を通じて、SRE 組織の立ち上げや運用改善に関する実践的なノウハウを紹介します。登壇者の 安達氏 は、横断 SRE として セキュリティ基盤の強化やオブザーバビリティ向上に取り組み、SRE チームの立ち上げを支えてきた経験を持ちます。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-36/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-37",
+      "title": "研究成果を最速でリリースするための Amazon EKS プラットフォーム - 100 以上のサービスを支える基盤",
+      "description": "Sansan の研究開発部では、ビジネスに直結する研究開発を行っており、“Sansan Labs” というデータを活用したプロダクトアイデアをベータ版的に迅速にリリースする仕組みも開発しています。これを支えるのが、研究開発部が運用している EKS 基盤 “Circuit” です。この Circuit では、数十から百単位のアプリケーションが稼働していますが多種多様です。研究開発部ではインフラの運用効率化を目指しており、どのような判断基準/方法で Circuit に移行するのか、また Circuit を運用する上で工夫している点についてお話します。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-37/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-38",
+      "title": "GenU × Amazon Bedrock による実装への挑戦-オイシックス・ラ・大地が実現した 333  時間の工数削減の技術解説",
+      "description": "オイシックス・ラ・大地では、AWS が提供する OSS の GenU と Amazon Bedrock を組み合わせた独自の生成 AI アプリケーションを構築し、メールマーケティング業務を自動化しました。当技術的施策により、月間 333 時間の工数削減と CVR200% 向上を達成しています。本セッションでは、GenU と Amazon Bedrock の統合アーキテクチャ設計から、プロンプトエンジニアリングによる精度向上の実践手法まで、技術的知見を詳しく解説します。特に生成 AI の実用化に関心のあるソフトウェアエンジニア、AI インフラ設計・構築を担当されている方、Amazon Bedrock の実践的活用方法を探られている方に有益な内容となっています。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-38/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-39",
+      "title": "Project LINKS におけるデータ構造化ソリューションの最前線- 国土交通省における LLM による行政データの変革",
+      "description": "行政情報の多くは、紙や Word、Excel 、PDF 等の非構造化データのまま存在し、データ活用の障壁となっています。国土交通省のデータ整備・活用・オープンデータ化プロジェクト 「Project LINKS」 において、Amazon Bedrock を活用し、LLM による行政情報の自動構造化ソリューションを構築した事例を紹介します。AWS の技術をどう組み合わせ、行政データ活用を加速させたのか、アーキテクチャや実装の工夫、課題と今後の展望を解説します。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-39/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-40",
+      "title": "ガバメントクラウドにおけるモダン化の定義",
+      "description": "システムのモダン化についてはさまざまな実現方法がありますが、本講演では、2025 年時点のガバメントクラウドという文脈でのシステムのモダン化について定義した内容を説明します。モダン化は、最先端を目指すことではなく、比較的新しい、ただし汎用化された技術を使い、今後利用が減っていくであろうレガシーな技術から脱却することです。モダン化について 5 つのカテゴリで定義を明確にし、その効果について説明し、どのようにルール化し、プロセス化しているのかについても、実際の事例に基づき解説します。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-40/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-41",
+      "title": "生成 AI が読み解くコンテンツの作風と感性 ～スカパー！ LYNKS による新次元のメタデータと業界横断活用の未来～",
+      "description": "本講演では、AWS クラウドを基盤に実現された「スカパー！ LYNKS 」で、生成 AI が自動拡張する独自メタデータにより、コンテンツの作風と感性を如何に読み解くかを探ります。大量コンテンツの効率的なタグ付与が、業界横断的な DX 推進と新次元エンタメ体験の創出にどのように貢献するのか、その革新の未来を具体事例と共に解説します。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-41/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-43",
+      "title": "Oracle から Aurora へ：クラウドネイティブで切り拓くビジネス DX 基盤刷新とビジネス貢献",
+      "description": "KDDI はビジネス DX 創出の加速に向け、密結合だった基幹システムを疎結合化し、通信・金融など異業種データを横断かつリアルタイムに活用できるデータ照会基盤 『JOINT』 を AWS に構築しました。しかし、数年の運用で Oracle DB の運用負荷とコストが課題となり、 Aurora 移行を決断、DB コスト 50% 削減と性能向上を実現しました。本セッションでは、DB 移行の中で直面した技術課題や実践した工夫をお話ししながら、クラウドネイティブで切り拓いたビジネス貢献についてお伝えします。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-43/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-44",
+      "title": "NTT 西日本グループの自動運転 EV バス事業戦略と AWS 基盤の活用",
+      "description": "NTT 西日本は、地域の喫緊かつ重要な公共交通維持の課題に取り組むため、2023 年に自動運転バス事業に本格参入いたしました。自動運転バスを世界 26 か国以上に展開する、自動運転システム研究開発企業のフランス Navya Mobility 社へ約 30% の出資を行い、日本国内での自動運転レベル 4 走行の実現を加速し、2024 年度より 10 以上の自治体と走行実証を実施しています。NTT 西日本が次世代モビリティの実現に、AWS 基盤をどのように活用しているか、持続可能な地域社会の未来に向けた取り組みをご紹介します。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-44/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-45",
+      "title": "「変化を競争力に変える」<br>アジャイルとクラウドで実現する、自律的に成長し続ける組織のつくり方",
+      "description": "変化の激しい市場環境下、お客様の期待にこたえ続けるエンジニア組織になるための組織設計/運営には、お客様を起点にアジャイルな事業運営が重要です。アジャイルな事業運営のエッセンスとして、数多くのプロダクト開発/運用を実施しているドコモでの組織設計/運営方法、人材やチーム育成の仕掛け/仕組み、AWS を活用し創出した価値等をご紹介します。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-45/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-46",
+      "title": "ニコニコの大規模セキュリティ改革",
+      "description": "本セッションでは AWS 製品を活用したセキュリティ監視基盤の構築と、AWS のセキュリティ専門チームと連携したインシデントの対応体制について紹介します。過去の AWS Summit Tokyo では、ニコニコ事業のインフラストラクチャ大改革としての AWS への全面移行について発表しました。AWS への全面移行には「開発・運用効率の向上」や「技術的選択肢の獲得」といった目的がありましたが、今回の講演ではさらにセキュリティ分野における積極的な取り組みについて紹介します。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-46/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-47",
+      "title": "Vertical SaaS を支えるアーキテクチャとその変遷 -9000 店舗の運営を支えるサービス開発の挑戦-",
+      "description": "スタートアップである hacomono では近年急激にお客様のサービスの利用が増加し、それに伴い主にアーキテクチャやコストに関して課題が生じましたが、AWS の各サービスを主軸とした基盤を駆使し需要に適応してきました。本セッションではそのアーキテクチャの変遷を課題とともに説明させていただき、今後のチャレンジについても解説いたします。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-47/live/",
+      "show_completed_as_vod": false
+    },
+    {
+      "id": "CUS-48",
+      "title": "Amazon Bedrock Agent による対話型データ活用で実現する広告高度化とは",
+      "description": "このセッションでは 「Amazon Bedrock Agent」 やデータ分析技術を活用し、マーケティングデータからインサイトを得る方法を解説します。顧客の行動や興味関心をチャットデータから読み取り、ターゲットごとに適したマーケティング施策を設計するポイントについて紹介します。また、「AWS Clean Rooms」 による 1st Party データと外部の各種データを掛け合わせた、より深い広告効果分析を実現するための方法や、分析結果をもとに 「Amazon Nova」 を活用した広告クリエイティブの改善案作成についても紹介します。簡単にデータ起点の意思決定を進める方法にご興味のある方、ぜひご参加ください。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-48/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-49",
+      "title": "Connected Vehicle Cloud の挑戦 – AFEELA とクラウドのシームレスな連携",
+      "description": "ソニー・ホンダモビリティでは、D2C（Direct to Consumer）ビジネスを構築し、お客様と車両のデータを一元管理するクラウドセントリックな開発を進めています。\n本講演では、AWS を活用した Connected Vehicle Cloud の全体アーキテクチャ、サーバーレス技術によるスケーラブルな構成、クラウドと IVI や各 ECU とのシームレスな連携、AD/ADAS 開発へのクラウド活用に加え、AFEELA 車両やデータへアクセス可能な API 公開に向けた取り組みについてもご紹介します。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-49/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-50",
+      "title": "PlayStation™Network のボイスチャットサーバの Amazon EKS 移行と Hybrid Cloud 化",
+      "description": "本セッションでは、PlayStation™Network のボイスチャットサーバ を Amazon EC2 から Amazon EKS へ移行し、Hybrid Cloud 化 した事例を紹介します。加えて、Hybrid Cloud 化によるコスト最適化達成のために、Kubernetes の拡張 OSS である Agones をどのように活用し、ボイスチャットサーバのセッション管理、ライフサイクル管理、スケーリングなどを実現したか、およびグローバルチームで行ったプロダクション導入プロセスについて紹介します。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-50/live/",
+      "show_completed_as_vod": true
+    },
+    {
+      "id": "CUS-51",
+      "title": "実況パワフルプロ野球などにおけるベアメタル環境から AWS への移行",
+      "description": "スマートフォンアプリ「実況パワフルプロ野球」などのサーバ環境をベアメタルサービスから AWS へ移行した話です。\nリリースから 10 年経過し、増強を繰り返したことでメンテナンスやスケーリングがしづらい構成だったものを、様々な取組みで運営しやすい形での移行を実施し、合わせて費用削減を達成しました。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-51/live/",
+      "show_completed_as_vod": false
+    },
+    {
+      "id": "CUS-52",
+      "title": "モンスターハンターワイルズ 100 万以上のユーザー同時接続を支えたネットワークアーキテクチャ",
+      "description": "モンスターハンターワイルズは多くのユーザからのアクセスを見込んだクロスプラットフォーム対応 AAA タイトルです。\n日本だけでなく世界各地から巨大なトラフィックが見込まれるネットワークタイトルで、サーバを 0 から構築するにあたりどのような技術を選択し、どういった苦労や工夫が行われたかご紹介させて頂きます。",
+      "session_url": "https://summitjapan.awslivestream.com/cus-52/live/",
+      "show_completed_as_vod": true
+    }
+  ]
+}

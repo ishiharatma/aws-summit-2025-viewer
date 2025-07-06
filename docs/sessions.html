@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Summit Japan 2025 セッション一覧</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #232F3E 0%, #131A22 100%);
+            color: #ffffff;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: #232F3E;
+            padding: 20px 0;
+            border-bottom: 3px solid #FF9900;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            color: #FF9900;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #CCCCCC;
+            font-size: 1.1rem;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .tab {
+            background: #3C4043;
+            color: #ffffff;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .tab:hover {
+            background: #FF9900;
+            transform: translateY(-2px);
+        }
+
+        .tab.active {
+            background: #FF9900;
+            color: #232F3E;
+            font-weight: bold;
+        }
+
+        .session-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .session-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid rgba(255, 153, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .session-card:hover {
+            transform: translateY(-5px);
+            border-color: #FF9900;
+            box-shadow: 0 10px 30px rgba(255, 153, 0, 0.2);
+        }
+
+        .session-id {
+            background: #FF9900;
+            color: #232F3E;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .session-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #ffffff;
+            line-height: 1.4;
+        }
+
+        .session-presenter {
+            color: #CCCCCC;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .session-description {
+            color: #E0E0E0;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 15px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .session-links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .link-btn {
+            background: #3C4043;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .link-btn:hover {
+            background: #FF9900;
+            color: #232F3E;
+            transform: scale(1.05);
+        }
+
+        .link-btn.disabled {
+            background: #555555;
+            color: #999999;
+            cursor: not-allowed;
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        .link-btn.disabled:hover {
+            background: #555555;
+            color: #999999;
+            transform: none;
+        }
+
+        .stats {
+            display: flex;
+            gap: 30px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            background: rgba(255, 153, 0, 0.1);
+            padding: 15px 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 153, 0, 0.3);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #FF9900;
+        }
+
+        .stat-label {
+            color: #CCCCCC;
+            font-size: 0.9rem;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .vod-filter {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 20px 0;
+            padding: 12px 20px;
+            background: rgba(255, 153, 0, 0.1);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 153, 0, 0.3);
+        }
+
+        .vod-filter input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #FF9900;
+        }
+
+        .vod-filter label {
+            color: #ffffff;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .session-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .tabs {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h1>AWS Summit Japan 2025</h1>
+            <p class="subtitle" id="subtitle">セッション一覧</p>
+            
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number" id="keynote-count">0</div>
+                    <div class="stat-label">基調講演</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="aws-count">0</div>
+                    <div class="stat-label">AWSセッション</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="partner-count">0</div>
+                    <div class="stat-label">パートナーセッション</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="customer-count">0</div>
+                    <div class="stat-label">カスタマーセッション</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="showSessions('all')">全セッション</button>
+            <button class="tab" onclick="showSessions('keynote')">基調講演</button>
+            <button class="tab" onclick="showSessions('aws')">AWSセッション</button>
+            <button class="tab" onclick="showSessions('partner')">パートナーセッション</button>
+            <button class="tab" onclick="showSessions('customer')">カスタマーセッション</button>
+        </div>
+
+        <div class="vod-filter">
+            <input type="checkbox" id="vod-only" onchange="applyFilters()" checked>
+            <label for="vod-only">VOD視聴可能セッションのみ表示</label>
+        </div>
+
+        <div id="session-container" class="session-grid">
+            <!-- セッションカードがここに動的に生成されます -->
+        </div>
+    </div>
+
+    <script>
+        let sessionsData = null;
+        let currentFilter = 'all';
+        let vodOnly = true;
+
+        // JSONデータを読み込み
+        fetch('./sessions_complete.json')
+            .then(response => response.json())
+            .then(data => {
+                sessionsData = data;
+                // 統計数を更新
+                const totalSessions = (data.keynote_sessions || []).length + data.aws_sessions.length + data.partner_sessions.length + data.customer_sessions.length;
+                document.getElementById('subtitle').textContent = `セッション一覧 - 全${totalSessions}セッション`;
+                document.getElementById('keynote-count').textContent = (data.keynote_sessions || []).length;
+                document.getElementById('aws-count').textContent = data.aws_sessions.length;
+                document.getElementById('partner-count').textContent = data.partner_sessions.length;
+                document.getElementById('customer-count').textContent = data.customer_sessions.length;
+                showSessions('all');
+            })
+            .catch(error => {
+                console.error('データの読み込みに失敗しました:', error);
+                document.getElementById('session-container').innerHTML = 
+                    '<p style="color: #FF9900; text-align: center; font-size: 1.2rem;">データの読み込みに失敗しました</p>';
+            });
+
+        function showSessions(filter) {
+            if (!sessionsData) return;
+
+            currentFilter = filter;
+            
+            // タブの状態を更新
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            event.target.classList.add('active');
+
+            applyFilters();
+        }
+
+        function applyFilters() {
+            if (!sessionsData) return;
+
+            vodOnly = document.getElementById('vod-only').checked;
+            const container = document.getElementById('session-container');
+            let sessions = [];
+
+            // フィルターに応じてセッションを選択
+            switch(currentFilter) {
+                case 'keynote':
+                    sessions = sessionsData.keynote_sessions || [];
+                    break;
+                case 'aws':
+                    sessions = sessionsData.aws_sessions;
+                    break;
+                case 'partner':
+                    sessions = sessionsData.partner_sessions;
+                    break;
+                case 'customer':
+                    sessions = sessionsData.customer_sessions;
+                    break;
+                default:
+                    sessions = [
+                        ...(sessionsData.keynote_sessions || []),
+                        ...sessionsData.aws_sessions,
+                        ...sessionsData.partner_sessions,
+                        ...sessionsData.customer_sessions
+                    ];
+            }
+
+            // VODフィルターを適用
+            if (vodOnly) {
+                sessions = sessions.filter(session => session.show_completed_as_vod === true);
+            }
+
+            // タブのセッション数を更新
+            updateTabCounts();
+
+            // セッションカードを生成
+            container.innerHTML = sessions.map(session => createSessionCard(session)).join('');
+        }
+
+        function updateTabCounts() {
+            if (!sessionsData) return;
+
+            const getFilteredCount = (sessions) => {
+                return vodOnly ? sessions.filter(s => s.show_completed_as_vod === true).length : sessions.length;
+            };
+
+            const keynoteCount = getFilteredCount(sessionsData.keynote_sessions || []);
+            const awsCount = getFilteredCount(sessionsData.aws_sessions);
+            const partnerCount = getFilteredCount(sessionsData.partner_sessions);
+            const customerCount = getFilteredCount(sessionsData.customer_sessions);
+            const totalCount = keynoteCount + awsCount + partnerCount + customerCount;
+
+            // タブのテキストを更新
+            const tabs = document.querySelectorAll('.tab');
+            tabs[0].textContent = `全セッション(${totalCount})`;
+            tabs[1].textContent = `基調講演(${keynoteCount})`;
+            tabs[2].textContent = `AWSセッション(${awsCount})`;
+            tabs[3].textContent = `パートナーセッション(${partnerCount})`;
+            tabs[4].textContent = `カスタマーセッション(${customerCount})`;
+        }
+
+        function createSessionCard(session) {
+            const description = session.description ? 
+                `<div class="session-description">${session.description}</div>` : '';
+            
+            const presenter = session.presenter ? 
+                `<div class="session-presenter">登壇社名: ${session.presenter}</div>` : '';
+
+            let links = [];
+            
+            if (session.session_url) {
+                if (session.show_completed_as_vod) {
+                    links.push(`<a href="${session.session_url}" target="_blank" class="link-btn">セッション視聴</a>`);
+                } else {
+                    links.push(`<span class="link-btn disabled">セッション視聴（準備中）</span>`);
+                }
+            }
+            
+
+            
+            if (session.download_url) {
+                links.push(`<a href="${session.download_url}" target="_blank" class="link-btn">ダウンロード</a>`);
+            }
+
+            const linksHtml = links.length > 0 ? 
+                `<div class="session-links">${links.join('')}</div>` : '';
+
+            return `
+                <div class="session-card">
+                    <div class="session-id">${session.session_id || session.id}</div>
+                    <div class="session-title">${session.title}</div>
+                    ${presenter}
+                    ${description}
+                    ${linksHtml}
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
