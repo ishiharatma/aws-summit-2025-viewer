@@ -260,11 +260,11 @@
 
     <div class="container">
         <div class="tabs">
-            <button class="tab active" onclick="showSessions('all')">全セッション</button>
-            <button class="tab" onclick="showSessions('keynote')">基調講演</button>
-            <button class="tab" onclick="showSessions('aws')">AWSセッション</button>
-            <button class="tab" onclick="showSessions('partner')">パートナーセッション</button>
-            <button class="tab" onclick="showSessions('customer')">カスタマーセッション</button>
+            <button class="tab active" onclick="showSessions('all', this)">全セッション</button>
+            <button class="tab" onclick="showSessions('keynote', this)">基調講演</button>
+            <button class="tab" onclick="showSessions('aws', this)">AWSセッション</button>
+            <button class="tab" onclick="showSessions('partner', this)">パートナーセッション</button>
+            <button class="tab" onclick="showSessions('customer', this)">カスタマーセッション</button>
         </div>
 
         <div class="vod-filter">
@@ -302,14 +302,30 @@
                     '<p style="color: #FF9900; text-align: center; font-size: 1.2rem;">データの読み込みに失敗しました</p>';
             });
 
-        function showSessions(filter) {
+        function showSessions(filter, targetElement = null) {
             if (!sessionsData) return;
 
             currentFilter = filter;
             
             // タブの状態を更新
             document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
-            event.target.classList.add('active');
+            
+            // targetElementが渡された場合はそれにactiveクラスを追加
+            if (targetElement) {
+                targetElement.classList.add('active');
+            } else {
+                // 初期表示時は該当するタブを探してactiveクラスを追加
+                const tabs = document.querySelectorAll('.tab');
+                tabs.forEach(tab => {
+                    if ((filter === 'all' && tab.textContent.includes('全セッション')) ||
+                        (filter === 'keynote' && tab.textContent.includes('基調講演')) ||
+                        (filter === 'aws' && tab.textContent.includes('AWSセッション')) ||
+                        (filter === 'partner' && tab.textContent.includes('パートナーセッション')) ||
+                        (filter === 'customer' && tab.textContent.includes('カスタマーセッション'))) {
+                        tab.classList.add('active');
+                    }
+                });
+            }
 
             applyFilters();
         }
